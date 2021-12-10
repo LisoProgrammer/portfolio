@@ -463,7 +463,11 @@
          align-items: center;
      }
  }
- 
+ @media only screen and (max-width: 300px) {
+     .pro {
+         font-size: 12px;
+     }
+ }
  @media only screen and (min-width: 876px) {
      div[class="cab"] {
          display: none;
