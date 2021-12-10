@@ -110,3 +110,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }))
 
 });
+
+function insertAction(id,link){
+   document.getElementById(id).addEventListener("click", ()=>{
+   window.location.href=link;
+   })
+}
+
+insertAction("btn-4a","https://pressly.000webhostapp.com/talotick/index.php");
