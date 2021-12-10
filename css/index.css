@@ -172,8 +172,16 @@
      display: flex;
  }
  
- .title-5::before {
-     content: "________";
+ 
+      .title-5::before {
+     content: "";
+     width: 100px;
+     height: 5px;
+     display: block;
+     margin: auto;
+     border-bottom: 1px solid white;
+ 
+
  }
  
  .btn-5 {
