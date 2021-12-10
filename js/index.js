@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function insertAction(id,link){
    document.getElementById(id).addEventListener("click", ()=>{
-   window.location.href=link;
+   window.open(link,"_blank")
    })
 }
 
