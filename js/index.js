@@ -1,6 +1,7 @@
 const btn_m = document.getElementById("btn_m")
 const menu = document.getElementById("menu")
 const subMe = document.getElementById("sub-menu")
+const form = document.getElementById("contact-form")
 let stat = 0
 
 btn_m.addEventListener("click", function() {
