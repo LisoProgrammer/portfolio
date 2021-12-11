@@ -24,11 +24,19 @@
      scroll-margin-top: 110px;
  }
  
+ .title-sp {
+     margin: 10px 0px;
+ }
+ 
  footer {
      color: var(--color1);
      font-size: 1.5rem;
      text-align: center;
      padding: 10px;
+ }
+ 
+ textarea {
+     min-height: 40px;
  }
  
  .c {
@@ -62,9 +70,7 @@
      top: 0;
      transition: 0.5s;
  }
- textarea {
-     min-height: 40px;
- }
+ 
  .sub-h {
      width: 100%;
      padding: 10px;
@@ -175,16 +181,13 @@
      display: flex;
  }
  
- 
-      .title-5::before {
+ .title-5::before {
      content: "";
      width: 100px;
      height: 5px;
      display: block;
      margin: auto;
      border-bottom: 1px solid white;
- 
-
  }
  
  .btn-5 {
