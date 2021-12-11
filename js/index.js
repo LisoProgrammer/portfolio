@@ -61,6 +61,26 @@ btn_top.onclick = function() {
         top: '0'
     })
 }
+for (let j = 0; j < form.elements.length; j++) {
+    form.elements[j].addEventListener("focus", focus)
+    form.elements[j].addEventListener("blur", blur)
+}
+
+function focus() {
+    if (window.innerWidth < 700) {
+        header.style.top = "-100%"
+        btn_top.style.opacity = "0"
+
+    }
+}
+
+function blur() {
+    if (window.innerWidth < 700) {
+        header.style.top = "0"
+        btn_top.style.opacity = "1"
+
+    }
+}
 const elemetn_form = document.getElementsByClassName("input")
 let btn_s = document.querySelector("#btn_s")
 btn_s.addEventListener("click", function(e) {
