@@ -60,8 +60,11 @@
      max-width: 1594px;
      z-index: 10;
      top: 0;
+     transition: 0.5s;
  }
- 
+ textarea {
+     min-height: 40px;
+ }
  .sub-h {
      width: 100%;
      padding: 10px;
@@ -463,22 +466,35 @@
          align-items: center;
      }
  }
- @media only screen and (max-width: 450px) {
+ 
+ @media only screen and (min-width: 876px) {
+     .cab {
+         display: none;
+     }
+ }
+ 
+ @media only screen and (max-width: 290px) {
      .pro {
          font-size: 12px;
      }
- }
- @media only screen and (min-width: 876px) {
-     div[class="cab"] {
-         display: none;
+     .bdrp {
+         padding: 40px 0px;
      }
-     .menu {
-         display: none;
+     .element {
+         width: 100%;
+     }
+     .wrap {
+         max-width: 100%;
+         min-width: 100%;
      }
  }
  
  @media only screen and (max-width: 570px) {
      #sub-menu {
+         width: 100%;
+     }
+     .form-1 {
+         padding: 15px;
          width: 100%;
      }
  }
