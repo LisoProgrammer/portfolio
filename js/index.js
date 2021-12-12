@@ -190,4 +190,4 @@ function insertAction(id, link) {
 }
 
 insertAction("btn-4a", "https://pressly.000webhostapp.com/talotick/index.php");
-insertAction("btn-5a", "https://pressly.000webhostapp.com/dadoo/dado.html")
+insertAction("btn-5a", "https://pressly.000webhostapp.com/dadoo")
