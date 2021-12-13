@@ -86,7 +86,7 @@ for (let j = 0; j < form.elements.length; j++) {
 function focus() {
     if (window.innerWidth < 700) {
         header.style.top = "-100%"
-        btn_top.style.opacity = "0"
+        btn_top.style.rigth="-100%"
 
     }
 }
@@ -94,7 +94,7 @@ function focus() {
 function blur() {
     if (window.innerWidth < 700) {
         header.style.top = "0"
-        btn_top.style.opacity = "1"
+        btn_top.style.rigth = "10px"
 
     }
 }
