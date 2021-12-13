@@ -81,7 +81,7 @@ btn_top.onclick = function() {
 for (let j = 0; j < form.elements.length; j++) {
     form.elements[j].addEventListener("focus", focus)
     form.elements[j].addEventListener("blur", blur)
-    form.elements[j].addEventListener("input", focus)
+    form.elements[j].addEventListener("keyup", focus)
 
 }
 
