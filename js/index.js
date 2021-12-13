@@ -3,16 +3,16 @@ const menu = document.getElementById("menu")
 const subMe = document.getElementById("sub-menu")
 const form = document.getElementById("contact-form")
 let stat = 0
-console = {
-    log: function() {},
-    error: function() {}
-}
+    /*console = {
+        log: function() {},
+        error: function() {}
+    }*/
 btn_m.addEventListener("click", function() {
     if (stat == 0) {
         //menú abierto
         stat = 1
             /*menu.style.right = "0"
-        subMe.style.right = "0"*/
+            subMe.style.right = "0"*/
         menu.className = "menu opened";
         subMe.className = "c-menu opened";
         subMe.style.transition = "all 0.3s"
@@ -86,7 +86,7 @@ for (let j = 0; j < form.elements.length; j++) {
 function focus() {
     if (window.innerWidth < 700) {
         header.style.top = "-100%"
-        btn_top.style.rigth="-100%"
+        btn_top.style.right = "-100%"
 
     }
 }
@@ -94,7 +94,7 @@ function focus() {
 function blur() {
     if (window.innerWidth < 700) {
         header.style.top = "0"
-        btn_top.style.rigth = "10px"
+        btn_top.style.right = "10px"
 
     }
 }
@@ -110,7 +110,7 @@ btn_s.addEventListener("click", function(e) {
         if (elemetn_form[i].value.length < 1) {
             sgt.innerHTML = "Por favor complete los parámetros."
             validation = false
-        } else if (elemetn_form[i].value.length > 1) {
+        } else if (elemetn_form[0].value.length > 1 && elemetn_form[1].value.length > 1 && elemetn_form[2].value.length > 1) {
             validation = true
         }
 
@@ -138,11 +138,12 @@ btn_s.addEventListener("click", function(e) {
         https.send(query)
     }
 })
-elemetn_form[2].addEventListener("keyup", function() {
+elemetn_form[2].addEventListener("input", function() {
     lengthE = elemetn_form[2].value.length
-    if (this.value.length = 100) {
-        this.value = this.value.slice(0, 150)
 
+    if (lengthE >= 199) {
+        elemetn_form[2].value = elemetn_form[2].value.slice(0, 199)
+        document.getElementById("le").innerHTML = 150
     }
     document.getElementById("le").innerHTML = lengthE
 })
@@ -166,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // show cursor
         showCursor: false,
         // character for cursor
-        cursorChar: "|",
+        cursorChar: "",
         // attribute to type (null == text)
         attr: null,
         // either html or text
@@ -189,5 +190,5 @@ function insertAction(id, link) {
     })
 }
 
-insertAction("btn-4a", "https://pressly.000webhostapp.com/talotick/index.php");
-insertAction("btn-5a", "https://pressly.000webhostapp.com/dadoo")
+insertAction("btn-4a", "https://pressly.000webhostapp.com/talotick/");
+insertAction("btn-5a", "https://pressly.000webhostapp.com/dadoo/")
