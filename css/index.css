@@ -1,4 +1,6 @@
- * {
+@import url(//db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard);
+
+* {
      box-sizing: border-box;
      -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -18,7 +20,6 @@
      --color-brownblue: #1d4355;
      --color-brown: #2f31247e;
  }
- @import url(//db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard);
 
  div[id],
  h1[id] {
