@@ -1,4 +1,4 @@
- //Array de todas las combinaciones div circulares de los numeros del dado    
+ //Array de todas las combinaciones div circulares de los numeros del dado 
  //1 = 5
  //2 = 3, 7
  //3 = 3, 5, 7
@@ -55,45 +55,7 @@
      }
  }
 
- function term_voice() {
-
-     let e = confirm("¿Deseas tirar los dados con tu voz?")
-
-     if (e == true && validation == 0) {
-         validation = 1
-         var recognition = new webkitSpeechRecognition();
-
-         recognition.continuous = true;
-         recognition.interimResults = true;
-         recognition.lang = "ES";
-
-         recognition.onresult = function(event) {
-             var interim_transcript = '';
-             console.log(interim_transcript)
-             for (var i = event.resultIndex; i < event.results.length; ++i) {
-                 interim_transcript += event.results[0][0].transcript;
-             }
-             console.log(interim_transcript);
-             for (let i = 0; i < words.length; i++) {
-                 if (interim_transcript == words[i]) {
-                     btn.click()
-
-                     interim_transcript = "";
-                 }
-             }
-
-             //recognition.continuous = false
-
-         };
-         recognition.start()
-         recognition.onerror = (e) => {
-             console.error("Error: " + e.error)
-         }
-     }
- }
-
-
-
+ 
  //clave para que funcione
  /*  console.log("Numero aleatorio: " + ramdom)
             console.log("Array: " + combiNum[ramdom][ITERATOR])*/
