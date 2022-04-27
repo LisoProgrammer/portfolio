@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Dadoo. Tira del dado y juega con tus amigos a cualquier juego de mesa.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <title>Dadoo</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="n" style="margin-top: 80px;">¡Lanza los dados!</div>
+    <div class="conj" id="n">
+        <div class="container" id="com" aria-label="dado">
+            <div class="punto deleted"></div>
+            <div class="punto"></div>
+            <div class="punto"></div>
+            <div class="punto black"></div>
+            <div class="punto"></div>
+            <div class="punto"></div>
+            <div class="punto"></div>
+            <div class="punto black"></div>
+            <div class="punto"></div>
+            <div class="punto"></div>
+
+        </div>
+        <div class="container" id="com2" aria-label="dado">
+            <div class="punto2"></div>
+            <div class="punto2"></div>
+            <div class="punto2 black"></div>
+            <div class="punto2"></div>
+            <div class="punto2"></div>
+            <div class="punto2"></div>
+            <div class="punto2 black"></div>
+            <div class="punto2"></div>
+            <div class="punto2"></div>
+            <div class="punto2 deleted"></div>
+        </div>
+    </div>
+    <div class="plat"></div>
+
+    <div class="conj">
+        <p id="result" aria-label="Valor obtenido aleatoriamente">2</p>
+        <p id="result2" aria-label="Valor obtenido aleatoriamente">2</p>
+    </div>
+
+
+    <button id="btn">Tirar dados <br> (Enter o Space)</button>
+    <div class="n" id="int">Intento(s): 0</div>
+    <div class="n">Dadoo V1.0</div>
+
+    <audio src="t.mp3" id="adu"></audio>
+
+    <script type="text/javascript" src="js/index.js">
+    </script>
+    <!--<script type="text/javascript">
+        //Array de todas las combinaciones div circulares de los numeros del dado    
+        const combiNum = new Array(0, [4, -5], [2, 6], [2, 4, 6], [0, 2, 6, 8], [0, 2, 4, 6, 8], [0, 1, 2, 6, 7, 8]);
+
+
+        function ramdom() {
+            "use strict"
+            //se activa el sonido al caer el dado
+            document.getElementById("adu").play()
+                //se busca aleatoriamente un número de los que se encuentran en un dado
+            let ramdom = Math.ceil(Math.random() * 6)
+                //el valor obtenido se pasa como contenido al div id result
+            document.getElementById("result").innerHTML = ramdom
+                //Se activa una animación irreal
+            setTimeout(function() {
+                document.getElementById("com").style.animation = "0.3s"
+            }, 400)
+
+            for (var i = 0; i < 10; i++) {
+                document.getElementById("com").style.animation = "agitar 0.3s"
+                document.getElementsByClassName("punto")[i].className = "punto white"
+                document.getElementsByClassName("punto")[9].className = "punto deleted"
+                console.clear()
+            } //Este bucle los que hace es colocar todos los div circulares en blanco para su pronta modificación de color en el siguiente buqle
+            for (var ii = 0; ii < 7; ii++) {
+                document.getElementsByClassName("punto")[combiNum[ramdom][ii]].className = "punto black"
+                console.clear()
+            } //Segn el valor obtenido en ramdom, se busca un array en combiNum y la variable ii es el segundo parámetro para buscar una combinación aleatoria
+        };
+
+        var btn = document.getElementById("btn") //cuando se presione el boton contenido en btn se activa la función ramdom
+        btn.addEventListener("click", ramdom)
+            //clave para que funcione
+            /*  console.log("Numero aleatorio: " + ramdom)
+                       console.log("Array: " + combiNum[ramdom])*/
+    </script>-->
+</body>
+
+</html>
