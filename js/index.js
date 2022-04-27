@@ -248,7 +248,7 @@ function insertAction(id, link) {
 }
 
 insertAction("btn-4a", "https://pressly.000webhostapp.com/talotick/");
-insertAction("btn-5a", "https://pressly.000webhostapp.com/dadoo/");
+insertAction("btn-5a", "assets/dadoo");
 insertAction("btn_g", "cv.docx")
 
 document.addEventListener("DOMContentLoaded", () => {
