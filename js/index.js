@@ -1,3 +1,44 @@
+/*document.addEventListener("DOMContentLoaded", () => {
+    let loading = document.getElementById("loading")
+    let sub_loa = document.querySelector(".sub-load")
+    sub_loa.style.animation = "scalemax 1s"
+
+    setTimeout(() => {
+        loading.remove()
+    }, 1000);
+    //
+})*/
+//observer necesita cargar una función como primer parámetro
+//Como segundo parametro recibe un objeto de los siguientes elementos.
+//root: llama a la función cuando un elemento pasa por un elemento fijo
+//rootMargin: el margen en la pantalla
+//threshold:
+/*const observer = new IntersectionObserver(an, {
+    root: null,
+    rootMargin: "0px 0px -50px 0px",
+    threshold: 1.0
+})
+
+
+for (let e = 1; e < 4; e++) {
+    observer.observe(document.getElementById("t" + e))
+}
+
+
+function an(entries, observer) {
+    console.log("entries")
+    console.log(entries)
+    console.log("observer")
+    console.log(observer)
+    entries.forEach((entries) => {
+        if (entries.isIntersecting) {
+            console.log("Está en pantalla")
+            document.styleSheets[0].insertRule("title-5::before {width: 0px;height: 0px;margin: auto;transform: rotate(90deg);border-left: 10px solid var(--color2);border-top: 5px solid transparent;border-bottom: 5px solid transparent;}", 0);
+        } else {
+            document.styleSheets[0].deleteRule(0);
+        }
+    });
+}*/
 const elements = document.getElementsByTagName("*")
 console.log(elements)
 window.onload = () => {
@@ -295,7 +336,7 @@ function insertAction(id, link) {
 }
 
 insertAction("#btn-4a", "https://pressly.000webhostapp.com/talotick/");
-insertAction("#btn-5a", "https://pressly.000webhostapp.com/dadoo/");
+insertAction("#btn-5a", "assets/dadoo");
 insertAction("#btn_g", "cv.docx")
 let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://json.com", "https://php.net", "https://www.mysql.com", "https://developer.mozilla.org/es/docs/Web/Guide/AJAX"]
 for (let m = 1; m < 8; m++) {
