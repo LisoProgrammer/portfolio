@@ -1,3 +1,46 @@
+const elements = document.getElementsByTagName("*")
+console.log(elements)
+window.onload = () => {
+    let loader = document.getElementById("progress")
+    let loading = document.getElementById("loading")
+    let sub_loa = document.querySelector(".sub-load")
+
+    if (sub_loa !== null) {
+        sub_loa.style.animation = "scalemax 1s"
+    }
+    setTimeout(() => {
+        setTimeout(() => {
+            loading.remove()
+        }, 500);
+        loading.style.animation = "parp 0.5s"
+
+    }, 1000);
+    //
+
+    let num_element = 0
+    let porcent = 0
+    try {
+        for (let j = 0; j < elements.length; j++) {
+            console.log(elements[j] == null)
+            if (elements[j] !== null) {
+                num_element++
+                //console.log((num_element * 100) / elements.length)
+                porcent = Math.floor(num_element * 100 / elements.length)
+                loader.style.width = porcent + "%"
+            }
+        }
+    } catch (e) {
+        console.error(e)
+    }
+    console.log(num_element)
+
+}
+
+
+/*nst imgs = ["", "assets/b_1ken.png", "assets/s_6m.png"]
+for (let mm = 1; mm < 3; mm++) {
+    document.getElementsByClassName("num" + mm + "img")[0].src = imgs[mm]
+}*/
 //Botón de apertura y cierre de menú
 const btn_m = document.getElementById("btn_m")
     //Menú objeto de pantalla completa
@@ -242,14 +285,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function insertAction(id, link) {
-    document.getElementById(id).addEventListener("click", () => {
-        window.open(link, "_blank")
-    })
+    try {
+        document.querySelector(id).addEventListener("click", () => {
+            window.open(link, "_blank")
+        })
+    } catch (e) { console.error(e) }
+
+
 }
 
-insertAction("btn-4a", "https://pressly.000webhostapp.com/talotick/");
-insertAction("btn-5a", "assets/dadoo");
-insertAction("btn_g", "cv.docx")
+insertAction("#btn-4a", "https://pressly.000webhostapp.com/talotick/");
+insertAction("#btn-5a", "https://pressly.000webhostapp.com/dadoo/");
+insertAction("#btn_g", "cv.docx")
+let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://json.com", "https://php.net", "https://www.mysql.com", "https://developer.mozilla.org/es/docs/Web/Guide/AJAX"]
+for (let m = 1; m < 8; m++) {
+    insertAction("#tc" + m, links[m])
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("int") == null && localStorage.getItem("tod") == null) {
