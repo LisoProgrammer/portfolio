@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="shortcut icon" href="https://pressly.000webhostapp.com/sourcest/brand.png">
     <link rel="stylesheet" href="css/index.css">
     <meta name="description" content="Este portafolio web contiene todo lo referente a Lisandro Zapata a nivel laboral.">
     <meta property="og:image" content="assets/Yo.jpg">
@@ -13,6 +12,15 @@
 </head>
 
 <body>
+    <div id="loading">
+        <div id="progress"></div>
+        <div class="sub-load">
+
+            <img src="assets/brand_white(2).png" alt="" width="50vw">
+            <h2>Cargando contenido...</h2>
+        </div>
+
+    </div>
     <div class="c">
         <header>
             <div class="m">
@@ -20,18 +28,18 @@
             </div>
             <div class="flex c_c" role="navigation">
                 <div class="cab">
-                    <button id="btn_m" class="btn-5">Menú<img src="assets/m.svg" alt="menu" width="20px"></button></div>
+                    <button id="btn_m" class="btn-5"><img src="assets/m.svg" alt="menu" width="20px"></button></div>
                 <div class="ab">
-                    <a href="#t1" class="a-sp">Sobre mí</a>
+                    <a href="#t1" class="a-sp t1_a">Sobre mí</a>
                 </div>
                 <div class="ab">
-                    <a href="#t2" class="a-sp">Mis Habilidades</a>
+                    <a href="#t2" class="a-sp t2_a">Mis Habilidades</a>
                 </div>
                 <div class="ab">
-                    <a href="#t3" class="a-sp">Mis proyectos</a>
+                    <a href="#t3" class="a-sp t3_a">Mis proyectos</a>
                 </div>
                 <div class="ab">
-                    <a href="#t4" class="a-sp">Contáctame</a>
+                    <a href="#t4" class="a-sp t4_a">Contáctame</a>
                 </div>
 
             </div>
@@ -58,7 +66,9 @@
                         <H1 class="titlesub">Creo en el internet y en las computadoras.</H1>
                         <h2 style="font-weight: 200;">- Acompáñame...</h2>
                     </p>
-                    <button class="btn-1" id="btn_g">Descarga CV</button>
+                    <button class="btn-1 flex center space-between" id="btn_g">Descargar CV
+                        <img src="assets/download.svg" alt="" width="25vw">
+                    </button>
 
                 </div>
             </div>
@@ -66,16 +76,16 @@
         </div>
         <div class="tut" id="t1">
             <div class="par">
-                <div class="title-5">
+                <div class="title-5 t1">
                     <h1 class="t-i">Sobre mí</h1>
                 </div>
-                <p>Soy Lisandro Enrique Zapata Paternina. Nací el 23 de febrero de 2005, es decir, tengo <span id="ag"></span> años. Soy técnico en sistemas y desarrollador web. Me identifico como una persona autodidacta, responsable y ordenada.</p>
+                <p>Mi nombre es Lisandro Zapata. Nací el 23 de febrero de 2005, es decir, tengo <span id="ag"></span> años. Soy técnico en sistemas y desarrollador web. Me identifico como una persona autodidacta, responsable y ordenada.</p>
             </div>
 
         </div>
         <div class="tut" id="t2">
             <div class="par">
-                <div class="title-5">
+                <div class="title-5 t2">
                     <h1 class="t-i">Habilidades profesionales</h1>
                 </div>
                 <p>Como técnico en sistemas, manejo herramientas ofimáticas y soy capaz de montar redes informáticas y de realizar mantenimiento preventivo y correctivo en equipos de cómputo. Además, como desarrollador web, manejo las tecnologías que se
@@ -86,77 +96,44 @@
 
         <div class="skills">
             <div class="title-5">
-                <h1 class="t-i"> Las tecnologías que manejo</h1>
+                <h1 class="t-i"> Las tecnologías</h1>
             </div>
             <div class="wrap">
-                <div class="element">
+                <div class="element tc flex column center" id="tc1">
                     <img src="assets/html.png" alt="HTML" srcset="" width="100vw"><br>
                     <h2>HTML5</h2>
                 </div>
-                <div class="element">
+                <div class="element tc flex column center" id="tc2">
                     <img src="assets/css.png" alt="CSS" srcset="" width="100vw"><br>
                     <h2>CSS3</h2>
                 </div>
-                <div class="element">
+                <div class="element tc flex column center" id="tc3">
                     <img src="assets/js.png" alt="JS" srcset="" width="100vw"><br>
                     <h2>JS</h2>
                 </div>
-                <div class="element">
-                    <img src="assets/php.svg" alt="PHP" srcset="" width="160vw"><br>
-                    <h2>PHP</h2>
-                </div>
-                <div class="element">
-                    <img src="assets/mysql.png" alt="MYSQL" srcset="" width="110vw"><br>
-                    <h2>MYSQL</h2>
-                </div>
-                <div class="element">
-                    <img src="assets/ajax.png" alt="AJAX" srcset="" width="150vw"><br>
-                    <h2>AJAX</h2>
-                </div>
-                <div class="element">
+                <div class="element tc flex column center" id="tc4">
                     <img src="assets/json.png" alt="JSON" srcset="" width="100vw"><br>
                     <h2>JSON</h2>
                 </div>
-            </div>
-        </div>
-        <!--<div class="skills">
-            <div class="title-5">
-                <h1 class="t-i"> Las tecnologías que manejo</h1>
-            </div>
-            <div class="wrap">
-                <div class="element">
-                    <img src="https://pressly.000webhostapp.com/sourcest/_html.png" alt="HTML5" srcset="" width="100vw"><br>
-                    <h2>HTML5</h2>
-                </div>
-                <div class="element">
-                    <img src="https://pressly.000webhostapp.com/sourcest/_css.png" alt="CSS3" srcset="" width="100vw"><br>
-                    <h2>CSS3</h2>
-                </div>
-                <div class="element">
-                    <img src="https://pressly.000webhostapp.com/sourcest/_js.png" alt="JAVASCRIPT" srcset="" width="100vw"><br>
-                    <h2>JS</h2>
-                </div>
-                <div class="element">
-                    <img src="https://pressly.000webhostapp.com/sourcest/_php.svg" alt="PHP" srcset="" width="160vw"><br>
+                <div class="element tc flex column center" id="tc5">
+                    <img src="assets/php.svg" alt="PHP" srcset="" width="160vw"><br>
                     <h2>PHP</h2>
                 </div>
-                <div class="element">
-                    <img src="https://pressly.000webhostapp.com/sourcest/_mysqlpng.png" alt="MYSQL" srcset="" width="110vw"><br>
+                <div class="element tc flex column center" id="tc6">
+                    <img src="assets/mysql.png" alt="MYSQL" srcset="" width="110vw"><br>
                     <h2>MYSQL</h2>
                 </div>
-                <div class="element">
-                    <img src="https://pressly.000webhostapp.com/sourcest/_ajax.png" alt="AJAX" srcset="" width="150vw"><br>
+                <div class="element tc flex column center" id="tc7">
+                    <img src="assets/ajax.png" alt="AJAX" srcset="" width="150vw"><br>
                     <h2>AJAX</h2>
                 </div>
-                <div class="element">
-                    <img src="https://pressly.000webhostapp.com/sourcest/_json.png" alt="JSON" srcset="" width="100vw"><br>
-                    <h2>JSON</h2>
-                </div>
+
             </div>
-        </div>-->
+        </div>
+
 
         <div class="skills" id="t3">
-            <div class="title-5">
+            <div class="title-5 t3">
                 <h1 class="t-i">Mis proyectos</h1>
             </div>
             <div class="wrap">
@@ -238,51 +215,53 @@
                     </div>
                 </div>
             </div>
-        </div><br><br><br>
-        <div class="c-form" id="t4">
-            <div class="bdrp" id="bdrp">
-                <h1>Contáctame</h1><br>
-                <form action="" method="post" class="form-1" id="contact-form">
-                    <div class="code suggestion">
-                        <h2>Puedes enviar <span id="cont" class="time">3</span> mensajes hoy.</h2>
-                    </div>
-
-
-                    <h2 class="title-sp">Nombre:</h2>
-                    <input type="text" name="name" class="input" placeholder="Nombre...">
-                    <h2 class="title-sp">Correo electrónico:</h2>
-                    <input type="email" name="email" class="input" placeholder="Correo electrónico...">
-                    <div class="flex space-between">
-                        <div>
-                            <h2 class="title-sp">Mensaje:</h2>
+            <br><br><br>
+            <a href="#term1">1</a>
+            <a href="#term2">2</a>
+            <div class="c-form" id="t4">
+                <div class="bdrp" id="bdrp">
+                    <h1>Contáctame</h1><br>
+                    <form action="" method="post" class="form-1" id="contact-form">
+                        <div class="code suggestion">
+                            <h2>Puedes enviar <span id="cont" class="time">3</span> mensajes hoy.</h2>
                         </div>
 
-                        <div>
-                            <span><div class="time"><span  id="le">0</span>/200</div>
-                        </span>
-                    </div>
+
+                        <h2 class="title-sp">Nombre:</h2>
+                        <input type="text" name="name" class="input" placeholder="Nombre...">
+                        <h2 class="title-sp">Correo electrónico:</h2>
+                        <input type="email" name="email" class="input" placeholder="Correo electrónico...">
+                        <div class="flex space-between">
+                            <div>
+                                <h2 class="title-sp">Mensaje:</h2>
+                            </div>
+
+                            <div>
+                                <span><div class="time"><span  id="le">0</span>/200</div>
+                            </span>
+                        </div>
+
+                </div>
+                <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input" placeholder="Mensaje..."></textarea>
+                <div id="sgt">
+                </div><br>
+                <button type="submit" id="btn_s" class="btn-1">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+        <button id="b_top">Subir ▲</button>
+        <footer>
+            copyrigths reserved © 2022
+            <div class="flex center margin-top-10px">
+
+                <div>
+                    <img src="assets/brand_white(2).png" alt="" width="30vw">
+                </div>
 
             </div>
-            <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input" placeholder="Mensaje..."></textarea>
-            <div id="sgt">
-            </div><br>
-            <button type="submit" id="btn_s" class="btn-1">Enviar</button>
-            </form>
-        </div>
 
-    </div>
-    <button id="b_top">Subir ▲</button>
-    <footer>
-        copyrigths reserved © 2022
-        <div class="flex center margin-top-10px">
-
-            <div>
-                <img src="assets/brand_white(2).png" alt="" width="30vw">
-            </div>
-
-        </div>
-
-    </footer>
+        </footer>
     </div>
     <div class="menu closed" id="menu" role="menu">
         <div class="c-menu closed" id="sub-menu">
@@ -306,16 +285,16 @@
                         <h4>Menú</h4>
                     </li>
                     <li>
-                        <a href="#t1" class="a-sp">Sobre mí</a>
+                        <a href="#t1" class="a-sp t1_b">Sobre mí</a>
                     </li>
                     <li>
-                        <a href="#t2" class="a-sp">Mis Habilidades</a>
+                        <a href="#t2" class="a-sp t2_b">Mis Habilidades</a>
                     </li>
                     <li>
-                        <a href="#t3" class="a-sp">Mis Proyectos</a>
+                        <a href="#t3" class="a-sp t2_b">Mis Proyectos</a>
                     </li>
                     <li>
-                        <a href="#t4" class="a-sp">
+                        <a href="#t4" class="a-sp t4_b">
                           Contáctame
                         </a>
                     </li>
