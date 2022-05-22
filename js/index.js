@@ -1,14 +1,89 @@
+/*document.addEventListener("DOMContentLoaded", () => {
+    let loading = document.getElementById("loading")
+    let sub_loa = document.querySelector(".sub-load")
+    sub_loa.style.animation = "scalemax 1s"
 
+    setTimeout(() => {
+        loading.remove()
+    }, 1000);
+    //
+})*/
+//observer necesita cargar una función como primer parámetro
+//Como segundo parametro recibe un objeto de los siguientes elementos.
+//root: llama a la función cuando un elemento pasa por un elemento fijo
+//rootMargin: el margen en la pantalla
+//threshold:
+const observer = new IntersectionObserver(an, {
+    root: null,
+    rootMargin: "0px 0px 40px 0px",
+    threshold: 1.0
+})
+
+
+for (let e = 1; e < 5; e++) {
+    observer.observe(document.getElementById("t" + e))
+        /*console.log("t" + e)
+        console.log(document.getElementById("t" + e))
+        console.log(observer)*/
+}
+
+
+
+function an(entries, observer) {
+    /*console.log("entries")
+    console.log(entries)
+    console.log("observer")
+    console.log(observer)*/
+    try {
+        entries.forEach((entries) => {
+            if (entries.isIntersecting) {
+
+                for (let i = 0; i < 2; i++) {
+
+                    document.getElementsByClassName(entries.target.id)[i].classList.add("spc-a-focuss")
+
+                    console.log(observer)
+                    console.log(entries)
+                    console.log(entries.target.id)
+                }
+
+            } else {
+                for (let i = 0; i < 2; i++) {
+                    document.getElementsByClassName(entries.target.id)[i].classList.remove("spc-a-focuss")
+                }
+            }
+        });
+    } catch (error) {
+        console.error(error)
+    }
+
+}
+const a = document.getElementsByClassName("a-sp")
+for (let m = 0; m < a.length; m++) {
+
+    a[m].addEventListener("click", () => {
+        //Se le da click al elemento,cambia de estilo y se omiten los otros elementos en este proceso. Si no tiene la clase de estilo el elemento clickeado, se le añade y a la vez se evita que quede con la clase permanentemente al ser seleccionado otro elemento <a>.
+        if (!a[m].classList[2]) {
+
+            for (let i = 0; i < a.length; i++) {
+                a[i].classList.remove("spc-a-focuss")
+            }
+            a[m].classList.add("spc-a-focuss")
+
+        }
+    })
+}
 const elements = document.getElementsByTagName("*")
-console.log(elements)
+    //console.log(elements)
 window.onload = () => {
     let loader = document.getElementById("progress")
     let loading = document.getElementById("loading")
     let sub_loa = document.querySelector(".sub-load")
-
+        //let aud = document.getElementById("ini")
     if (sub_loa !== null) {
         sub_loa.style.animation = "scalemax 1s"
     }
+    //aud.play()
     setTimeout(() => {
         setTimeout(() => {
             loading.remove()
@@ -22,7 +97,7 @@ window.onload = () => {
     let porcent = 0
     try {
         for (let j = 0; j < elements.length; j++) {
-            console.log(elements[j] == null)
+            //console.log(elements[j] == null)
             if (elements[j] !== null) {
                 num_element++
                 //console.log((num_element * 100) / elements.length)
@@ -33,7 +108,7 @@ window.onload = () => {
     } catch (e) {
         console.error(e)
     }
-    console.log(num_element)
+    //console.log(num_element)
 
 }
 
@@ -108,7 +183,9 @@ for (let m = 0; m < element_a.length; m++) {
 var direction = 0
     //El encabezado de la página
 const header = document.getElementsByTagName("header")[0]
-    //Se asigna un evento scroll a la ventana del navegador
+
+
+//Se asigna un evento scroll a la ventana del navegador
 window.addEventListener("scroll", () => {
         //Se lee el valor del scroll de eje Y
         let scroll_y = window.scrollY
@@ -125,12 +202,16 @@ window.addEventListener("scroll", () => {
             //console.log("Abajo")
             direction = scroll_y
             header.style.top = "-100%"
+
         } else {
             //Arriba 
             //console.log("Arriba")
+
+
             header.style.top = "0"
             direction = scroll_y
         }
+
     })
     //Si se presiona el botón "Volver arriba", el scroll Y es cero.
 const btn_top = document.getElementById("b_top")
@@ -160,6 +241,7 @@ function blur() {
 
     }
 }
+
 //Se valida la información para preparar el envío
 const elemetn_form = document.getElementsByClassName("input")
 let btn_s = document.querySelector("#btn_s")
@@ -295,14 +377,12 @@ function insertAction(id, link) {
 
 }
 
-insertAction("#btn-4a", "https://pressly.000webhostapp.com/talotick/");
-insertAction("#btn-5a", "assets/dadoo");
+
 insertAction("#btn_g", "cv.docx")
 let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://json.com", "https://php.net", "https://www.mysql.com", "https://developer.mozilla.org/es/docs/Web/Guide/AJAX"]
 for (let m = 1; m < 8; m++) {
     insertAction("#tc" + m, links[m])
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("int") == null && localStorage.getItem("tod") == null) {
@@ -321,4 +401,4 @@ document.addEventListener("DOMContentLoaded", () => {
     cont.innerHTML = localStorage.getItem("int")
 })
 
-console.log(localStorage.getItem("int"))
+//console.log(localStorage.getItem("int"))
