@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: "Poor Richard";
+        }
+        
+        @font-face {
+            src: url("assets/PoorRichardOpti.otf");
+            font-family: "Poor Richard";
+        }
+        
+        div[id],
+        h1[id],
+        div[class],
+        a[class="spc-a"] {
+            scroll-margin-top: 5000px;
+        }
+        
+         :root {
+            --color1: #f5f5f5;
+            --color2: #289dd2;
+            --color3: #dfdfdf;
+            --color4: #9f9f9f;
+            --color5: #004d6e;
+            --color6: rgb(27, 27, 27);
+            --color7: rgba(0, 27, 43, 0.822);
+            --color-brownblue: #1d4355;
+            --color-brown: #2f31247e;
+        }
+        
+        html {
+            min-height: 0px;
+            max-height: 600px;
+        }
+        
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            color: var(--color1);
+        }
+        
+        .slider-container {
+            width: 100%;
+            height: 250px;
+            margin: auto;
+            font-size: 1.4rem;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .slider-element {
+                display: flex;
+                flex-direction: column;
+                border-radius: 5px;
+            }
+            .slider-container {
+                height: 650px;
+            }
+            .slider-element>div[class="c_img"]+div[class="c_description"] {
+                width: 100%!important;
+                height: 300px !important;
+            }
+            .c_img {
+                height: 300px !important;
+                width: 100% !important;
+            }
+            .c-description {
+                width: 100% !important;
+            }
+            div[id],
+            h1[id] {
+                scroll-margin-top: 500px;
+            }
+        }
+        
+        .c_links {
+            margin-top: 100px;
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .slider-element {
+                font-size: 1.2rem;
+            }
+        }
+        
+        .btn-1 {
+            padding: 10px;
+            border: none;
+            border: 3px solid var(--color2);
+            border-radius: 2px;
+            background: var(--color2);
+            color: rgb(255, 255, 255);
+            margin: 20px auto;
+            font-size: 20px;
+            transition: 0.3s;
+            display: flex;
+            cursor: pointer;
+        }
+        
+        .btn-1:hover {
+            background: transparent;
+        }
+        
+        .slider-element {
+            display: flex;
+            background: var(--color6);
+            position: absolute;
+            z-index: -10;
+            opacity: 0;
+            border-radius: 5px;
+            display: none;
+            height: 100%;
+        }
+        
+        .slider-element:target {
+            z-index: 10;
+            opacity: 1;
+            animation: desv 0.3s;
+            display: flex;
+        }
+        
+        .c-description {
+            padding: 15px;
+            width: 50%;
+        }
+        
+        .c-description>div {
+            margin: 15px 0px;
+        }
+        
+        .c_img {
+            width: 50%;
+            border-radius: 5px;
+        }
+        
+        .img1 {
+            background: url("assets/b_1ken.png");
+            background-size: cover;
+        }
+        
+        .img2 {
+            background: url("assets/s_6m.png");
+            background-size: cover;
+        }
+        
+        .img3 {
+            background: url("assets/bg.png");
+            background-size: cover;
+        }
+        
+        .img4 {
+            background: url("assets/gb.png");
+            background-size: cover;
+        }
+        
+        .img5 {
+            background: url("assets/dadoo.png");
+            background-size: cover;
+        }
+        
+        .c_links {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .term {
+            opacity: 1;
+            z-index: 1;
+            display: flex;
+        }
+        
+        .spc-a {
+            text-decoration: none;
+            display: flex;
+            background-color: var(--color1);
+            color: var(--color1);
+            width: 30px;
+            height: 30px;
+            margin: 0px 5px;
+            padding: 5px;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            color: rgb(0, 0, 0);
+            border-radius: 50%;
+        }
+        
+        .spc-a-focus {
+            background: var(--color2);
+            color: rgb(255, 255, 255);
+            animation: scla 0.3s;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .space-between {
+            justify-content: space-between;
+        }
+        
+        .center {
+            align-items: center;
+        }
+        
+        @keyframes desv {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes scla {
+            from {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .time {
+            width: auto;
+            padding: 4px;
+            background: var(--color2);
+            border-radius: 5px;
+            color: white;
+            font-weight: 200;
+            display: block;
+        }
+        
+        hr {
+            height: 1px;
+            width: 20px;
+            background: #fff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="c_links">
+            <a href="#tt1" class="spc-a spc-a-focus">1</a>
+            <hr>
+            <a href="#tt2" class="spc-a">2</a>
+            <hr>
+            <a href="#tt3" class="spc-a">3</a>
+            <hr>
+            <a href="#tt4" class="spc-a">4</a>
+            <hr>
+            <a href="#tt5" class="spc-a">5</a>
+        </div>
+
+        <div class="slider-element term" id="tt1">
+
+            <div class="c_img img1"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between">
+                        <div>Bookend</div>
+                        <div class="time">2021¬05</div>
+                    </h2>
+                </div>
+                <p>El proyecto Bookend tiene como finalidad el fortalecimiento del sector educativo y el laboral de Colombia mediante software y apoyo físico.</p>
+                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+            </div>
+
+        </div>
+        <div class="slider-element" id="tt2">
+
+            <div class="c_img img2"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
+                        <div>Sim. pruebas Icfes</div>
+                        <div class="time">2021¬05</div>
+                    </h2>
+                </div>
+                <p>El sim. de pruebas Icfes hace parte de Bookendtest. Su objetivo es preparar a los estudiantes del país, para las pruebas Saber. Es aún un prototipo.</p>
+                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+            </div>
+
+        </div>
+        <div class="slider-element" id="tt3">
+
+            <div class="c_img img3"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
+                        <div>App Web Bookend</div>
+                        <div class="time">2021¬09</div>
+                    </h2>
+                </div>
+                <p>El desarrollo de una aplicación web creada por el proyecto Bookend, dirigida en torno al fortalecimiento del sector laboral. Es aún un prototipo.</p>
+                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+            </div>
+
+        </div>
+        <div class="slider-element" id="tt4">
+
+            <div class="c_img img4"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
+                        <div>Talotick</div>
+                        <div class="time">2021¬10</div>
+                    </h2>
+                </div>
+                <p>Un pequeño sistema para registrar participantes y escoger automaticamente al ganador dada una fecha de juego.</p>
+                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+            </div>
+
+        </div>
+        <div class="slider-element" id="tt5">
+
+            <div class="c_img img5"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
+                        <div>Dadoo</div>
+                        <div class="time">2021¬04</div>
+                    </h2>
+                </div>
+                <p>La virtualización de los típicos dados físicos, corresponde a la primera fase de mi aprendizaje.</p>
+                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function insertAction(id, link, indice) {
+            try {
+                document.getElementsByClassName(id)[indice].addEventListener("click", () => {
+                    window.open(link, "_blank")
+                })
+            } catch (e) {
+                console.error(e)
+            }
+
+
+        }
+        const links = ["", "", "", "", "assets/dadoo"]
+        for (let m = 0; m < links.length; m++) {
+            insertAction("btn-1", links[m], m)
+            document.getElementsByClassName("spc-a")[m].addEventListener("click", () => {
+                //Se le da click al elemento,cambia de estilo y se omiten los otros elementos en este proceso. Si no tiene la clase de estilo el elemento clickeado, se le añade y a la vez se evita que quede con la clase permanentemente al ser seleccionado otro elemento <a>.
+                if (!document.getElementsByClassName("spc-a")[m].classList[1]) {
+
+                    for (let i = 0; i < links.length; i++) {
+                        document.getElementsByClassName("spc-a")[i].classList.remove("spc-a-focus")
+                        document.getElementsByClassName("spc-a")[m].classList.add("spc-a-focus")
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
