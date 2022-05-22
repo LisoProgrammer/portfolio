@@ -1,18 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", () => {
-    let loading = document.getElementById("loading")
-    let sub_loa = document.querySelector(".sub-load")
-    sub_loa.style.animation = "scalemax 1s"
-
-    setTimeout(() => {
-        loading.remove()
-    }, 1000);
-    //
-})*/
-//observer necesita cargar una función como primer parámetro
-//Como segundo parametro recibe un objeto de los siguientes elementos.
-//root: llama a la función cuando un elemento pasa por un elemento fijo
-//rootMargin: el margen en la pantalla
-//threshold:
 const observer = new IntersectionObserver(an, {
     root: null,
     rootMargin: "0px 0px 40px 0px",
@@ -400,5 +385,3 @@ document.addEventListener("DOMContentLoaded", () => {
     let cont = document.getElementById("cont")
     cont.innerHTML = localStorage.getItem("int")
 })
-
-//console.log(localStorage.getItem("int"))
