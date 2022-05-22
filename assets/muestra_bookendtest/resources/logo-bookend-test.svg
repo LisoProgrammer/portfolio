@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="537.69293"
+   height="217.18898"
+   viewBox="0 0 142.26458 57.464621"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="logo-bookend.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.74118967"
+     inkscape:cx="220.59131"
+     inkscape:cy="346.06527"
+     inkscape:window-width="924"
+     inkscape:window-height="1001"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     width="209mm"
+     units="px"
+     height="252.18898px" />
+  <defs
+     id="defs2">
+    <rect
+       x="369.67596"
+       y="464.11871"
+       width="70.157478"
+       height="39.126286"
+       id="rect80665" />
+    <rect
+       x="265.78891"
+       y="442.5318"
+       width="373.72351"
+       height="157.85432"
+       id="rect22267" />
+    <rect
+       x="232.05936"
+       y="447.92853"
+       width="383.16779"
+       height="68.808296"
+       id="rect4382" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#289dd2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.270467"
+       id="path123"
+       cx="70.68029"
+       cy="28.736177"
+       rx="38.909855"
+       ry="27.665264" />
+    <rect
+       style="fill:#1d4355;fill-opacity:1;stroke-width:0.290538"
+       id="rect1108"
+       width="141.36057"
+       height="30.699518"
+       x="0.35697263"
+       y="15.349756" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-45.335336,-98.524039)"
+       id="text22265"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:53.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect22267);fill:#ffffff"
+       x="145.32553"
+       y="0"><tspan
+         x="270.41332"
+         y="510.65195"
+         id="tspan58"><tspan
+   style="font-size:74.6667px"
+   id="tspan56">Bookend</tspan>
+</tspan><tspan
+         x="452.65039"
+         y="584.52221"
+         id="tspan60">
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-35.697115,-85.316106)"
+       id="text80663"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;white-space:pre;shape-inside:url(#rect80665);fill:#ffffff"><tspan
+         x="369.67578"
+         y="488.44798"
+         id="tspan62">Test</tspan></text>
+  </g>
+</svg>

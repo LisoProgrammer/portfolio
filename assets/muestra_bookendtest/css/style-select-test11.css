@@ -1,0 +1,58 @@
+
+
+.indicator{
+	width: 90%;
+	height: auto;
+	margin: 10px auto 20px auto;
+	font-weight: bold;
+	color: white;
+	background: #1d4355;
+	padding: 10px;
+	border-radius: 5px;
+}
+.c-botones1{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto 20px auto;
+
+}
+.display{
+	margin: 0px auto 0px auto;
+	display: flex;
+	flex-direction: column;
+}
+.cont{
+	margin: 0px auto 0px auto;
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    color: #999;
+}
+#title{
+	margin: auto 0px auto 0px;
+	color: inherit;
+}
+.lin{
+	margin: -2px 0px 0px 5px;
+	text-decoration: none;
+	color: inherit;
+	font-weight: 1000;
+}
+body{
+	overflow-y: hidden;
+	background: white;
+}
+input{
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 350px){
+	.display{
+		width: 95%;
+	}
+	.cont{
+		font-size: 14px ;
+	}
+}

@@ -1,0 +1,118 @@
+.v-d {
+    visibility: visible;
+    z-index: 100;
+    animation-name: burbuja5;
+    animation-duration: 0.5s;
+}
+
+.resulteffect {
+    padding: 10px;
+    display: flex;
+}
+
+.active {
+    animation: parp 1.5s;
+}
+
+.off {
+    animation: none;
+}
+
+.inv-d {
+    visibility: hidden;
+}
+
+.hEa-down {
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0px 1px 20px 0px #289dd2;
+    animation-name: EyS;
+    animation-duration: 0.1s;
+}
+
+.hEa-up {
+    position: initial;
+    background: white;
+    animation-name: SyE;
+    animation-duration: 0.1s;
+}
+
+
+/*.getResults{
+  animation-duration: 1s;
+  animation-name: parp;
+  padding: 10px;
+}*/
+
+#printButton {
+    color: var(--color-white);
+    background: #2a5d75;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    margin: auto 0px auto auto;
+    padding: 10px;
+}
+
+#printButton:hover {
+    background: var(--color-brownblue);
+}
+
+.reco1,
+.reco2,
+.reco3,
+.reco4,
+.reco5,
+.reco6,
+.reco7,
+.reco8,
+.reco9,
+.reco10 {
+    width: 100%;
+    height: auto;
+    margin: 5px auto 5px auto;
+    border-radius: 3px;
+    background: #f7c7c7;
+}
+
+.recoBordert {
+    background: rgb(105, 211, 105);
+    border: 3px solid rgb(43, 175, 43);
+    padding: 5px;
+}
+
+.recoBorder {
+    border: 3px solid red;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    margin: 5px auto 5px auto;
+    border-radius: 5px;
+    background: #f7c7c7;
+}
+
+.recoBorderInf {
+    border: 3px solid #ad9000;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    margin: 5px auto 5px auto;
+    border-radius: 5px;
+    background: #fbea96;
+}
+
+#HeAFix {
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#HeAIni {
+    position: initial;
+    box-shadow: none;
+    position: relative;
+    transform: translate(0px, 0px);
+    z-index: 1000;
+}
