@@ -27,9 +27,9 @@ function an(entries, observer) {
 
                     document.getElementsByClassName(entries.target.id)[i].classList.add("spc-a-focuss")
 
-                    console.log(observer)
-                    console.log(entries)
-                    console.log(entries.target.id)
+                    //console.log(observer)
+                    //console.log(entries)
+                    //console.log(entries.target.id)
                 }
 
             } else {
