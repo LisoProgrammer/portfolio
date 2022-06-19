@@ -806,7 +806,7 @@
                      height: 48rem;
                  }
                  #app_b_tes{
-                     width:90%                        
+                     width:100% !!important;                        
                  }        
              }
              
