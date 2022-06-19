@@ -1,4 +1,4 @@
-             * {
+ * {
                  box-sizing: border-box;
                  -webkit-box-sizing: border-box;
                  -moz-box-sizing: border-box;
@@ -12,14 +12,14 @@
              }
              
              #app_bookendtest {
-                 width: 90%;
+                 width: 100%;
                  margin: 20px auto;
                  position: relative;
                  top: -90px;
              }
              
              #app_b_test {
-                 width: 80%;
+                 width: 90%;
                  max-width: 790px;
                  height: 500px;
                  border-radius: 10px;
@@ -805,15 +805,14 @@
                  .slider {
                      height: 48rem;
                  }
-                 #app_b_tes{
-                     width:100% !!important;                        
-                 }        
+                         
              }
              
              @media only screen and (max-width: 400px) {
                  .slider {
                      height: 50rem;
                  }
+                 
              }
              
              .code {
