@@ -805,6 +805,9 @@
                  .slider {
                      height: 48rem;
                  }
+                 #app_b_tes{
+                     width:90%                        
+                 }        
              }
              
              @media only screen and (max-width: 400px) {
