@@ -364,7 +364,7 @@ function insertAction(id, link) {
 
 
 insertAction("#btn_g", "cv.docx")
-let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://json.com", "https://php.net", "https://www.mysql.com", "https://developer.mozilla.org/es/docs/Web/Guide/AJAX"]
+let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://json.com", "https://php.net", "https://python.org", "https://www.mysql.com", "https://developer.mozilla.org/es/docs/Web/Guide/AJAX"]
 for (let m = 1; m < 8; m++) {
     insertAction("#tc" + m, links[m])
 }
