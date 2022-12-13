@@ -9,6 +9,7 @@
 body {
     background: black;
     min-width: 340px;
+    zoom: 150%;
 }
 
 .container {
