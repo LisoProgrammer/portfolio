@@ -276,7 +276,7 @@ btn_s.addEventListener("click", function(e) {
         let valueEncMsg = encodeURIComponent(form.msg.value)
         let query = "name=" + valueEncNa + "&email=" + valueEncEM + "&msg=" + valueEncMsg;
         //Se enviará el mensaje por los medios establecidos
-        https.open("POST", "https://testingdevelope.000webhostapp.com/response.php", true)
+        https.open("POST", "https://depauperate-adaptio.000webhostapp.com/response.php", true)
         sgt.innerHTML = "Enviando..."
         sgt.className = "code sending"
 
