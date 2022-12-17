@@ -9,10 +9,10 @@ if($method == "OPTIONS") {
 }
 
 error_reporting(0);
-if(isset($_GET)){
-    $name = $_GET["name"];
-    $email = $_GET["email"];
-    $msg = "Soy: $name. \nEmail: $email. \nMensaje:".$_GET["msg"];
+if(isset($_POST)){
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $msg = "Soy: $name. \nEmail: $email. \nMensaje:".$_POST["msg"];
     $send = mail("zlisandro5@gmail.com","MENSAJE NUEVO DESDE PORTAFOLIO WEB",$msg);
     if($send){
         echo "Tu mensaje se envió con éxito.";
