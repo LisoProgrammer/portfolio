@@ -1,5 +1,4 @@
 button_fs = document.getElementById("fs-controller")
-body = document.body
 icon = document.getElementById("icon-fs")
 state = 0
 button_fs.addEventListener("click",()=>{
@@ -16,7 +15,7 @@ button_fs.addEventListener("click",()=>{
         state=0
         console.log(state)
         icon.src="resources/open_fs.png"
-        body.exitFullscreen()
+        document.exitFullscreen()
     }
     
 })
