@@ -11,7 +11,7 @@ button_fs.addEventListener("click",()=>{
         body.requestFullscreen()
         icon.src="resources/exit_fs.png"
     }
-    if(state==1 && document.exitFullscreen){
+    else if(state==1 && document.exitFullscreen){
         //Se desactiva
         state=0
         console.log(state)
