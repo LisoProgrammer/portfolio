@@ -6,7 +6,7 @@ button_fs.addEventListener("click",()=>{
     if(state==0){
         //El modo pantalla completa está desactivado.
         //Entonces, se activa
-        etate=1
+        state=1
         console.log(state)
         body.requestFullscreen()
         icon.src="resources/exit_fs.png"
