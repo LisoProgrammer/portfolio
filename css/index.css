@@ -23,8 +23,9 @@
                  max-width: 790px;
                  height: 500px;
                  border-radius: 10px;
-                 border: none;
-             }
+                 border: 15px solid black;
+                 box-shadow: -1px 1px 20px 0px black;
+              }
              
               :root {
                  --color1: #f5f5f5;
