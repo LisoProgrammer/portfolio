@@ -15,4 +15,5 @@ button_fs.addEventListener("click",()=>{
         icon.src="resources/open_fs.png"
         body.exitFullscreen()
     }
+    console.log(state)
 })
