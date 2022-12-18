@@ -8,11 +8,11 @@ button_fs.addEventListener("click",()=>{
         //Entonces, se activa
         etate=1
         body.requestFullscreen()
-        icon.src="exit_fs.png"
+        icon.src="resources/exit_fs.png"
     }else{
         //Se desactiva
         state=0
-        icon.src="open_fs.png"
+        icon.src="resources/open_fs.png"
         body.exitFullscreen()
     }
 })
