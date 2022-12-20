@@ -1,5 +1,5 @@
 const observer = new IntersectionObserver(an, {
-    root: document.getElementsByClassName("c")[0],
+    root: null,
     rootMargin: "0px",
     threshold: 1.0
 })
