@@ -1,7 +1,7 @@
 const observer = new IntersectionObserver(an, {
     root: null,
-    rootMargin: "0px",
-    threshold: 1.0
+    rootMargin: "0px 0px 50px 0px",
+    threshold: 0.4
 })
 
 
@@ -15,9 +15,9 @@ for (let e = 1; e < 5; e++) {
 
 
 function an(entries, observer) {
-    /*console.log("entries")
+    console.log("entries")
     console.log(entries)
-    console.log("observer")
+    /*console.log("observer")
     console.log(observer)*/
     try {
         entries.forEach((entries) => {
