@@ -25,8 +25,20 @@
                  border-radius: 10px;
                  border: 15px solid black;
                  box-shadow: -1px 1px 20px 0px black;
+                 border-top: 32px solid black;
               }
-             
+
+              .cam{
+                width: 18px;
+                height: 18px;
+                display: block;
+                border-radius: 50%;
+                border: 5px solid rgb(80, 80, 80);
+                background: rgb(125, 125, 125);
+                position: relative;
+                margin: auto;
+                top: 25px;
+              }
               :root {
                  --color1: #f5f5f5;
                  --color2: #289dd2;
