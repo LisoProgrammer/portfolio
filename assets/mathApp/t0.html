@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>SUMA</title>
+  <style type="text/css" media="all">
+     
+  </style>
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div id="spi">
+    
+  </div>
+  <div class="put" id="punt">
+    0
+  </div>
+ <div class="titek">
+   Resuelve
+ </div>
+ <div class="titek">
+   <select name="op" id="t">
+     <option value="9">1 cifra</option>
+     <option value="99">2 cifras</option>
+     <option value="999">3 cifras</option>
+   </select>
+ </div>
+ <div class="titek">
+  <span id="res"></span>
+ </div>
+  <div class="ope">
+    <div class="op1" id="n1">
+    </div>
+    <div class="operando">
+      +
+    </div>
+    <div class="op2" id="n2">
+    </div>
+    <div class="igual">
+      =
+    </div>
+    <div class="results" id="re">
+      <input type="number" name="on" id="on" style="min-width: 50px; max-width: 100px; margin:0; position: relative; top: -10px" placeholder="?" readonly />
+    </div>
+  </div>
+  <div class="content-input">
+     <input type="number" name="in" id="in" placeholder="Escribe tu respuesta aquí..."/>
+  </div>
+ <script defer="on">
+   window.addEventListener("error", function(){
+     alert("Hubo un error")
+   })
+ </script>
+  <script src="main(0).js" defer></script>
+</body>
+</html>

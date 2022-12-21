@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style type="text/css" media="all">
+      .box{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 10px auto;
+      }
+      .sub-box{
+        
+        width: 40%;
+        border: 5px solid #222d6d;
+        border-radius: 10px;
+        margin: 5%;
+        text-align: center;
+        color: #222d6d;
+        background: white;
+        transition: 0.3s;
+        
+      }
+      .sub-box:hover{
+        transform: scale(1.1);
+      }
+      .sym{
+        width: 100%;
+        height: 170px;
+        background: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 130px;
+        color: #222d6d;
+        pointer-events: none;
+      }
+      .name{
+        padding: 10px;
+        background: #3DADFF;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    </style>
+    <title>Título de la app</title>
+</head>
+
+<body>
+ <h1 style="color: #222d6d; text-align: center">Título de la app</h1>
+<div class="box">
+  
+  <div class="sub-box" id="t1">
+    <div class="sym">
+      +
+    </div>
+    <div class="name">
+      Suma
+    </div>
+  </div>
+  
+  <div class="sub-box" id="t2">
+    <div class="sym">
+      -
+    </div>
+    <div class="name">
+      Resta
+    </div>
+  </div>
+  <div class="sub-box" id="t3">
+  <div class="sym">
+    ×
+  </div>
+  <div class="name">
+    Multiplicación
+  </div>
+  </div>
+  <div class="sub-box" id="t4">
+    <div class="sym">
+      ÷
+    </div>
+    <div class="name">
+      Division
+    </div>
+  </div>
+</div>
+<div style="text-align: center ">
+  Desarrollado por Lisandro Zapata
+  
+</div>
+<script type="text/javascript" charset="utf-8">
+"use strict"
+document.addEventListener("contextmenu", function(){
+  return false
+})
+  for(let i = 0; i<4; i++){
+    document.getElementsByClassName("sub-box")[i].addEventListener('click',function(){
+      window.location.href="t"+i+".html"
+     
+    })
+    
+    
+    }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+  *{
+     font-family: sans-serif;
+     box-sizing: border-box;
+    user-select: none;
+   }
+   body{
+     opacity: 1;
+     animation: trr 1s;
+   }
+   @keyframes trr{
+     from{opacity:0}
+     to{opacity:1}
+   }
+   input{
+     width: 100%;
+     height: auto;
+     border: 5px solid #3DADFF;
+     border-radius: 10px;
+     outline: none;
+     font-size: 40px;
+     text-align: center;
+   }
+   body{
+     background: #f4f1ea}
+   #on{
+     min-width: inherit;
+     max-width: auto;
+    } 
+   .content-input{
+     margin: 50px auto;
+     width: 300px;
+   }
+   .ope{
+     display: flex;
+     height: auto;
+     width: auto;
+     justify-content: center;
+     font-size: 70px;
+     color: #222d6d;
+     margin: 30px auto;
+     transition: all 0.3s;
+   }
+   .titek{
+     font-size: 50px;
+     color: #222d6d;
+     text-align: center;
+     margin-top: 5px; 
+     transition: all 1s;
+   }
+   .ani{
+     animation: re 0.5s;
+     position: relative;
+   }
+   #in::placeholder{
+     font-size: 15px;
+     position: relative;
+     top: -7px;
+   }
+   #t{
+     border:  5px solid #3DADFF;
+     border-radius: 5px;
+   }
+   @keyframes re{
+     25%{right: 0px}
+     50%{right:-20px}
+     75%{right: 20px}
+     100%{right: 0px}
+   }
+     .spinner{
+     position: fixed;
+     background: transparent;
+     border: 5px solid transparent;
+     border-top-color: #42445A;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     animation: tr 2.5s infinite;
+   }
+   @keyframes tr{
+     0%{transform: rotate(0deg)}
+     100%{transform: rotate(360deg)}
+   }
+   .put{
+     position: fixed;
+     right: 0;
+   }
