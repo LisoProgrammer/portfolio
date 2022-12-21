@@ -27,7 +27,7 @@ document.addEventListener("keydown", function(){
    if(input.value==ope){
      res.innerHTML="👍"
      res.className="ani"
-     sumPu()
+     
      spinner.className="spinner"
        setTimeout(function(){
        res.className=""
@@ -38,16 +38,14 @@ document.addEventListener("keydown", function(){
    }else{
      res.innerHTML="👎"
      res.className="ani"
-     if(boxp.innerHTM=="-10"){
-    alert("Ups! Perdiste. Obtuviste 0 puntos")
-    window.location.href="index.html"
+     
   }
-     a()
+    
      setTimeout(function(){
        res.className=""
      },1000)
    }
-  }}
+  }
     
 )
 input.addEventListener("keyup",function(){
@@ -69,19 +67,13 @@ function defIn(){
 }
 
 function sumPu(){
- puntos = puntos + 10
+  puntos = puntos + 10
   boxp.innerHTML=puntos
   return puntos
 }
 function a(){
   puntos = puntos-10
   boxp.innerHTML=puntos
-  if(puntos == 0){
-    alert("Ups! Perdiste. Obtuviste 0 puntos")
-    window.location.href="index.html"
-    document.body.removeChild("div")
-  }
-  
 }
 
 
