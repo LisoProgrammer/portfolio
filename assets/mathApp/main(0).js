@@ -65,10 +65,12 @@ function ini(operation){
            bx_result.className="box_result box_correct"
            bx_result.innerHTML="Correcto"
            audio_apl.play()
+           input.setAttribute("readonly","readonly")
            spinner.className="spinner"
              setTimeout(function(){
              bx_result.className = "box_result box_none"
              spinner.className=""
+             input.removeAttribute("readonly")
            },1000)
            setTimeout(defIn,2000)
            
@@ -77,12 +79,12 @@ function ini(operation){
            //res.className="ani"
            bx_result.className="box_result box_incorrect"
            bx_result.innerHTML="Incorrecto"
-
+           input.setAttribute("readonly","readonly")
            audio_error.play()
         }
-          
            setTimeout(function(){
             bx_result.className = "box_result box_none"
+            input.removeAttribute("readonly")
           },1000)
          }
         }

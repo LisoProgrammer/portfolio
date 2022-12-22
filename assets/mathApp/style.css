@@ -39,7 +39,6 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: 0.4s;
       width: 100vw;
       height: 110vh;
       margin: 0;
@@ -49,20 +48,41 @@
       color: #fff;
       top: -10px;
       z-index: -50;
+
     }
     .box_none{
       display: none;
+      animation: desaparecer 5s;
     }
     .box_correct{
       background: rgba(0, 133, 0, 0.6);
       opacity: 1;
       z-index: 1000;
+      animation: aparecer 0.3s;
     }
     .box_incorrect{
       background: rgba(255, 217, 0, 0.6);
       opacity: 1;
       z-index: 1000;
       color: rgb(0, 0, 0);
+      animation: aparecer 0.3s;
+
+    }
+    @keyframes aparecer{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+    @keyframes desaparecer{
+      from{
+        opacity: 1;
+      }
+      to{
+        opacity: 0;
+      }
     }
    .content-input{
      margin: 50px auto;
@@ -109,8 +129,8 @@
     border: none;
     border: 3px solid #289dd2;
     border-radius: 2px;
-    background: #289dd2;
-    color: rgb(255, 255, 255);
+    background: #289cd200;
+    color: rgb(0, 0, 0);
     margin: 20px;
     font-size: 20px;
     transition: 0.3s;
