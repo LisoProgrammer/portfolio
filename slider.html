@@ -169,7 +169,10 @@
             background: url("assets/dadoo.png");
             background-size: cover;
         }
-        
+        .img6{
+            background: url("assets/mathapp.jpg");
+            background-size: cover;
+        }
         .c_links {
             width: 100%;
             height: auto;
@@ -264,7 +267,8 @@
             <a href="#tt1" class="spc-a spc-a-focus">1</a>
             <hr>
             <a href="#tt2" class="spc-a">2</a>
-            
+            <hr>
+            <a href="#tt3" class="spc-a">3</a>
             <!--
 Se debe ir cambiando los números y id a medida en que se creen proyectos
             <a href="#tt1" class="spc-a spc-a-focus">1</a>
@@ -296,6 +300,22 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
             </div>
 
         </div>-->
+        <div class="slider-element term" id="tt1">
+
+            <div class="c_img img5"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
+                        <div>Dadoo</div>
+                        <div class="time">2021/04</div>
+                    </h2>
+                </div>
+                <p>La virtualización de los típicos dados físicos, corresponde a la primera fase de mi aprendizaje.</p>
+                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+            </div>
+
+        </div>
         <div class="slider-element" id="tt2">
 
             <div class="c_img img2"></div>
@@ -309,6 +329,23 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                 </div>
                 <p>El sim. de pruebas Icfes. Su objetivo es preparar a los estudiantes del país, para las pruebas Saber. Es aún un prototipo.</p>
                 <!--<button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>-->
+            </div>
+
+        </div>            
+        <div class="slider-element" id="tt3">
+
+                <div class="c_img img6"></div>
+    
+                <div class="c-description">
+                    <div class="content-title">
+                        <h2 class="flex space-between center">
+                            <div>mathApp</div>
+                            <div class="time">2022/05</div>
+                        </h2>
+                    </div>
+                    <p>Una aplicación web para entrenar a los niños y jóvenes estudiantes en las operaciones básicas de las matemáticas.</p>
+                    <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+                </div>
             </div>
 <!--
         </div>
@@ -344,26 +381,11 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
             </div>--->
 <!--
 Se deben ir cambiando los ids
-Colocar adem´s la clase term para que sea visible el elemento del slider
+Colocar además la clase term para que sea visible el elemento del slider
 -->
-        </div>
-        <div class="slider-element term" id="tt1">
+        
 
-            <div class="c_img img5"></div>
-
-            <div class="c-description">
-                <div class="content-title">
-                    <h2 class="flex space-between center">
-                        <div>Dadoo</div>
-                        <div class="time">2021/04</div>
-                    </h2>
-                </div>
-                <p>La virtualización de los típicos dados físicos, corresponde a la primera fase de mi aprendizaje.</p>
-                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
-            </div>
-
-        </div>
-    </div>
+    
     <script>
         function insertAction(id, link, indice) {
             try {
@@ -372,11 +394,13 @@ Colocar adem´s la clase term para que sea visible el elemento del slider
                 })
             } catch (e) {
                 console.error(e)
+                console.log(document.getElementsByClassName(id)[indice])
+                console.log("Indice con error:"+indice)
             }
 
 
         }
-        const links = ["assets/dadoo", "", "", "", ""]
+        const links = ["assets/dadoo", "assets/mathApp"]
         for (let m = 0; m < links.length; m++) {
             insertAction("btn-1", links[m], m)
             document.getElementsByClassName("spc-a")[m].addEventListener("click", () => {
