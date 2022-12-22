@@ -93,9 +93,79 @@ function ini(operation){
       break
     case "-":
       console.log("-")
+      document.addEventListener("keydown", function(){
+  
+        if(event.key == "Enter"){
+         ope = (parseInt(boxn1.innerHTML)) - (parseInt(boxn2.innerHTML))
+         if(input.value==ope){
+           //res.innerHTML="👍"
+           //res.className="ani"
+           bx_result.className="box_result box_correct"
+           bx_result.innerHTML="Correcto"
+           audio_apl.play()
+           input.setAttribute("readonly","readonly")
+           spinner.className="spinner"
+             setTimeout(function(){
+             bx_result.className = "box_result box_none"
+             spinner.className=""
+             input.removeAttribute("readonly")
+           },1000)
+           setTimeout(defIn,2000)
+           
+         }else{
+           //res.innerHTML="👎"
+           //res.className="ani"
+           bx_result.className="box_result box_incorrect"
+           bx_result.innerHTML="Incorrecto"
+           input.setAttribute("readonly","readonly")
+           audio_error.play()
+        }
+           setTimeout(function(){
+            bx_result.className = "box_result box_none"
+            input.removeAttribute("readonly")
+          },1000)
+         }
+        }
+          
+      )
       break
     case "*":
       console.log("*")
+      document.addEventListener("keydown", function(){
+  
+        if(event.key == "Enter"){
+         ope = (parseInt(boxn1.innerHTML)) * (parseInt(boxn2.innerHTML))
+         if(input.value==ope){
+           //res.innerHTML="👍"
+           //res.className="ani"
+           bx_result.className="box_result box_correct"
+           bx_result.innerHTML="Correcto"
+           audio_apl.play()
+           input.setAttribute("readonly","readonly")
+           spinner.className="spinner"
+             setTimeout(function(){
+             bx_result.className = "box_result box_none"
+             spinner.className=""
+             input.removeAttribute("readonly")
+           },1000)
+           setTimeout(defIn,2000)
+           
+         }else{
+           //res.innerHTML="👎"
+           //res.className="ani"
+           bx_result.className="box_result box_incorrect"
+           bx_result.innerHTML="Incorrecto"
+           input.setAttribute("readonly","readonly")
+           audio_error.play()
+        }
+           setTimeout(function(){
+            bx_result.className = "box_result box_none"
+            input.removeAttribute("readonly")
+          },1000)
+         }
+        }
+          
+      )
       break
     case "/":
       console.log("/")

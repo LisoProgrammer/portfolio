@@ -21,6 +21,8 @@
      outline: none;
      font-size: 40px;
      text-align: center;
+     padding: 10px;
+     
    }
    body{
      background: #f4f1ea}
@@ -30,8 +32,6 @@
      min-width: 50px; 
      max-width: 150px; 
      margin:0; 
-     position: relative; 
-     top: -10px
     } 
     .box_result{
       position: absolute;
@@ -102,6 +102,7 @@
      color: #222d6d;
      margin: 30px auto;
      transition: all 0.3s;
+     align-items: center;
    }
    .titek{
      font-size: 50px;
@@ -115,10 +116,36 @@
      position: relative;
    }
    #in::placeholder{
-     font-size: 15px;
-     position: relative;
-     top: -7px;
+     font-size: 16px;
+    }
+   #in{
+    caret-color: #289dd2;
+   }  
+   .content-input:hover::before{
+    content: "Enter para ingresar la respuesta.";
+    width: auto;
+    height: 30px;
+    position: relative;
+    background: rgb(255, 247, 153);
+    padding: 5px;
+    box-shadow: 0px 0px 10px rgb(210, 210, 210);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 40%;
+    
    }
+   /*.content-input:hover div::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: 10px solid rgb(255, 247, 153);
+    border-left: 5px solid transparent ;
+    border-right: 5px solid transparent ;
+    position: fixed;
+    bottom: 200px;
+   }*/
    #t{
      border:  5px solid #3DADFF;
      border-radius: 5px;
@@ -136,6 +163,9 @@
     transition: 0.3s;
     cursor: pointer;
     text-decoration: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
   }
 
    @keyframes re{
@@ -174,5 +204,14 @@
     }
     .sub-box{
       width: 90% !important;
+    }
+    .titek{
+      font-size: 30px;
+    }
+    .ope{
+      font-size: 30px;
+    }
+    input{
+      font-size: 20px;
     }        
 }
