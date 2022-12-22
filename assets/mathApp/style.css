@@ -109,3 +109,17 @@
      position: fixed;
      right: 0;
    }
+   @media only screen and (max-width: 650px) {
+    .box {
+      flex-wrap: nowrap;
+      width: 90%;
+      margin: 10px auto;
+      max-width: 800px;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+    .sub-box{
+      width: 90%;
+    }        
+}
