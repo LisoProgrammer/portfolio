@@ -173,6 +173,6 @@
       align-items: center;
     }
     .sub-box{
-      width: 90%;
+      width: 90% !important;
     }        
 }
