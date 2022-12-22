@@ -6,6 +6,8 @@
    body{
      opacity: 1;
      animation: trr 1s;
+     margin: 0;
+     overflow: hidden;
    }
    @keyframes trr{
      from{opacity:0}
@@ -31,6 +33,37 @@
      position: relative; 
      top: -10px
     } 
+    .box_result{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: 0.4s;
+      width: 100vw;
+      height: 110vh;
+      margin: 0;
+      opacity: 0;
+      justify-content: center;
+      font-size: 50px;
+      color: #fff;
+      top: -10px;
+      z-index: -50;
+    }
+    .box_none{
+      display: none;
+    }
+    .box_correct{
+      background: rgba(0, 133, 0, 0.6);
+      opacity: 1;
+      z-index: 1000;
+    }
+    .box_incorrect{
+      background: rgba(255, 217, 0, 0.6);
+      opacity: 1;
+      z-index: 1000;
+      color: rgb(0, 0, 0);
+    }
    .content-input{
      margin: 50px auto;
      width: 300px;

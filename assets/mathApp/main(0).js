@@ -1,5 +1,5 @@
-var puntos = 0
 const option = document.getElementById('t')
+const bx_result = document.getElementById("box_res")
 function ale(){
   let num = Math.ceil(Math.random()*(option.value))
   return num
@@ -20,34 +20,9 @@ option.addEventListener('change', function (){
  if(boxn1.innerHTML=="" && boxn2.innerHTML==""){
   defIn()
 }
-document.addEventListener("keydown", function(){
-  
-  if(event.key == "Enter"){
-   ope = (parseInt(boxn1.innerHTML)) + (parseInt(boxn2.innerHTML))
-   if(input.value==ope){
-     res.innerHTML="👍"
-     res.className="ani"
-     
-     spinner.className="spinner"
-       setTimeout(function(){
-       res.className=""
-       spinner.className=""
-     },1000)
-     setTimeout(defIn,2000)
-     
-   }else{
-     res.innerHTML="👎"
-     res.className="ani"
-     
-  }
-    
-     setTimeout(function(){
-       res.className=""
-     },1000)
-   }
-  }
-    
-)
+audio_apl = document.getElementById("apl-a")
+audio_error = document.getElementById("err-a")
+
 input.addEventListener("keyup",function(){
   input2.value=input.value
   
@@ -76,5 +51,56 @@ function a(){
   boxp.innerHTML=puntos
 }
 
+function ini(operation){
+  switch(operation){
+    case "+":
+      console.log("+")
+      document.addEventListener("keydown", function(){
+  
+        if(event.key == "Enter"){
+         ope = (parseInt(boxn1.innerHTML)) + (parseInt(boxn2.innerHTML))
+         if(input.value==ope){
+           //res.innerHTML="👍"
+           //res.className="ani"
+           bx_result.className="box_result box_correct"
+           bx_result.innerHTML="Correcto"
+           audio_apl.play()
+           spinner.className="spinner"
+             setTimeout(function(){
+             bx_result.className = "box_result box_none"
+             spinner.className=""
+           },1000)
+           setTimeout(defIn,2000)
+           
+         }else{
+           //res.innerHTML="👎"
+           //res.className="ani"
+           bx_result.className="box_result box_incorrect"
+           bx_result.innerHTML="Incorrecto"
 
+           audio_error.play()
+        }
+          
+           setTimeout(function(){
+            bx_result.className = "box_result box_none"
+          },1000)
+         }
+        }
+          
+      )
+      break
+    case "-":
+      console.log("-")
+      break
+    case "*":
+      console.log("*")
+      break
+    case "/":
+      console.log("/")
+      break
+    default:
+      console.log("Selección incorrecta.")
+  }
+}
+ini("+")
 
