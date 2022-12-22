@@ -7,7 +7,7 @@
      opacity: 1;
      animation: trr 1s;
      margin: 0;
-     overflow: hidden;
+     overflow-x: hidden;
    }
    @keyframes trr{
      from{opacity:0}
