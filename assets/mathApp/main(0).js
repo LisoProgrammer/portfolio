@@ -1,8 +1,19 @@
 const option = document.getElementById('t')
 const bx_result = document.getElementById("box_res")
+
+puntos = localStorage.getItem("puntos")
+caja_p = document.getElementById("p_total")
+caja_p.innerHTML = puntos 
+
 function ale(){
   let num = Math.ceil(Math.random()*(option.value))
   return num
+}
+function reg_puntos(){
+  puntos = localStorage.getItem("puntos")
+  puntos_up = parseInt(puntos) + 15
+  localStorage.setItem("puntos",puntos_up)
+  caja_p.innerHTML=localStorage.getItem("puntos")
 }
 option.addEventListener('change', function (){
   defIn()
@@ -60,15 +71,6 @@ function defDiv(){
   input2.value=""
   res.className=""
 }
-function sumPu(){
-  puntos = puntos + 10
-  boxp.innerHTML=puntos
-  return puntos
-}
-function a(){
-  puntos = puntos-10
-  boxp.innerHTML=puntos
-}
 
 function correctly(){
   bx_result.className="box_result box_correct"
@@ -80,6 +82,7 @@ function correctly(){
     bx_result.className = "box_result box_none"
     spinner.className=""
     input.removeAttribute("readonly")
+    reg_puntos()
   },1000)
   setTimeout(defIn,2000)
   
