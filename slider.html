@@ -107,6 +107,7 @@
             transition: 0.3s;
             display: flex;
             cursor: pointer;
+            width: fit-content;
         }
         
         .btn-1:hover {
@@ -258,6 +259,9 @@
             background: #fff;
             border: none;
         }
+        a{
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -312,7 +316,7 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                     </h2>
                 </div>
                 <p>La virtualización de los típicos dados físicos, corresponde a la primera fase de mi aprendizaje.</p>
-                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+                <a class="btn-1" target="_blank" href="assets/dadoo">Ir a la página web<img src="assets/a_go.svg" alt=""></a><br>
             </div>
 
         </div>
@@ -328,7 +332,7 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                     </h2>
                 </div>
                 <p>El sim. de pruebas Icfes. Su objetivo es preparar a los estudiantes del país, para las pruebas Saber. Es aún un prototipo.</p>
-                <!--<button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>-->
+                <!--<a class="btn-1" href="index.html#app_b_test" target="_self">Ir a la página web<img src="assets/a_go.svg" alt=""></a>--><br>
             </div>
 
         </div>            
@@ -344,7 +348,7 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                         </h2>
                     </div>
                     <p>Una aplicación web para entrenar a los niños y jóvenes estudiantes en las operaciones básicas de las matemáticas.</p>
-                    <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+                    <a class="btn-1" target="_blank">Ir a la página web<img src="assets/a_go.svg" alt=""></a><br>
                 </div>
             </div>
 <!--
@@ -389,8 +393,14 @@ Colocar además la clase term para que sea visible el elemento del slider
     <script>
         function insertAction(id, link, indice) {
             try {
-                document.getElementsByClassName(id)[indice].addEventListener("click", () => {
-                    window.open(link, "_blank")
+                document.getElementsByClassName(id)[indice].addEventListener("click", () => {                
+                    //Solución prematura
+                    if(indice==2){
+                        window.open(link)
+                    }else{
+                      window.open(link, "_blank")  
+                    }
+                    
                 })
             } catch (e) {
                 console.error(e)
@@ -400,9 +410,8 @@ Colocar además la clase term para que sea visible el elemento del slider
 
 
         }
-        const links = ["assets/dadoo","assets/mathApp"]
+        const links = ["assets/dadoo","./index.html#app_b_test","assets/mathApp"]
         for (let m = 0; m < links.length; m++) {
-            insertAction("btn-1", links[m], m)
             document.getElementsByClassName("spc-a")[m].addEventListener("click", () => {
                 //Se le da click al elemento,cambia de estilo y se omiten los otros elementos en este proceso. Si no tiene la clase de estilo el elemento clickeado, se le añade y a la vez se evita que quede con la clase permanentemente al ser seleccionado otro elemento <a>.
                 if (!document.getElementsByClassName("spc-a")[m].classList[1]) {

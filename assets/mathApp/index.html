@@ -93,16 +93,15 @@
 <div style="text-align: center ">
   Desarrollado por <a href="https://lisoprogrammer.github.io/portfolio/">Lisandro Zapata</a>
   
-</div>
+</div><br><br>
 <script type="text/javascript" charset="utf-8">
-"use strict"
-document.addEventListener("contextmenu", function(){
-  return false
-})
+
+let operaciones = ["suma","resta","mult","div"]
   for(let i = 0; i<4; i++){
     document.getElementsByClassName("sub-box")[i].addEventListener('click',function(){
-      window.location.href="t"+i+".html"
-     
+      //window.location.href="t"+i+".html"
+      window.location.href="t0.html"
+      window.localStorage.setItem("op",operaciones[i])
     })
     
     

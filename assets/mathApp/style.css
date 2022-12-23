@@ -40,7 +40,7 @@
       align-items: center;
       text-align: center;
       width: 100vw;
-      height: 110vh;
+      height: 101vh;
       margin: 0;
       opacity: 0;
       justify-content: center;
@@ -97,6 +97,7 @@
      display: flex;
      height: auto;
      width: auto;
+     max-width: 700px;
      justify-content: space-evenly;;
      font-size: 70px;
      color: #222d6d;
@@ -116,7 +117,7 @@
      position: relative;
    }
    #in::placeholder{
-     font-size: 16px;
+     font-size: 20px;
     }
    #in{
     caret-color: #289dd2;
