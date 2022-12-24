@@ -77,10 +77,10 @@
       }
     }
     @keyframes desaparecer{
-      from{
+      10%{
         opacity: 1;
       }
-      to{
+      100%{
         opacity: 0;
       }
     }
@@ -135,6 +135,8 @@
     align-items: center;
     position: absolute;
     bottom: 40%;
+    animation: desaparecer 5s;
+    opacity: 0;
     
    }
    /*.content-input:hover div::before{
