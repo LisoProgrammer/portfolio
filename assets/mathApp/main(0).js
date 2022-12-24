@@ -11,6 +11,30 @@ function ale(){
   let num = Math.ceil(Math.random()*(option.value))
   return num
 }
+function sound_ale_win(){
+  carpeta = "assets/correct/"
+  file = "correct"
+  n_files = 3
+  src = []
+  ext = ".wav"
+  for(let i = 1; i<=n_files; i++){
+    src.push(carpeta+file+i+ext)
+  }
+  i = Math.floor(Math.random() * src.length)
+  return src[i]
+}
+function sound_ale_err(){
+  carpeta = "assets/error/"
+  file = "error"
+  n_files = 4
+  src = []
+  ext = ".wav"
+  for(let i = 1; i<=n_files; i++){
+    src.push(carpeta+file+i+ext)
+  }
+  i = Math.floor(Math.random() * src.length)
+  return src[i]
+}
 function reg_puntos(){
   puntos = localStorage.getItem("puntos")
   puntos_up = parseInt(puntos) + 15
@@ -94,6 +118,7 @@ function defDiv(){
 function correctly(){
   bx_result.className="box_result box_correct"
   bx_result.innerHTML="Correcto"
+  audio_apl.src=sound_ale_win()
   audio_apl.play()
   input.setAttribute("readonly","readonly")
   spinner.className="spinner"    
@@ -114,6 +139,7 @@ function incorrectly(){
   bx_result.className="box_result box_incorrect"
   bx_result.innerHTML="Incorrecto"
   input.setAttribute("readonly","readonly")
+  audio_error.src=sound_ale_err()
   audio_error.play()
   reg_intents()
   reg_racha()
