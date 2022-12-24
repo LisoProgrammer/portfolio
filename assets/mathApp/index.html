@@ -59,7 +59,9 @@
  <center>
   <div class="box_p">
     🏆
-    <span id="p_total"></span>
+    <span id="p_total">0</span>
+    💥
+    <span id="racha">0</span>%
   </div>
  </center>
 <div class="box">
@@ -106,8 +108,16 @@
   if(!localStorage.getItem("puntos")){
     localStorage.setItem("puntos",0)
   }
+  if(!localStorage.getItem("racha")){
+    localStorage.setItem("racha",0)
+    localStorage.setItem("intents",0)
+    localStorage.setItem("win",0)
+  }
 puntos = localStorage.getItem("puntos")
+racha = localStorage.getItem("racha")
 caja_p = document.getElementById("p_total")
+caja_r = document.getElementById("racha")
+caja_r.innerHTML = racha
 caja_p.innerHTML = puntos
 let operaciones = ["suma","resta","mult","div"]
   for(let i = 0; i<4; i++){
