@@ -266,6 +266,6 @@ switch(operacion){
     ini("/")
     break
   default:
-    window.location.href="mathApp/index.html"
+    window.location.href="index.html"
 }
 
