@@ -125,22 +125,23 @@ function correctly(){
   net = navigator.connection.downlink
   bx_result.className="box_result box_correct"
   bx_result.innerHTML="Correcto"
-  audio_apl.src=sound_ale_win()
-  if(net>2.5){
-    audio_apl.play()
-  }
-  
+  audio_apl.play()
+  tiempo = audio_apl.duration * 1000 + 500
   input.setAttribute("readonly","readonly")
   spinner.className="spinner"    
     reg_puntos()
     reg_intents()
     reg_winned()
     reg_racha()
-    setTimeout(function(){
+  
+  setTimeout(()=>{
+    audio_apl.src=sound_ale_win()
+  },tiempo)
+
+  setTimeout(function(){
     bx_result.className = "box_result box_none"
     spinner.className=""
     input.removeAttribute("readonly")
-
   },1000)
   setTimeout(defIn,2000)
   
@@ -149,10 +150,13 @@ function incorrectly(){
   bx_result.className="box_result box_incorrect"
   bx_result.innerHTML="Incorrecto"
   input.setAttribute("readonly","readonly")
-  audio_error.src=sound_ale_err()
   audio_error.play()
+  tiempo = audio_error.duration * 1000 + 500
   reg_intents()
   reg_racha()
+  setTimeout(()=>{
+    audio_error.src=sound_ale_err()
+  },tiempo)
 }
 function reset(){
   setTimeout(function(){
