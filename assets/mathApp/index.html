@@ -113,6 +113,11 @@
     localStorage.setItem("intents",0)
     localStorage.setItem("win",0)
   }
+  window.addEventListener("storage",()=>{
+  if(!localStorage.puntos || !localStorage.racha){
+    window.location.href="./index.html"
+  }
+})
 puntos = localStorage.getItem("puntos")
 racha = localStorage.getItem("racha")
 caja_p = document.getElementById("p_total")
