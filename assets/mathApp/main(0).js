@@ -167,10 +167,12 @@ function incorrectly(){
   input.setAttribute("readonly","readonly")
   audio_error.play()
   tiempo = audio_error.duration * 1000 + 500
+  document.body.style.overflowY = "hidden"
   reg_intents()
   reg_racha()
   setTimeout(()=>{
     audio_error.src=sound_ale_err()
+    document.body.style.overflowY = "auto"
   },tiempo)
 }
 function reset(){
