@@ -17,6 +17,7 @@ function ale(){
   let num = Math.ceil(Math.random()*(option.value))
   return num
 }
+
 function sound_ale_win(){
   carpeta = "assets/correct/"
   file = "correct"
@@ -41,9 +42,11 @@ function sound_ale_err(){
   i = Math.floor(Math.random() * src.length)
   return src[i]
 }
+// puntos de interés
+let puntos_int = 5
 function reg_puntos(){
   puntos = localStorage.getItem("puntos")
-  puntos_up = parseInt(puntos) + 15
+  puntos_up = parseInt(puntos) + puntos_int
   localStorage.setItem("puntos",puntos_up)
   caja_p.innerHTML=localStorage.getItem("puntos")
 }
@@ -64,8 +67,19 @@ function reg_racha(){
   localStorage.setItem("racha",racha_term)
   caja_r.innerHTML=localStorage.getItem("racha")
 }
+
+
+
 option.addEventListener('change', function (){
   defIn()
+  tasa_puntual = parseInt(option.value)
+  if(tasa_puntual == 9){
+    puntos_int = 5
+  }else if(tasa_puntual == 99){
+    puntos_int = 10
+  }else if(tasa_puntual == 999){
+    puntos_int = 15
+  }
 })
 
   const input = document.getElementById("in")
@@ -124,16 +138,16 @@ function defDiv(){
 function correctly(){
   net = navigator.connection.downlink
   bx_result.className="box_result box_correct"
-  bx_result.innerHTML="Correcto"
+  bx_result.innerHTML="Correcto <br> +"+puntos_int
   audio_apl.play()
   tiempo = audio_apl.duration * 1000 + 500
   input.setAttribute("readonly","readonly")
-  spinner.className="spinner"    
-    reg_puntos()
-    reg_intents()
-    reg_winned()
-    reg_racha()
-  
+  spinner.className="spinner" 
+  document.body.style.overflowY = "hidden"   
+  reg_puntos()
+  reg_intents()
+  reg_winned()
+  reg_racha()
   setTimeout(()=>{
     audio_apl.src=sound_ale_win()
   },tiempo)
@@ -141,6 +155,7 @@ function correctly(){
   setTimeout(function(){
     bx_result.className = "box_result box_none"
     spinner.className=""
+    document.body.style.overflowY = "auto"
     input.removeAttribute("readonly")
   },1000)
   setTimeout(defIn,2000)
