@@ -7,6 +7,12 @@ caja_p.innerHTML = puntos
 racha = localStorage.getItem("racha") 
 caja_r = document.getElementById("racha")
 caja_r.innerHTML = racha
+
+window.addEventListener("storage",()=>{
+  if(!localStorage.puntos || !localStorage.racha){
+    window.location.href="./index.html"
+  }
+})
 function ale(){
   let num = Math.ceil(Math.random()*(option.value))
   return num
@@ -116,10 +122,14 @@ function defDiv(){
 }
 
 function correctly(){
+  net = navigator.connection.downlink
   bx_result.className="box_result box_correct"
   bx_result.innerHTML="Correcto"
   audio_apl.src=sound_ale_win()
-  audio_apl.play()
+  if(net>2.5){
+    audio_apl.play()
+  }
+  
   input.setAttribute("readonly","readonly")
   spinner.className="spinner"    
     reg_puntos()
