@@ -139,12 +139,9 @@ function correctly(){
   net = navigator.connection.downlink
   bx_result.className="box_result box_correct"
   bx_result.innerHTML="Correcto <br> +"+puntos_int
-  try{
-    audio_apl.play()
-  }catch(e){
+  if(audio_apl.load()){
     audio_apl.play()
   }
-  
   tiempo = audio_apl.duration * 1000 + 1000
   input.setAttribute("readonly","readonly")
   spinner.className="spinner" 
@@ -170,9 +167,7 @@ function incorrectly(){
   bx_result.className="box_result box_incorrect"
   bx_result.innerHTML="Incorrecto"
   input.setAttribute("readonly","readonly")
-  try{
-    audio_error.play()
-  }catch(e){
+  if(audio_error.load()){
     audio_error.play()
   }
   tiempo = audio_error.duration * 1000 + 1000
