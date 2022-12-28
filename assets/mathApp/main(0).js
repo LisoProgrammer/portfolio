@@ -139,10 +139,8 @@ function correctly(){
   net = navigator.connection.downlink
   bx_result.className="box_result box_correct"
   bx_result.innerHTML="Correcto <br> +"+puntos_int
-  if(audio_apl.load()){
-    audio_apl.play()
-  }
-  tiempo = audio_apl.duration * 1000 + 1000
+  audio_apl.play()
+  tiempo = audio_apl.duration * 1000 + 2000
   input.setAttribute("readonly","readonly")
   spinner.className="spinner" 
   document.body.style.overflowY = "hidden"   
@@ -151,7 +149,9 @@ function correctly(){
   reg_winned()
   reg_racha()
   setTimeout(()=>{
-    audio_apl.src=sound_ale_win()
+    if(audio_apl.ended){
+      audio_apl.src=sound_ale_win()
+    }
   },tiempo)
 
   setTimeout(function(){
@@ -167,15 +167,15 @@ function incorrectly(){
   bx_result.className="box_result box_incorrect"
   bx_result.innerHTML="Incorrecto"
   input.setAttribute("readonly","readonly")
-  if(audio_error.load()){
-    audio_error.play()
-  }
-  tiempo = audio_error.duration * 1000 + 1000
+  audio_error.play()
+  tiempo = audio_error.duration * 1000 + 2000
   document.body.style.overflowY = "hidden"
   reg_intents()
   reg_racha()
   setTimeout(()=>{
-    audio_error.src=sound_ale_err()
+    if(audio_error.ended){
+      audio_error.src=sound_ale_err()
+    }
     document.body.style.overflowY = "auto"
   },tiempo)
 }
