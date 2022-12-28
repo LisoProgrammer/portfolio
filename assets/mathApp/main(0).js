@@ -139,8 +139,13 @@ function correctly(){
   net = navigator.connection.downlink
   bx_result.className="box_result box_correct"
   bx_result.innerHTML="Correcto <br> +"+puntos_int
-  audio_apl.play()
-  tiempo = audio_apl.duration * 1000 + 500
+  try{
+    audio_apl.play()
+  }catch(e){
+    audio_apl.play()
+  }
+  
+  tiempo = audio_apl.duration * 1000 + 1000
   input.setAttribute("readonly","readonly")
   spinner.className="spinner" 
   document.body.style.overflowY = "hidden"   
@@ -165,8 +170,12 @@ function incorrectly(){
   bx_result.className="box_result box_incorrect"
   bx_result.innerHTML="Incorrecto"
   input.setAttribute("readonly","readonly")
-  audio_error.play()
-  tiempo = audio_error.duration * 1000 + 500
+  try{
+    audio_error.play()
+  }catch(e){
+    audio_error.play()
+  }
+  tiempo = audio_error.duration * 1000 + 1000
   document.body.style.overflowY = "hidden"
   reg_intents()
   reg_racha()
