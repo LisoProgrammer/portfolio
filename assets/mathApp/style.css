@@ -167,7 +167,8 @@
    #t{
      border:  5px solid #3DADFF;
      border-radius: 5px;
-     transform: scale(1.3)
+     transform: scale(1.3);
+     background: #fff;
    }
    .btn-1 {
     padding: 3px;
