@@ -86,14 +86,27 @@
         opacity: 0;
       }
     }
+    @keyframes desaparecer2{
+      10%{
+        opacity: 1;
+        z-index: 1000;
+      }
+      100%{
+        opacity: 0;
+        z-index: 0;
+        top: -100%;
+      }
+    }
    .content-input{
      margin: 50px auto;
      width: 300px;
+     position: relative;
      display: flex;
      justify-content: center;
      align-items: center;
      align-content: center;
      flex-direction: column;
+     z-index: 10;
    }
    .ope{
      display: flex;
@@ -128,17 +141,17 @@
     content: "Enter para ingresar la respuesta.";
     width: auto;
     height: 30px;
-    position: relative;
     background: rgb(255, 247, 153);
     padding: 5px;
     box-shadow: 0px 0px 10px rgb(210, 210, 210);
     border-radius: 2px;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 40%;
-    animation: desaparecer 5s;
+    animation: desaparecer2 6s;
     opacity: 0;
+    z-index: 0;
     
    }
    /*.content-input:hover div::before{
