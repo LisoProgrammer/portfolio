@@ -136,7 +136,6 @@ function defDiv(){
 }
 
 function correctly(){
-  net = navigator.connection.downlink
   bx_result.className="box_result box_correct"
   bx_result.innerHTML="Correcto <br> +"+puntos_int
   audio_apl.play()

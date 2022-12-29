@@ -73,8 +73,8 @@
   <audio src="assets/error/error1.wav" preload="auto" id="err-a" style="display: none;"></audio>
   
  <script defer="on">
-   window.addEventListener("error", function(){
-     alert("Hubo un error")
+   window.addEventListener("error", function(e){
+     alert("Hubo un error "+e)
    })
  </script>
   <script src="main(0).js" defer></script>
