@@ -276,7 +276,8 @@
              
              .ic-5 {
                  border-radius: 10px;
-                 width: 250px;
+                 width: 70vw;
+                 max-width: 250px;
              }
              
              .pro {
@@ -679,12 +680,16 @@
              }
              
              #img-face {
-                 animation: enter 0.5s alternate;
+                 animation: enter 0.5s;
+                 
              }
              
              @keyframes enter {
                  from {
                      transform: scale(0);
+                 }
+                 to{
+                    transform: scale(1);
                  }
              }
              
