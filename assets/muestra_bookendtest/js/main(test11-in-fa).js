@@ -88,6 +88,10 @@
           cAds.style.bottom = "-60px"
           cAds.innerHTML = "<p>Se acaba el tiempo, ¡Te quedan menos de 30 segundos!</p>"
       }
+      if(timeH<=0 && timeS<=1 && timeM<=1){
+        clearInterval(se)
+        window.location.reload()
+      }
   }
 
   function stop() {
