@@ -314,7 +314,7 @@
                  border: 3px solid var(--color2);
                  border-radius: 2px;
                  background: var(--color2);
-                 color: rgb(255, 255, 255);
+                 color: rgb(0, 0, 0);
                  margin: 20px auto;
                  font-size: 20px;
                  transition: 0.3s;
@@ -435,7 +435,9 @@
                  top: -5px;
                  transition: top 0.3s;
              }
-             
+             .sbr{
+                border-bottom: 5px solid var(--color2);
+             }
              .tc:hover::after {
                  content: "Quiero saber más";
                  position: absolute;
@@ -446,7 +448,7 @@
                  transform: scale(1.6);
                  border-radius: 5px;
                  box-shadow: 0px 0px 10px rgb(83, 83, 83);
-                 font-size: 16px;
+                 font-size: 14px;
                  animation: up 0.6s;
                  margin: auto;
                  color: #000;
@@ -494,7 +496,7 @@
              
              button[type="submit"] {
                  background: var(--color2);
-                 color: white;
+                 color: rgb(0, 0, 0);
                  border-radius: 2px;
                  padding: 10px;
                  font-size: 1.4rem;
@@ -512,7 +514,7 @@
                  padding: 4px;
                  background: var(--color2);
                  border-radius: 5px;
-                 color: white;
+                 color: rgb(0, 0, 0);
                  font-weight: 200;
                  margin: 10px 0px;
                  display: inline-block;
@@ -593,6 +595,11 @@
                  animation: 1s covered;
                  background: transparent;
                  backdrop-filter: blur(20px);
+                 color: #fff;
+             }
+             .btn-1:hover svg rect#rect846, .btn-1:hover svg rect#rect928,.btn-1:hover svg rect#rect1156, .btn-1:hover svg rect#rect1373{
+                fill:rgb(255, 255, 255) !important;
+                transition: 0.3s;
              }
              
              .btn-1:active {
