@@ -190,7 +190,7 @@ function ini(operation){
     case "+":
       console.log("+")
       document.addEventListener("keydown", function(){
-        //console.log(event.key)
+        alert(event.key)
         if(event.key == "Enter" || event.key == "."){
          ope = (parseInt(boxn1.innerHTML)) + (parseInt(boxn2.innerHTML))
          if(input.value==ope){
@@ -205,7 +205,7 @@ function ini(operation){
     case "-":
       console.log("-")
       document.addEventListener("keydown", function(){
-  
+        alert(event.key)
         if(event.key == "Enter" || event.key == "."){
          ope = (parseInt(boxn1.innerHTML)) - (parseInt(boxn2.innerHTML))
          if(input.value==ope){
@@ -220,7 +220,7 @@ function ini(operation){
     case "*":
       console.log("*")
       document.addEventListener("keydown", function(){
-  
+        alert(event.key)
         if(event.key == "Enter" || event.key == "."){
          ope = (parseInt(boxn1.innerHTML)) * (parseInt(boxn2.innerHTML))
          if(input.value==ope){
@@ -248,7 +248,7 @@ function ini(operation){
       boxn2.innerHTML = nums_div[ind_aleatorio]   
       ope = (parseInt(boxn1.innerHTML)) / (parseInt(boxn2.innerHTML))
       document.addEventListener("keydown", function(){
-
+        alert(event.key)
         if(event.key == "Enter" || event.key == "."){
           ope = (parseInt(boxn1.innerHTML)) / (parseInt(boxn2.innerHTML))
           if(input.value==ope){

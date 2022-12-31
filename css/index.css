@@ -5,6 +5,7 @@
                  -o-box-sizing: border-box;
                  margin: 0;
                  font-family: "Poor Richard", sans-serif;
+                 user-select: none;
              }
              
              html {
@@ -406,6 +407,7 @@
                  min-width: 324px;
                  justify-content: center;
                  align-items: baseline;
+                 font-size: 16px;
              }
              
              .element {
@@ -752,6 +754,9 @@
                  .slider {
                      top: -100px;
                  }
+                 p{
+                    text-align: justify;
+                 }
              }
              
              @media only screen and (max-width: 330px) {
@@ -793,7 +798,7 @@
                      padding: 40px 0px;
                  }
                  .element {
-                     width: 240px;
+                     width: 90%;
                      font-size: 16px;
                  }
                  .wrap {
@@ -823,7 +828,15 @@
                  .bdrp {
                      padding: 40px 0px 20px 0px;
                  }
-             }
+                 .wrap{
+                    max-width: 100%;
+                    min-width: 100%;
+                }
+                .element{
+                    width: 70%;
+                }
+            }
+             
              
              @media only screen and (max-width: 800px) {
                  .slider {
