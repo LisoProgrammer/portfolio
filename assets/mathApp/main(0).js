@@ -190,8 +190,8 @@ function ini(operation){
     case "+":
       console.log("+")
       document.addEventListener("keydown", function(){
-  
-        if(event.key == "Enter"){
+        //console.log(event.key)
+        if(event.key == "Enter" || event.key == "."){
          ope = (parseInt(boxn1.innerHTML)) + (parseInt(boxn2.innerHTML))
          if(input.value==ope){
             correctly()
@@ -206,7 +206,7 @@ function ini(operation){
       console.log("-")
       document.addEventListener("keydown", function(){
   
-        if(event.key == "Enter"){
+        if(event.key == "Enter" || event.key == "."){
          ope = (parseInt(boxn1.innerHTML)) - (parseInt(boxn2.innerHTML))
          if(input.value==ope){
           correctly()
@@ -221,7 +221,7 @@ function ini(operation){
       console.log("*")
       document.addEventListener("keydown", function(){
   
-        if(event.key == "Enter"){
+        if(event.key == "Enter" || event.key == "."){
          ope = (parseInt(boxn1.innerHTML)) * (parseInt(boxn2.innerHTML))
          if(input.value==ope){
            correctly()
@@ -249,7 +249,7 @@ function ini(operation){
       ope = (parseInt(boxn1.innerHTML)) / (parseInt(boxn2.innerHTML))
       document.addEventListener("keydown", function(){
 
-        if(event.key == "Enter"){
+        if(event.key == "Enter" || event.key == "."){
           ope = (parseInt(boxn1.innerHTML)) / (parseInt(boxn2.innerHTML))
           if(input.value==ope){
             correctly()
