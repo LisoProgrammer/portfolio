@@ -191,7 +191,7 @@ function ini(operation){
       console.log("+")
       document.addEventListener("keydown", function(){
         //alert(event.which)
-        if(event.key == "Enter" || event.which == 229){
+        if(event.key == "Enter"){
          ope = (parseInt(boxn1.innerHTML)) + (parseInt(boxn2.innerHTML))
          if(input.value==ope){
             correctly()
@@ -206,7 +206,7 @@ function ini(operation){
       console.log("-")
       document.addEventListener("keydown", function(){
         //alert(event.key)
-        if(event.key == "Enter" || event.which == 229){
+        if(event.key == "Enter"){
          ope = (parseInt(boxn1.innerHTML)) - (parseInt(boxn2.innerHTML))
          if(input.value==ope){
           correctly()
@@ -221,7 +221,7 @@ function ini(operation){
       console.log("*")
       document.addEventListener("keydown", function(){
         //alert(event.key)
-        if(event.key == "Enter" || event.which == 229){
+        if(event.key == "Enter"){
          ope = (parseInt(boxn1.innerHTML)) * (parseInt(boxn2.innerHTML))
          if(input.value==ope){
            correctly()
@@ -248,8 +248,8 @@ function ini(operation){
       boxn2.innerHTML = nums_div[ind_aleatorio]   
       ope = (parseInt(boxn1.innerHTML)) / (parseInt(boxn2.innerHTML))
       document.addEventListener("keydown", function(){
-        //alert(event.key)
-        if(event.key == "Enter" || event.which == 229){
+        //alert(event.codeKey)
+        if(event.key == "Enter"){
           ope = (parseInt(boxn1.innerHTML)) / (parseInt(boxn2.innerHTML))
           if(input.value==ope){
             correctly()

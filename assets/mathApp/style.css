@@ -147,7 +147,7 @@
     cursor: text;
    }  
    #label_input:hover::before {
-    content: "Recuerda: Enter(→) ó punto(.) para ingresar la respuesta.";
+    content: "Recuerda: Enter(→) o Ir para ingresar la respuesta.";
     width: fit-content;
     height: fit-content;
     color: hsl(0, 0%, 45%);
