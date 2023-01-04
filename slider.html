@@ -162,7 +162,7 @@
         }
         
         .img4 {
-            background: url("assets/gb.png");
+            background: url("assets/todo_rifas_img.jpg");
             background-size: cover;
         }
         
@@ -299,6 +299,8 @@
             <a href="#tt2" class="spc-a">2</a>
             <hr>
             <a href="#tt3" class="spc-a">3</a>
+            <hr>
+            <a href="#tt4" class="spc-a">4</a>
             <!--
 Se debe ir cambiando los números y id a medida en que se creen proyectos
             <a href="#tt1" class="spc-a spc-a-focus">1</a>
@@ -378,24 +380,25 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                     <a class="btn-1" target="_blank" href="assets/mathApp/">Ir a mathApp<img src="assets/a_go.svg" alt=""></a><br>
                 </div>
             </div>
-<!--
-        </div>
-        <div class="slider-element" id="tt3">
+            <div class="slider-element" id="tt4">
 
-            <div class="c_img img3"></div>
+                    <div class="c_img img4"></div>
 
-            <div class="c-description">
-                <div class="content-title">
-                    <h2 class="flex space-between center">
-                        <div>App Web Bookend</div>
-                        <div class="time">2021¬09</div>
+                <div class="c-description">
+                    <div class="content-title">
+                     <h2 class="flex space-between center">
+                        <div>Todo rifas</div>
+                        <div class="time">2023/01</div>
                     </h2>
                 </div>
-                <p>El desarrollo de una aplicación web creada por el proyecto Bookend, dirigida en torno al fortalecimiento del sector laboral. Es aún un prototipo.</p>
-                <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
+                <p>Todo rifas es un sistema en desarrollo, que pretende dar a los usuarios la posibilidad de organizar sus rifas o sorteos de manera automática.</p>
+                <div class="info_box in_dev">en desarrollo</div>
+                <!--<button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>-->
             </div>
 
+        </div><!--
         </div>
+        
         <div class="slider-element" id="tt4">
 
             <div class="c_img img4"></div>
@@ -437,7 +440,7 @@ Colocar además la clase term para que sea visible el elemento del slider
 
 
         }
-        const links = ["assets/dadoo","./index.html#app_b_test","assets/mathApp"]
+        const links = ["assets/dadoo","./index.html#app_b_test","assets/mathApp",""]
         for (let m = 0; m < links.length; m++) {
             document.getElementsByClassName("spc-a")[m].addEventListener("click", () => {
                 //Se le da click al elemento,cambia de estilo y se omiten los otros elementos en este proceso. Si no tiene la clase de estilo el elemento clickeado, se le añade y a la vez se evita que quede con la clase permanentemente al ser seleccionado otro elemento <a>.
