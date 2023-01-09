@@ -78,7 +78,7 @@ window.onload = () => {
     }, 1000);
     //
 
-    let num_element = 0
+    /*let num_element = 0
     let porcent = 0
     try {
         for (let j = 0; j < elements.length; j++) {
@@ -92,7 +92,7 @@ window.onload = () => {
         }
     } catch (e) {
         console.error(e)
-    }
+    }*/
     //console.log(num_element)
 
 }
