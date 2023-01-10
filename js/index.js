@@ -15,8 +15,8 @@ for (let e = 1; e < 5; e++) {
 
 
 function an(entries, observer) {
-    console.log("entries")
-    console.log(entries)
+    //console.log("entries")
+    //console.log(entries)
     /*console.log("observer")
     console.log(observer)*/
     try {
