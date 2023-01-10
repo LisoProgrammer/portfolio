@@ -191,8 +191,6 @@ window.addEventListener("scroll", () => {
         } else {
             //Arriba 
             //console.log("Arriba")
-
-
             header.style.top = "0"
             direction = scroll_y
         }
@@ -226,7 +224,15 @@ function blur() {
 
     }
 }
-
+window.addEventListener("storage",()=>{
+    sgt.className = "code error"
+    sgt.innerHTML = "Ocurrió un error inesperado, se recargará la página automáticamente...";
+    
+    setTimeout(() => {
+        localStorage.int = 0
+        window.location.reload()
+    }, 3000)
+})
 //Se valida la información para preparar el envío
 const elemetn_form = document.getElementsByClassName("input")
 let btn_s = document.querySelector("#btn_s")
@@ -236,6 +242,7 @@ btn_s.addEventListener("click", function(e) {
     e.preventDefault()
     let sgt = document.getElementById("sgt")
     sgt.innerHTML = ""
+    
     for (let i = 0; i < elemetn_form.length; i++) {
 
         if (elemetn_form[i].value.length <= 1) {
@@ -309,8 +316,8 @@ btn_s.addEventListener("click", function(e) {
 elemetn_form[2].addEventListener("input", function() {
     lengthE = elemetn_form[2].value.length
 
-    if (lengthE >= 199) {
-        elemetn_form[2].value = elemetn_form[2].value.slice(0, 199)
+    if (lengthE >= 399) {
+        elemetn_form[2].value = elemetn_form[2].value.slice(0, 399)
         document.getElementById("le").innerHTML = 150
     }
     document.getElementById("le").innerHTML = lengthE
@@ -371,14 +378,14 @@ for (let m = 1; m < 8; m++) {
 
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("int") == null && localStorage.getItem("tod") == null) {
-        localStorage.setItem("int", num_int);
+        //localStorage.setItem("int", num_int);
         let fecha = new Date()
         console.log(fecha)
         localStorage.setItem("tod", fecha.getDay())
     } else {
         if (day != localStorage.getItem("tod")) {
             //console.log("Linea ejecutada")
-            localStorage.setItem("int", num_int)
+            //localStorage.setItem("int", num_int)
             localStorage.setItem("tod", f.getDay())
         }
     }
