@@ -370,7 +370,7 @@ function insertAction(id, link) {
 }
 
 
-insertAction("#btn_g", "assets/cv/CV_LISANDRO_ZAPATA(1).pdf")
+insertAction("#btn_g", "assets/cv/CVLISANDRO_ZAPATA.pdf")
 let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://json.com", "https://php.net", "https://python.org", "https://www.mysql.com", "https://developer.mozilla.org/es/docs/Web/Guide/AJAX"]
 for (let m = 1; m < 8; m++) {
     insertAction("#tc" + m, links[m])
