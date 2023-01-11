@@ -145,13 +145,8 @@ document.addEventListener("click", function(e) {
         subMe.style.right = "-100%"*/
     }
 })
-const age_span = document.getElementById("ag")
-let f = new Date()
-document.addEventListener("DOMContentLoaded", () => {
-    let ed = (f.getFullYear()) - 2005
-    age_span.innerHTML = ed
-})
 
+let f = new Date()
 //número de Día de la semana en que ingresa el usuario a la página
 let day = f.getDay();
 //Por cada etiqueta <a> que el usuario presiona se cierra el menú cambiando de estado: cerrado -> 0
