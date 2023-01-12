@@ -1,7 +1,7 @@
 const observer = new IntersectionObserver(an, {
     root: null,
     rootMargin: "0px 0px 50px 0px",
-    threshold: 0.4
+    threshold: 0.2
 })
 
 
@@ -110,6 +110,9 @@ const menu = document.getElementById("menu")
 const subMe = document.getElementById("sub-menu")
     //formulario de contacto
 const form = document.getElementById("contact-form")
+//banner
+const ban = document.getElementById("ban")
+//
     //Estado inicial del menú: cerrado -> 0. Abierto -> 1
 let stat = 0
     //Intento de envío de mensajes por #contact-form
@@ -130,7 +133,10 @@ btn_m.addEventListener("click", function() {
         subMe.style.transition = "all 0.3s"
     }
 })
-
+window.addEventListener("scroll",()=>{
+    const scrollY = window.scrollY
+    ban.style.transform = "translate3d(0px,-"+(scrollY*0.08)+"px, 0px)"
+})
 //cuando se detecta que se dió click al menu objeto, el menú objeto cambia de estado: 0.
 document.addEventListener("click", function(e) {
     let em = e.target;
