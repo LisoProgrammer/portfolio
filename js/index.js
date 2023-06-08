@@ -258,7 +258,7 @@ btn_s.addEventListener("click", function(e) {
 
     }
     //Codigo de seguridad
-    if (parseInt(localStorage.int) > num_int || parseInt(localStorage.int) < 0) {
+    /*if (parseInt(localStorage.int) > num_int || parseInt(localStorage.int) < 0) {
 
         sgt.className = "code error"
         sgt.innerHTML = "Ocurrió un error inesperado, se recargará la página automáticamente...";
@@ -268,7 +268,7 @@ btn_s.addEventListener("click", function(e) {
             window.location.reload()
         }, 3000)
 
-    }
+    }*/
     //No hay intentos de envio cuando llega a cero.
     if (localStorage.getItem("int") == 0) {
         sgt.className = "code suggestion"
@@ -383,6 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let fecha = new Date()
         console.log(fecha)
         localStorage.setItem("tod", fecha.getDay())
+        localStorage.setItem("int",num_int);
     } else {
         if (day != localStorage.getItem("tod")) {
             //console.log("Linea ejecutada")
