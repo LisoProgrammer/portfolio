@@ -232,6 +232,7 @@ window.addEventListener("storage",()=>{
     setTimeout(() => {
         localStorage.int = 0
         window.location.reload()
+        localStorage.setItem("e",0);
     }, 3000)
 })
 //Se valida la información para preparar el envío
@@ -378,6 +379,7 @@ for (let m = 1; m < 8; m++) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    let e = localStorage.getItem("e");
     if (localStorage.getItem("int") == null && localStorage.getItem("tod") == null) {
         //localStorage.setItem("int", num_int);
         let fecha = new Date()
@@ -385,10 +387,13 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("tod", fecha.getDay())
         localStorage.setItem("int",num_int);
     } else {
-        if (day != localStorage.getItem("tod")) {
+        //con intención de que haya nuevos intentos
+        if (f.getDay() != localStorage.getItem("tod") && e == null) {
             //console.log("Linea ejecutada")
             //localStorage.setItem("int", num_int)
             localStorage.setItem("tod", f.getDay())
+            localStorage.setItem("int",num_int);
+            console.log(day)
         }
     }
     let cont = document.getElementById("cont")
