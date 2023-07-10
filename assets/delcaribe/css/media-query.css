@@ -1,5 +1,5 @@
-@media only screen and (min-width: 650px){
-    #type0,#type1,#type2,#type3{
+@media only screen and (min-width: 500px){
+    #ent,#plf,#pos,#beb{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
