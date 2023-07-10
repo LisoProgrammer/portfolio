@@ -1,11 +1,14 @@
 let cloader = document.getElementById("cloader");
 let http = new XMLHttpRequest();
 http.open('GET','./menu/menu.json');
+window.onload = () =>{
+    cloader.remove()
+}
 http.onreadystatechange = () => {
     if (http.readyState == 4 && http.status == 200){
         menujson = JSON.parse(http.responseText);
         console.log(menujson);
-        cloader.remove()
+        
         for(let ent in menujson["entradas"]){
             console.log(ent)
             //console.log(menujson["entrada"][ent])
@@ -66,6 +69,7 @@ function generarTarjeta(cat, item, id_container) {
     img.style.width = '100%'
     div_subcontent.appendChild(div_img)
     div_img.appendChild(img)
+    div_img.className = "cimg"
     img.onerror = () =>{
         img.src = "menu/assets/noimg.jpg";
     }

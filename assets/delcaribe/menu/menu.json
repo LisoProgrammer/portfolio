@@ -15,8 +15,8 @@
         {"code":"pos03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"}
     ],
     "bebidas":[
-        {"code":"beb01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
-        {"code":"beb02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
-        {"code":"beb03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"}
+        {"code":"beb01","nombre":"Coctel sin alcohol","descripcion":"Tómate una sensación refrescante de frutas cítricas.","precio":10000,"img":"menu/assets/b01.jpg"},
+        {"code":"beb02","nombre":"Jugo de mago con naranja","descripcion":"El sabor dulce del mango con la acidez de la naranja aportan un combinación excepcional.","precio":5000,"img":"menu/assets/b02.webp"},
+        {"code":"beb03","nombre":"Jugo de manzana con frutos rojos y naranja","descripcion":"Los trozos de manzanas te dan una crocancia excepcional, acompañada de tonos rosas y acidos.","precio":15000,"img":"menu/assets/b03.jpg"}
     ]
 }

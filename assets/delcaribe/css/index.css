@@ -73,6 +73,9 @@ h1,h2,h3{
     margin: 5px;
     max-width: 470px;
     min-width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .tar .subcontent{
     display: flex;
