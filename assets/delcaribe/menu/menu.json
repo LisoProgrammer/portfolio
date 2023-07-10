@@ -1,22 +1,22 @@
 {
     "entradas":[
-        {"code":"ent01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"ent02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"ent03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"}
+        {"code":"ent01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"ent02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"ent03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"}
     ],
     "platosfuertes":[
-        {"code":"plf01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"plf02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"plf03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"}
+        {"code":"plf01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"plf02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"plf03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"}
     ],
     "postres":[
-        {"code":"pos01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"pos02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"pos03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"}
+        {"code":"pos01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"pos02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"pos03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"}
     ],
     "bebidas":[
-        {"code":"beb01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"beb02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"},
-        {"code":"beb03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"assets/ent01.webp"}
+        {"code":"beb01","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"beb02","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"},
+        {"code":"beb03","nombre":"Pescado frito con arroz de coco.","descripcion":"Incluye pescado, arroz de coco, patacones y ensalada.","precio":15000,"img":"menu/assets/ent01.webp"}
     ]
 }
