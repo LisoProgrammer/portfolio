@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Inter","sans-serif";
+}
+
+@font-face {
+    src: url("../assets/fonts/inter-font.ttf");
+    font-family: "Inter";
+}
+button{
+    cursor: pointer;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    box-shadow: 0px -6px 20px grey;
+    padding: 5px;
+    position: fixed;
+    background: #fff;
+    z-index: 10;
+}
+h1,h2,h3{
+    color: #F25C05;
+    margin: 5px;
+}
+.h-ele{
+    width: 90px;
+}
+#bmenu{
+    border: none;
+    background: transparent;
+}
+.content{
+    margin: 70px 0px 0px 0px;
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+}
+#ent{
+    width: 100%;
+}
+.tar{
+    box-shadow: 0px 0px 3px grey;
+    margin: 5px;
+    max-width: 470px;
+    min-width: 330px;
+}
+.tar .subcontent{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.ctext{
+    width: 70%;
+    padding: 7px;
+}
+.ctext > h4, .ctext > div, .ctext > p{
+    margin: 5px 0px 0px 0px;
+}
+.cimg{
+    width: 30%;
+    max-width: 190px;
+}
+.cprecio{
+    display: flex;
+    font-size: 25px;
+}
+.ord{
+    border: none;
+    padding: 3px;
+    font-size: 20px;
+    background: #fff;
+}
+.cbutton{
+    width: 100%;
+    background: #F25C05;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+}

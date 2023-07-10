@@ -1,0 +1,7 @@
+@media only screen and (min-width: 650px){
+    #ent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
