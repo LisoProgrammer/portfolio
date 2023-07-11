@@ -110,9 +110,7 @@ function generarTarjeta(cat, item, id_container) {
                     
     
                 })
-                function total(){
-                    
-                }
+                
                 capa_pri.className = "capa_pri capa_pri_act"
                 capa_sec.className = "capa_sec capa_sec_act"
                 
