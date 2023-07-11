@@ -106,14 +106,16 @@ h4{
     border: none;
     padding: 3px;
     font-size: 20px;
-    background: #fff;
+    background: #F25C05;
+    color: #fff;
+    border-radius: 3px;
 }
 .cbutton{
     width: 100%;
-    background: #F25C05;
     justify-content: center;
     display: flex;
     padding: 10px;
+    border-top: 3px solid #F25C05;
 }
 
 .capa_pri{

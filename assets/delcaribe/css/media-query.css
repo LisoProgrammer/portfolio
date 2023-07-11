@@ -1,7 +1,26 @@
 @media only screen and (min-width: 500px){
     #ent,#plf,#pos,#beb{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        max-width: 1350px;
+        margin: auto;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 1051px){
+    #ent,#plf,#pos,#beb{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: auto;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 702px){
+    #ent,#plf,#pos,#beb{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        margin: auto;
+        max-width: 472px;
         justify-content: center;
     }
 }
