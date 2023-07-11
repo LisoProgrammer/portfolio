@@ -10,6 +10,8 @@
 }
 button{
     cursor: pointer;
+    border: none;
+    background: #fff;
 }
 .loader{
     position: relative;
@@ -50,6 +52,9 @@ header{
 }
 h1,h2,h3{
     color: #F25C05;
+    margin: 5px;
+}
+h4{
     margin: 5px;
 }
 .h-ele{
@@ -110,3 +115,77 @@ h1,h2,h3{
     display: flex;
     padding: 10px;
 }
+
+.capa_pri{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(209, 209, 209, 0.314);
+    z-index: 0;
+    font-size: 20px;
+    opacity: 0;
+}
+.capa_pri_act{
+    z-index: 20;
+    opacity: 1;
+}
+.capa_sec_act{
+    z-index: 21 !important;
+}
+.capa_sec{
+    position: fixed;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    background: #fff;
+    top: 250px;
+    z-index: 0;
+}
+.capa_sec *{
+    margin: 5px 0px 5px 0px;
+    font-weight: 500;
+}
+.subheader{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button_closer{
+    font-size: 20px;
+}
+input[type="number"]{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 1px 3px grey;
+    padding: 10px;
+    outline: none;
+}
+input[type="submit"]{
+    padding: 10px;
+    background: #F25C05;
+    color: #fff;
+    box-shadow: 0px 1px 3px grey;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.flex{
+    display: flex;
+    width: 100%;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+

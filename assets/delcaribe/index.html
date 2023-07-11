@@ -24,7 +24,69 @@
         </div>
         <p>Cargando menú...</p>
     </div>
+    <div class="capa_pri" id="capa_pri">
+        <div class="capa_sec" id="capa_sec">
+            <div class="subheader">
+                <div>
+                    <h3>Ordenar</h3>
+                </div>
+                <div>
+                    <button class="button_closer" id="closer_orden">X</button>
+                </div>
+            </div>
+            <div>
+                <div class="flex space-between">
+                    <div><h4>Nombre del producto: </h4></div>
+                    <div><h4 id="name_prod"></h4></div>
+                </div>
+                
+                <div class="flex space-between">
+                    <div>
+                      <h4>Precio: </h4>  
+                    </div>
+                    <div class="flex" style="width: auto !important;">
+                        <div>
+                            <h4>$</h4>
+                        </div>
+                        <div>
+                            <h4 id="precio">0</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <form action="" method="get">
+                <div>
+                    <h4>Número de la mesa</h4>
+                    <input type="number" name="num_mesa" id="" min="0" max="50" value="0">
+                </div>
+                <div>
+                    <div class="flex space-between" style="width: auto !important;">
+                        <div>
+                            <h4>Total: </h4>
+                        </div>
+                        <div class="flex" style="width: auto !important;">
+                            <div >
+                                <h4>$</h4>
+                            </div>
+                            <div>
+                               <h4 id="total">0</h4> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <h4>Cantidad</h4>
+                    <input type="number" name="cant" id="cant" min="0" max="50" value="0">
+                </div>
+                <div class="flex center">
+                   <input type="submit" value="ORDENAR"> 
+                </div>
+                
+            </form>
 
+        </div>
+    </div>
     <div class="content">
         <h1>Menú</h1>
         <h3>Entradas</h3>
