@@ -181,7 +181,7 @@ input[type="submit"]{
     border: none;
     cursor: pointer;
     font-size: 20px;
-    margin: 16px;
+    margin: 16px 0px 50px 0px;
 }
 .flex{
     display: flex;
