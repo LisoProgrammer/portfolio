@@ -176,6 +176,7 @@ form_ordenar.addEventListener("submit",(e)=>{
         alert_mesa.innerText = ""
         select_mesa.style.border = "none"
         cor = 1
+        e.preventDefault();
     }
 
     if(parseInt(input_cantidad.value) == 0){
@@ -187,6 +188,7 @@ form_ordenar.addEventListener("submit",(e)=>{
         cor = 1
         alert_cantidad.className = "alert inv"
         alert_cantidad.innerText = ""
+        e.preventDefault();
     }
 
     if(cor == 1){
