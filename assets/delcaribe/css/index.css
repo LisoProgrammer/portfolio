@@ -103,12 +103,13 @@ h4{
     font-size: 25px;
 }
 .ord{
-    border: none;
-    padding: 3px;
-    font-size: 20px;
+    padding: 10px;
     background: #F25C05;
     color: #fff;
-    border-radius: 3px;
+    box-shadow: 0px 1px 3px grey;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
 }
 .cbutton{
     width: 100%;
@@ -143,7 +144,7 @@ h4{
     height: auto;
     padding: 20px;
     background: #fff;
-    top: 250px;
+    top: 10vh;
     z-index: 0;
 }
 .capa_sec *{
@@ -160,7 +161,7 @@ h4{
 .button_closer{
     font-size: 20px;
 }
-input[type="number"]{
+input[type="number"],select{
     width: 100%;
     height: auto;
     margin: auto;

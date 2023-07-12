@@ -24,3 +24,16 @@
         justify-content: center;
     }
 }
+@media only screen and (max-width: 540px){
+    .capa_pri{
+        background: #fff;
+        overflow-y: auto;
+    }
+    .capa_sec{
+        width: 100%;
+        top: 0;
+        height: auto;
+        position: relative;
+    }
+    
+}

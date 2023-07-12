@@ -130,5 +130,22 @@ document.addEventListener("click", function(e) {
         input_cantidad.value = 0;
     }
 })
+let http_mesas = new XMLHttpRequest();
+http_mesas.open('GET','./menu/mesas.json');
+http_mesas.onreadystatechange = () => {
+    let select_mesa = document.getElementById("select_mesa");
+    if (http_mesas.readyState == 4 && http_mesas.status == 200){
+        mesas_json = JSON.parse(http_mesas.responseText)
+        //console.log(mesas_json)
+        for(let op in mesas_json["mesas"]){
+            let opt = document.createElement("option")
+            opt.value = op
+            opt.innerText = mesas_json["mesas"][op]
+            select_mesa.appendChild(opt)
+            console.log(op)
+        }
+    }
+}
+http_mesas.send()
 
 
