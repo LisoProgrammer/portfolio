@@ -190,6 +190,6 @@ form_ordenar.addEventListener("submit",(e)=>{
     }
 
     if(cor == 1){
-        form_ordenar.submit()
+        form_ordenar.submit();
     }
 })
