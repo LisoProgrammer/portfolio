@@ -55,9 +55,11 @@
                     </div>
                 </div>
             </div>
-            <form action="" method="get">
+            <form action="" method="get" id="form-ordenar">
                 <div>
                     <h4>Mesa</h4>
+                    <div class="alert inv" id="alert_mesa">
+                    </div>
                     <select name="mesa" id="select_mesa">
                         
                     </select>
@@ -79,7 +81,10 @@
                     
                     
                     <h4>Cantidad</h4>
-                    <input type="number" name="cant" id="cant" min="0" max="50" value="0">
+                    <div class="alert inv" id="alert_cantidad">
+
+                    </div>
+                    <input type="number" name="cant" id="cant" min="0" value="0">
                 </div>
                 <div class="flex center">
                    <input type="submit" value="ORDENAR"> 

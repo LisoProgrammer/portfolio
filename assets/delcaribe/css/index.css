@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: "Inter","sans-serif";
+    transition: all 0.3s;
 }
 
 @font-face {
@@ -77,10 +78,11 @@ h4{
     box-shadow: 0px 0px 3px grey;
     margin: 5px;
     max-width: 470px;
-    min-width: 330px;
+    min-width: 260px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #fff;
 }
 .tar .subcontent{
     display: flex;
@@ -179,6 +181,7 @@ input[type="submit"]{
     border: none;
     cursor: pointer;
     font-size: 20px;
+    margin: 16px;
 }
 .flex{
     display: flex;
@@ -190,5 +193,17 @@ input[type="submit"]{
 }
 .space-between{
     justify-content: space-between;
+}
+.alert{
+    padding: 5px;
+    color: #ffffff;
+    background: #F25C05;
+    border-radius: 3px;
+}
+.inv{
+    opacity: 0;
+}
+.vis{
+    opacity: 1;
 }
 

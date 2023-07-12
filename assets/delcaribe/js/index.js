@@ -5,6 +5,7 @@ window.onload = () =>{
     cloader.remove()
 }
 let state_ord_menu = 0;
+let cant_max = 10
 //template ORDENAR
 let capa_pri = document.getElementById("capa_pri")
 let capa_sec = document.getElementById("capa_sec")
@@ -12,6 +13,8 @@ let name_prod_html = document.getElementById("name_prod")
 let precio_prod_html = document.getElementById("precio")
 let total_prod_html = document.getElementById("total")
 let input_cantidad = document.getElementById("cant")
+let select_mesa = document.getElementById("select_mesa");
+let alert_cantidad = document.getElementById("alert_cantidad")
 http.onreadystatechange = () => {
     if (http.readyState == 4 && http.status == 200){
         menujson = JSON.parse(http.responseText);
@@ -92,7 +95,7 @@ function generarTarjeta(cat, item, id_container) {
     divtar.appendChild(div_cbutton)
     div_cbutton.appendChild(button_order)
     button_order.addEventListener("click",()=>{
-        console.log("Hola, me haz presionado. Mi id es "+button_order.id);
+        //console.log("Hola, me haz presionado. Mi id es "+button_order.id);
         for(let it in cat){
             //console.log(cat[it])
             //si el codigo del producto es igual al id del boton generado
@@ -102,13 +105,20 @@ function generarTarjeta(cat, item, id_container) {
                 name_prod_html.innerText = cat[it]["nombre"]
                 precio_prod_html.innerText = cat[it]["precio"]
                 input_cantidad.addEventListener("input",()=>{
-                    if(input_cantidad.value.length == 0){
+                    if(input_cantidad.value.length == 0 || parseInt(input_cantidad.value) < 0){
                         input_cantidad.value = 0;
                         //console.log(input_cantidad.value.length)
                     }
-                    total_prod_html.innerText = parseInt(input_cantidad.value) * cat[it]["precio"]
                     
-    
+                    if(parseInt(input_cantidad.value) > cant_max){
+                        input_cantidad.value = cant_max;
+                        alert_cantidad.innerText = "⚠ Haz sobrepasado la cantidad máxima ("+cant_max+").";
+                        alert_cantidad.className = "alert vis"
+                    }else{
+                        alert_cantidad.innerText = ""
+                        alert_cantidad.className = "alert inv"
+                    }
+                    total_prod_html.innerText = parseInt(input_cantidad.value) * cat[it]["precio"]
                 })
                 
                 capa_pri.className = "capa_pri capa_pri_act"
@@ -133,7 +143,7 @@ document.addEventListener("click", function(e) {
 let http_mesas = new XMLHttpRequest();
 http_mesas.open('GET','./menu/mesas.json');
 http_mesas.onreadystatechange = () => {
-    let select_mesa = document.getElementById("select_mesa");
+    
     if (http_mesas.readyState == 4 && http_mesas.status == 200){
         mesas_json = JSON.parse(http_mesas.responseText)
         //console.log(mesas_json)
@@ -148,4 +158,38 @@ http_mesas.onreadystatechange = () => {
 }
 http_mesas.send()
 
+let form_ordenar = document.getElementById("form-ordenar")
+form_ordenar.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let alert_mesa = document.getElementById("alert_mesa")
+    let cor = 0
+    if(select_mesa.value == "0"){
+        window.location.href = "#"+select_mesa.id
+        select_mesa.style.border = "1px solid #ff0000"
+        alert_mesa.className = "alert vis"
+        alert_mesa.innerText = "⚠ Seleccione una mesa."
+        cor = 0
+        e.preventDefault();
 
+    }else{
+        alert_mesa.className = "alert inv"
+        alert_mesa.innerText = ""
+        select_mesa.style.border = "none"
+        cor = 1
+    }
+
+    if(parseInt(input_cantidad.value) == 0){
+        cor = 0
+        alert_cantidad.className = "alert vis"
+        alert_cantidad.innerText = "⚠ Pida por lo menos uno."
+        e.preventDefault();
+    }else{
+        cor = 1
+        alert_cantidad.className = "alert inv"
+        alert_cantidad.innerText = ""
+    }
+
+    if(cor == 1){
+        form_ordenar.submit()
+    }
+})
