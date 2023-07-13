@@ -196,8 +196,8 @@ input[type="submit"]{
 }
 .alert{
     padding: 5px;
-    color: #ffffff;
-    background: #F25C05;
+    color: #000000;
+    background: #ffa500;
     border-radius: 3px;
 }
 .inv{

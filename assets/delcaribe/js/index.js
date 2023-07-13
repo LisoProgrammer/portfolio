@@ -1,11 +1,12 @@
 let cloader = document.getElementById("cloader");
 let http = new XMLHttpRequest();
-http.open('GET','./menu/menu.json');
-window.onload = () =>{
+http.open('GET', './menu/menu.json');
+window.onload = () => {
     cloader.remove()
 }
 let state_ord_menu = 0;
 let cant_max = 10
+
 //template ORDENAR
 let capa_pri = document.getElementById("capa_pri")
 let capa_sec = document.getElementById("capa_sec")
@@ -16,31 +17,31 @@ let input_cantidad = document.getElementById("cant")
 let select_mesa = document.getElementById("select_mesa");
 let alert_cantidad = document.getElementById("alert_cantidad")
 http.onreadystatechange = () => {
-    if (http.readyState == 4 && http.status == 200){
+    if (http.readyState == 4 && http.status == 200) {
         menujson = JSON.parse(http.responseText);
         //console.log(menujson);
-        
-        for(let ent in menujson["entradas"]){
+
+        for (let ent in menujson["entradas"]) {
             console.log(ent)
             //console.log(menujson["entrada"][ent])
-            generarTarjeta(menujson["entradas"],ent,"ent")
+            generarTarjeta(menujson["entradas"], ent, "ent")
         }
-        for(let ent in menujson["platosfuertes"]){
+        for (let ent in menujson["platosfuertes"]) {
             console.log(ent)
             //console.log(menujson["entrada"][ent])
-            generarTarjeta(menujson["platosfuertes"],ent,"plf")
+            generarTarjeta(menujson["platosfuertes"], ent, "plf")
         }
-        for(let ent in menujson["postres"]){
+        for (let ent in menujson["postres"]) {
             console.log(ent)
             //console.log(menujson["entrada"][ent])
-            generarTarjeta(menujson["postres"],ent,"pos")
+            generarTarjeta(menujson["postres"], ent, "pos")
         }
-        for(let ent in menujson["bebidas"]){
+        for (let ent in menujson["bebidas"]) {
             console.log(ent)
             //console.log(menujson["entrada"][ent])
-            generarTarjeta(menujson["bebidas"],ent,"beb")
+            generarTarjeta(menujson["bebidas"], ent, "beb")
         }
-            
+
     }
 }
 http.send()
@@ -70,7 +71,7 @@ function generarTarjeta(cat, item, id_container) {
     let div_cprecio = document.createElement("div");
     div_cprecio.className = "cprecio"
     let p_$ = document.createElement("p");
-    p_$.innerText="$";
+    p_$.innerText = "$";
     let p_precio = document.createElement("p");
     p_precio.innerText = cat[item]["precio"]
     div_ctext.appendChild(div_cprecio)
@@ -83,7 +84,7 @@ function generarTarjeta(cat, item, id_container) {
     div_subcontent.appendChild(div_img)
     div_img.appendChild(img)
     div_img.className = "cimg"
-    img.onerror = () =>{
+    img.onerror = () => {
         img.src = "menu/assets/noimg.jpg";
     }
     let div_cbutton = document.createElement("div");
@@ -94,36 +95,36 @@ function generarTarjeta(cat, item, id_container) {
     button_order.innerText = "ORDENAR";
     divtar.appendChild(div_cbutton)
     div_cbutton.appendChild(button_order)
-    button_order.addEventListener("click",()=>{
+    button_order.addEventListener("click", () => {
         //console.log("Hola, me haz presionado. Mi id es "+button_order.id);
-        for(let it in cat){
+        for (let it in cat) {
             //console.log(cat[it])
             //si el codigo del producto es igual al id del boton generado
-            if(cat[it]["code"]==button_order.id){
+            if (cat[it]["code"] == button_order.id) {
                 //Mostrar el objeto del producto
                 console.log(cat[it])
                 name_prod_html.innerText = cat[it]["nombre"]
                 precio_prod_html.innerText = cat[it]["precio"]
-                input_cantidad.addEventListener("input",()=>{
-                    if(input_cantidad.value.length == 0 || parseInt(input_cantidad.value) < 0){
+                input_cantidad.addEventListener("input", () => {
+                    if (input_cantidad.value.length == 0 || parseInt(input_cantidad.value) < 0) {
                         input_cantidad.value = 0;
                         //console.log(input_cantidad.value.length)
                     }
-                    
-                    if(parseInt(input_cantidad.value) > cant_max){
+
+                    if (parseInt(input_cantidad.value) > cant_max) {
                         input_cantidad.value = cant_max;
-                        alert_cantidad.innerText = "⚠ Haz sobrepasado la cantidad máxima ("+cant_max+").";
+                        alert_cantidad.innerText = "⚠ Haz sobrepasado la cantidad máxima (" + cant_max + ").";
                         alert_cantidad.className = "alert vis"
-                    }else{
+                    } else {
                         alert_cantidad.innerText = ""
                         alert_cantidad.className = "alert inv"
                     }
                     total_prod_html.innerText = parseInt(input_cantidad.value) * cat[it]["precio"]
                 })
-                
+
                 capa_pri.className = "capa_pri capa_pri_act"
                 capa_sec.className = "capa_sec capa_sec_act"
-                
+
             }
         }
     }
@@ -131,7 +132,7 @@ function generarTarjeta(cat, item, id_container) {
 }
 let button_closer = document.getElementById("closer_orden")
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     let em = e.target;
     if (em.id == "capa_pri" || em.id == "closer_orden") {
         //cierra la capa
@@ -141,13 +142,13 @@ document.addEventListener("click", function(e) {
     }
 })
 let http_mesas = new XMLHttpRequest();
-http_mesas.open('GET','./menu/mesas.json');
+http_mesas.open('GET', './menu/mesas.json');
 http_mesas.onreadystatechange = () => {
-    
-    if (http_mesas.readyState == 4 && http_mesas.status == 200){
+
+    if (http_mesas.readyState == 4 && http_mesas.status == 200) {
         mesas_json = JSON.parse(http_mesas.responseText)
         //console.log(mesas_json)
-        for(let op in mesas_json["mesas"]){
+        for (let op in mesas_json["mesas"]) {
             let opt = document.createElement("option")
             opt.value = op
             opt.innerText = mesas_json["mesas"][op]
@@ -159,37 +160,44 @@ http_mesas.onreadystatechange = () => {
 http_mesas.send()
 
 let form_ordenar = document.getElementById("form-ordenar")
-form_ordenar.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    let alert_mesa = document.getElementById("alert_mesa")
-    let cor = 0
-    if(select_mesa.value == "0"){
-        window.location.href = "#"+select_mesa.id
-        select_mesa.style.border = "1px solid #ff0000"
-        alert_mesa.className = "alert vis"
-        alert_mesa.innerText = "⚠ Seleccione una mesa."
-        cor = 0
+form_ordenar.addEventListener("submit", (e) => {
+    let alert_mesa = document.getElementById("alert_mesa");
+    let alert_cantidad = document.getElementById("alert_cantidad");
+    let select_mesa = document.getElementById("select_mesa");
+    let input_cantidad = document.getElementById("cant");
+
+    if (parseInt(select_mesa.value) === 0) {
         e.preventDefault();
-
-    }else{
-        alert_mesa.className = "alert inv"
-        alert_mesa.innerText = ""
-        select_mesa.style.border = "none"
-        cor = 1
+        window.location.href = "#" + select_mesa.id;
+        select_mesa.style.border = "1px solid #ff0000";
+        alert_mesa.className = "alert vis";
+        alert_mesa.innerText = "⚠ Seleccione una mesa.";
+        //console.log("mesa = 0? "+(parseInt(select_mesa.value) == 0))
+    } else {
+        alert_mesa.className = "alert inv";
+        alert_mesa.innerText = "";
+        select_mesa.style.border = "none";
     }
 
-    if(parseInt(input_cantidad.value) == 0){
-        cor = 0
-        alert_cantidad.className = "alert vis"
-        alert_cantidad.innerText = "⚠ Pida por lo menos uno."
+    if (parseInt(input_cantidad.value) === 0) {
         e.preventDefault();
-    }else{
-        cor = 1
-        alert_cantidad.className = "alert inv"
-        alert_cantidad.innerText = ""
+        //console.log("Cantidad = 0? "+(parseInt(input_cantidad.value) == 0))
+        alert_cantidad.className = "alert vis";
+        alert_cantidad.innerText = "⚠ Pida por lo menos uno.";
+    } else {
+        alert_cantidad.className = "alert inv";
+        alert_cantidad.innerText = "";
+        input_cantidad.value = parseInt(input_cantidad.value)
     }
-
-    if(cor == 1){
-        form_ordenar.submit();
+    let alert_form_sent_equal = document.getElementById("alert_form_sent_qual")
+    if (window.location.href == localStorage.getItem("url")) {
+        alert_form_sent_equal.innerHTML = "⚠ Esta solicitud fue anteriormente procesada.";
+        alert_form_sent_equal.className = "alert vis"
+        setTimeout(() => {
+            alert_form_sent_equal.innerHTML = "";
+            alert_form_sent_equal.className = "alert inv"
+        }, 3000)
+        e.preventDefault()
     }
-})
+    localStorage.setItem("url", window.location.href)
+});
