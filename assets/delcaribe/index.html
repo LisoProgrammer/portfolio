@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <form action="" method="get" id="form-ordenar">
+            <form action="https://depauperate-adaptio.000webhostapp.com/delcaribe_response_prod_selected.php" method="get" id="form-ordenar">
                 <div>
                     <h4>Mesa</h4>
                     <div class="alert inv" id="alert_mesa">
@@ -92,7 +92,8 @@
                 <div class="flex center">
                    <input type="submit" value="ORDENAR"> 
                 </div>
-                
+                <input type="datetime-local" name="datetime" id="datetime-local" hidden>
+                <input type="text" name="code_prod" id="input_code" hidden>
             </form>
 
         </div>
@@ -137,5 +138,6 @@
         
     </footer>
     <script async src="js/index.js"></script>
+    <script src="js/menu_header.js"></script>
 </body>
 </html>

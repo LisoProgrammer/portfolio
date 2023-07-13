@@ -5,6 +5,7 @@ window.onload = () => {
     cloader.remove()
 }
 let state_ord_menu = 0;
+//Cantidad maxima de productos para pedir
 let cant_max = 10
 
 //template ORDENAR
@@ -14,30 +15,32 @@ let name_prod_html = document.getElementById("name_prod")
 let precio_prod_html = document.getElementById("precio")
 let total_prod_html = document.getElementById("total")
 let input_cantidad = document.getElementById("cant")
+let input_code = document.getElementById("input_code")
 let select_mesa = document.getElementById("select_mesa");
 let alert_cantidad = document.getElementById("alert_cantidad")
+//Se cargan las tarjetas con los datos de cada producto, clasificados por entradas, platosfuertes, postres y bebidas.
 http.onreadystatechange = () => {
     if (http.readyState == 4 && http.status == 200) {
         menujson = JSON.parse(http.responseText);
         //console.log(menujson);
 
         for (let ent in menujson["entradas"]) {
-            console.log(ent)
+            //console.log(ent)
             //console.log(menujson["entrada"][ent])
             generarTarjeta(menujson["entradas"], ent, "ent")
         }
         for (let ent in menujson["platosfuertes"]) {
-            console.log(ent)
+            //console.log(ent)
             //console.log(menujson["entrada"][ent])
             generarTarjeta(menujson["platosfuertes"], ent, "plf")
         }
         for (let ent in menujson["postres"]) {
-            console.log(ent)
+            //console.log(ent)
             //console.log(menujson["entrada"][ent])
             generarTarjeta(menujson["postres"], ent, "pos")
         }
         for (let ent in menujson["bebidas"]) {
-            console.log(ent)
+            //console.log(ent)
             //console.log(menujson["entrada"][ent])
             generarTarjeta(menujson["bebidas"], ent, "beb")
         }
@@ -103,8 +106,13 @@ function generarTarjeta(cat, item, id_container) {
             if (cat[it]["code"] == button_order.id) {
                 //Mostrar el objeto del producto
                 console.log(cat[it])
+                //se accede al nombre del producto y se cambia el texto que tiene el html
                 name_prod_html.innerText = cat[it]["nombre"]
+                //se accede al precio del producto y se cambia el texto que tiene el html
                 precio_prod_html.innerText = cat[it]["precio"]
+                //se guarda el codigo en un input
+                input_code.value = cat[it]["code"]
+                //Se validan ciertos campos
                 input_cantidad.addEventListener("input", () => {
                     if (input_cantidad.value.length == 0 || parseInt(input_cantidad.value) < 0) {
                         input_cantidad.value = 0;
@@ -121,7 +129,7 @@ function generarTarjeta(cat, item, id_container) {
                     }
                     total_prod_html.innerText = parseInt(input_cantidad.value) * cat[it]["precio"]
                 })
-
+                //Se abre el menú de opciones de orden cuando se da clic en cierto prod
                 capa_pri.className = "capa_pri capa_pri_act"
                 capa_sec.className = "capa_sec capa_sec_act"
 
@@ -134,6 +142,7 @@ let button_closer = document.getElementById("closer_orden")
 
 document.addEventListener("click", function (e) {
     let em = e.target;
+    //Se cierra el menu de opciones de orden
     if (em.id == "capa_pri" || em.id == "closer_orden") {
         //cierra la capa
         capa_pri.className = "capa_pri";
@@ -141,6 +150,7 @@ document.addEventListener("click", function (e) {
         input_cantidad.value = 0;
     }
 })
+//Se cargan las mesas en el select
 let http_mesas = new XMLHttpRequest();
 http_mesas.open('GET', './menu/mesas.json');
 http_mesas.onreadystatechange = () => {
@@ -160,6 +170,7 @@ http_mesas.onreadystatechange = () => {
 http_mesas.send()
 
 let form_ordenar = document.getElementById("form-ordenar")
+//Se validan los campos antes de enviar
 form_ordenar.addEventListener("submit", (e) => {
     let alert_mesa = document.getElementById("alert_mesa");
     let alert_cantidad = document.getElementById("alert_cantidad");
@@ -189,7 +200,10 @@ form_ordenar.addEventListener("submit", (e) => {
         alert_cantidad.innerText = "";
         input_cantidad.value = parseInt(input_cantidad.value)
     }
-    let alert_form_sent_equal = document.getElementById("alert_form_sent_qual")
+    //Se escribe la fecha
+    input_fecha = document.getElementById("datetime-local")
+    input_fecha.value = fecha_formateada_iso()
+    /*let alert_form_sent_equal = document.getElementById("alert_form_sent_qual")
     if (window.location.href == localStorage.getItem("url")) {
         alert_form_sent_equal.innerHTML = "⚠ Esta solicitud fue anteriormente procesada.";
         alert_form_sent_equal.className = "alert vis"
@@ -199,5 +213,29 @@ form_ordenar.addEventListener("submit", (e) => {
         }, 3000)
         e.preventDefault()
     }
-    localStorage.setItem("url", window.location.href)
+    localStorage.setItem("url", window.location.href)*/
 });
+function fecha_formateada_iso() {
+
+    // Crear un objeto Date con la fecha y hora deseada
+    let fecha = new Date(); // Los meses van de 0 a 11, por lo que 5 representa junio
+    //Obtener los componentes de la fecha
+    let año = fecha.getFullYear();
+    let mes = fecha.getMonth() + 1; // Se le suma 1 porque los meses van de 0 a 11
+    let dia = fecha.getDate();
+    let hora = fecha.getHours();
+    let minutos = fecha.getMinutes();
+
+    // Formatear los componentes para que tengan dos dígitos si es necesario
+    mes = mes < 10 ? '0' + mes : mes;
+    dia = dia < 10 ? '0' + dia : dia;
+    hora = hora < 10 ? '0' + hora : hora;
+    minutos = minutos < 10 ? '0' + minutos : minutos;
+
+    // Crear la cadena de fecha en el formato adecuado
+    let fechaFormateada = año + '-' + mes + '-' + dia + 'T' + hora + ':' + minutos;
+
+    // Establecer el valor del input
+    return fechaFormateada;
+
+}
