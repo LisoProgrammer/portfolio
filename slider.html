@@ -12,20 +12,20 @@
             margin: 0;
             font-family: "Poor Richard";
         }
-        
+
         @font-face {
             src: url("assets/PoorRichardOpti.otf");
             font-family: "Poor Richard";
         }
-        
+
         div[id],
         h1[id],
         div[class],
         a[class="spc-a"] {
             scroll-margin-top: 5000px;
         }
-        
-         :root {
+
+        :root {
             --color1: #f5f5f5;
             --color2: #289dd2;
             --color3: #dfdfdf;
@@ -36,12 +36,12 @@
             --color-brownblue: #1d4355;
             --color-brown: #2f31247e;
         }
-        
+
         html {
             min-height: 0px;
             max-height: 600px;
         }
-        
+
         body {
             overflow: hidden;
             width: 100%;
@@ -51,50 +51,55 @@
             margin: auto;
             color: var(--color1);
         }
-        
+
         .slider-container {
             width: 100%;
             height: 250px;
             margin: auto;
             font-size: 1.4rem;
         }
-        
+
         @media only screen and (max-width: 700px) {
             .slider-element {
                 display: flex;
                 flex-direction: column;
                 border-radius: 5px;
             }
+
             .slider-container {
                 height: 650px;
             }
+
             .slider-element>div[class="c_img"]+div[class="c_description"] {
-                width: 100%!important;
+                width: 100% !important;
                 height: 300px !important;
             }
+
             .c_img {
                 height: 300px !important;
                 width: 100% !important;
             }
+
             .c-description {
                 width: 100% !important;
             }
+
             div[id],
             h1[id] {
                 scroll-margin-top: 500px;
             }
         }
-        
+
         .c_links {
             margin-top: 100px;
         }
-        
+
         @media only screen and (max-width: 500px) {
             .slider-element {
                 font-size: 1.2rem;
             }
         }
-        
+
         .btn-1 {
             padding: 10px;
             border: none;
@@ -102,18 +107,18 @@
             border-radius: 2px;
             background: var(--color2);
             color: rgb(255, 255, 255);
-            margin: 50px auto;
+            margin: 30px auto;
             font-size: 20px;
             transition: 0.3s;
             display: flex;
             cursor: pointer;
             width: fit-content;
         }
-        
+
         .btn-1:hover {
             background: transparent;
         }
-        
+
         .slider-element {
             display: flex;
             background: var(--color6);
@@ -124,56 +129,63 @@
             display: none;
             height: 100%;
         }
-        
+
         .slider-element:target {
             z-index: 10;
             opacity: 1;
             animation: desv 0.3s;
             display: flex;
         }
-        
+
         .c-description {
             padding: 15px;
             width: 50%;
         }
-        
+
         .c-description>div {
             margin: 15px 0px;
         }
-        
+
         .c_img {
             width: 50%;
             border-radius: 5px;
         }
-        
+
         .img1 {
             background: url("assets/b_1ken.png");
             background-size: cover;
         }
-        
+
         .img2 {
             background: url("assets/s_6m.png");
             background-size: cover;
         }
-        
+
         .img3 {
             background: url("assets/bg.png");
             background-size: cover;
         }
-        
+
         .img4 {
             background: url("assets/todo_rifas_img.jpg");
             background-size: cover;
         }
-        
+
         .img5 {
             background: url("assets/dadoo.png");
             background-size: cover;
         }
-        .img6{
+
+        .img6 {
             background: url("assets/mathapp.jpg");
             background-size: cover;
         }
+
+        .img7 {
+            background: url("assets/delcaribe.png");
+            background-size: cover;
+        }
+
         .c_links {
             width: 100%;
             height: auto;
@@ -182,13 +194,13 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .term {
             opacity: 1;
             z-index: 1;
             display: flex;
         }
-        
+
         .spc-a {
             text-decoration: none;
             display: flex;
@@ -204,45 +216,47 @@
             color: rgb(0, 0, 0);
             border-radius: 50%;
         }
-        
+
         .spc-a-focus {
             background: var(--color2);
             color: rgb(255, 255, 255);
             animation: scla 0.3s;
         }
-        
+
         .flex {
             display: flex;
         }
-        
+
         .space-between {
             justify-content: space-between;
         }
-        
+
         .center {
             align-items: center;
         }
-        
+
         @keyframes desv {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
-        
+
         @keyframes scla {
             from {
                 transform: scale(0.1);
                 opacity: 0;
             }
+
             to {
                 transform: scale(1);
                 opacity: 1;
             }
         }
-        
+
         .time {
             width: auto;
             padding: 4px;
@@ -252,16 +266,18 @@
             font-weight: 200;
             display: block;
         }
-        
+
         hr {
             height: 1px;
             width: 20px;
             background: #fff;
             border: none;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .info_box {
             width: fit-content;
             height: fit-content;
@@ -272,13 +288,16 @@
             display: flex;
             align-items: flex-end;
         }
-        .developed{
+
+        .developed {
             color: #4ab200;
         }
-        .in_dev{
+
+        .in_dev {
             color: #004d6e;
         }
-        .in_dev::before{
+
+        .in_dev::before {
             content: "";
             width: 20px;
             height: 20px;
@@ -301,6 +320,8 @@
             <a href="#tt3" class="spc-a">3</a>
             <hr>
             <a href="#tt4" class="spc-a">4</a>
+            <hr>
+            <a href="#tt5" class="spc-a">5</a>
             <!--
 Se debe ir cambiando los números y id a medida en que se creen proyectos
             <a href="#tt1" class="spc-a spc-a-focus">1</a>
@@ -344,7 +365,8 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                     </h2>
                 </div>
                 <p>La virtualización de los típicos dados físicos, corresponde a la primera fase de mi aprendizaje.</p>
-                <a class="btn-1" target="_blank" href="assets/dadoo">Ir a Dadoo<img src="assets/a_go.svg" alt=""></a><br>
+                <a class="btn-1" target="_blank" href="assets/dadoo">Ir a Dadoo<img src="assets/a_go.svg"
+                        alt=""></a><br>
             </div>
 
         </div>
@@ -359,47 +381,65 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                         <div class="time">2021/05</div>
                     </h2>
                 </div>
-                <p>El sim. de pruebas Icfes. Su objetivo es preparar a los estudiantes del país, para las pruebas Saber. Es aún un prototipo.</p>
+                <p>El sim. de pruebas Icfes. Su objetivo es preparar a los estudiantes del país, para las pruebas Saber.
+                    Es aún un prototipo.</p>
                 <div class="info_box in_dev">en desarrollo</div>
                 <!--<a class="btn-1" href="index.html#app_b_test" target="_self">Ir a la página web<img src="assets/a_go.svg" alt=""></a>--><br>
             </div>
 
-        </div>            
+        </div>
         <div class="slider-element" id="tt3">
 
-                <div class="c_img img6"></div>
-    
-                <div class="c-description">
-                    <div class="content-title">
-                        <h2 class="flex space-between center">
-                            <div>mathApp</div>
-                            <div class="time">2022/05</div>
-                        </h2>
-                    </div>
-                    <p>Una aplicación web para entrenar a los niños y jóvenes estudiantes en las operaciones básicas de las matemáticas.</p>
-                    <a class="btn-1" target="_blank" href="assets/mathApp/">Ir a mathApp<img src="assets/a_go.svg" alt=""></a><br>
+            <div class="c_img img6"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
+                        <div>mathApp</div>
+                        <div class="time">2022/05</div>
+                    </h2>
                 </div>
+                <p>Una aplicación web para entrenar a los niños y jóvenes estudiantes en las operaciones básicas de las
+                    matemáticas.</p>
+                <a class="btn-1" target="_blank" href="assets/mathApp/">Ir a mathApp<img src="assets/a_go.svg"
+                        alt=""></a><br>
             </div>
-            <div class="slider-element" id="tt4">
+        </div>
+        <div class="slider-element" id="tt4">
 
-                    <div class="c_img img4"></div>
+            <div class="c_img img4"></div>
 
-                <div class="c-description">
-                    <div class="content-title">
-                     <h2 class="flex space-between center">
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
                         <div>Todo rifas</div>
                         <div class="time">2023/01</div>
                     </h2>
                 </div>
-                <p>Todo rifas es un sistema en desarrollo, que pretende dar a los usuarios la posibilidad de organizar sus rifas o sorteos de manera automática.</p>
+                <p>Todo rifas es un sistema en desarrollo, que pretende dar a los usuarios la posibilidad de organizar
+                    sus rifas o sorteos de manera automática.</p>
                 <div class="info_box in_dev">en desarrollo</div>
                 <!--<button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>-->
             </div>
-
-        </div><!--
         </div>
-        
-        <div class="slider-element" id="tt4">
+        <div class="slider-element" id="tt5">
+
+            <div class="c_img img7"></div>
+
+            <div class="c-description">
+                <div class="content-title">
+                    <h2 class="flex space-between center">
+                        <div>Delcaribe</div>
+                        <div class="time">2023/06</div>
+                    </h2>
+                </div>
+                <p>Un sistema en desarrollo para restaurante que permitiría a los comensales ordenar algún producto
+                    del menu y al administrador de la cocina, ver los pedidos pendientes.</p>
+                <!--<div class="info_box in_dev">en desarrollo</div>-->
+                <a class="btn-1" target="_blank" href="assets/delcaribe">Ver demo<img src="assets/a_go.svg" alt=""></a>
+            </div>
+        </div>
+        <!--<div class="slider-element" id="tt4">
 
             <div class="c_img img4"></div>
 
@@ -413,47 +453,47 @@ Se debe ir cambiando los números y id a medida en que se creen proyectos
                 <p>Un pequeño sistema para registrar participantes y escoger automaticamente al ganador dada una fecha de juego.</p>
                 <button class="btn-1">Ir a la página web<img src="assets/a_go.svg" alt=""></button><br>
             </div>--->
-<!--
+        <!--
 Se deben ir cambiando los ids
 Colocar además la clase term para que sea visible el elemento del slider
 -->
-        
-
-    
-    <script>
-        function insertAction(id, link, indice) {
-            try {
-                document.getElementsByClassName(id)[indice].addEventListener("click", () => {                
-                    //Solución prematura
-                    if(indice==2){
-                        window.open(link)
-                    }else{
-                      window.open(link, "_blank")  
-                    }
-                    
-                })
-            } catch (e) {
-                console.error(e)
-                console.log(document.getElementsByClassName(id)[indice])
-                console.log("Indice con error:"+indice)
-            }
 
 
-        }
-        const links = ["assets/dadoo","./index.html#app_b_test","assets/mathApp",""]
-        for (let m = 0; m < links.length; m++) {
-            document.getElementsByClassName("spc-a")[m].addEventListener("click", () => {
-                //Se le da click al elemento,cambia de estilo y se omiten los otros elementos en este proceso. Si no tiene la clase de estilo el elemento clickeado, se le añade y a la vez se evita que quede con la clase permanentemente al ser seleccionado otro elemento <a>.
-                if (!document.getElementsByClassName("spc-a")[m].classList[1]) {
 
-                    for (let i = 0; i < links.length; i++) {
-                        document.getElementsByClassName("spc-a")[i].classList.remove("spc-a-focus")
-                        document.getElementsByClassName("spc-a")[m].classList.add("spc-a-focus")
-                    }
+        <script>
+            function insertAction(id, link, indice) {
+                try {
+                    document.getElementsByClassName(id)[indice].addEventListener("click", () => {
+                        //Solución prematura
+                        if (indice == 2) {
+                            window.open(link)
+                        } else {
+                            window.open(link, "_blank")
+                        }
+
+                    })
+                } catch (e) {
+                    console.error(e)
+                    console.log(document.getElementsByClassName(id)[indice])
+                    console.log("Indice con error:" + indice)
                 }
-            })
-        }
-    </script>
+
+
+            }
+            const links = ["assets/dadoo", "./index.html#app_b_test", "assets/mathApp", "", "assets/delcaribe"]
+            for (let m = 0; m < links.length; m++) {
+                document.getElementsByClassName("spc-a")[m].addEventListener("click", () => {
+                    //Se le da click al elemento,cambia de estilo y se omiten los otros elementos en este proceso. Si no tiene la clase de estilo el elemento clickeado, se le añade y a la vez se evita que quede con la clase permanentemente al ser seleccionado otro elemento <a>.
+                    if (!document.getElementsByClassName("spc-a")[m].classList[1]) {
+
+                        for (let i = 0; i < links.length; i++) {
+                            document.getElementsByClassName("spc-a")[i].classList.remove("spc-a-focus")
+                            document.getElementsByClassName("spc-a")[m].classList.add("spc-a-focus")
+                        }
+                    }
+                })
+            }
+        </script>
 </body>
 
 </html>
