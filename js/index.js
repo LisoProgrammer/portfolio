@@ -326,7 +326,7 @@ elemetn_form[2].addEventListener("input", function() {
 })
 document.addEventListener("DOMContentLoaded", function() {
     new Typed(".prot", ({
-        strings: ["Desarrollador.", "Técnico.", "@LisoPro."],
+        strings: ["Dev.", "Tech.", "@LisoPro."],
         // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
         stringsElement: null,
         // typing speed
