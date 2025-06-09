@@ -17,7 +17,7 @@
         gtag('js', new Date());
         gtag('config', 'G-Q04R0W6M2F');
 </script>
-    <title>Lisandro Zapata | Portafolio</title>
+    <title data-i18n="title">Lisandro Zapata | Portafolio</title>
 </head>
 
 <body>
@@ -26,10 +26,8 @@
         <div class="sub-load">
 
             <img src="assets/brand_white(2).png" alt="" width="50vw">
-            <h2>Cargando contenido...</h2>
+            <h2 data-i18n="loading">Cargando contenido...</h2>
         </div>
-
-
     </div>
     <div class="c">
         <header>
@@ -39,7 +37,7 @@
             <div class="flex c_c" role="navigation">
                 <div class="flex">
                     <img src="assets/lang.png" alt="" width="25px" height="25px" style="margin: auto 0px 20px 0px;">
-                    <select name="" id="langSelector" value="es">
+                    <select name="" id="langSelector" value="es" style="outline: none;">
                     <option value="es">Español (es)</option>
                     <option value="en">English (en)</option>
                 </select>
@@ -48,16 +46,16 @@
                 <div class="cab">
                     <button id="btn_m" class="btn-5"><img src="assets/m.svg" alt="menu" width="20px"></button></div>
                 <div class="ab">
-                    <a href="#t1" class="a-sp t1">Sobre mí</a>
+                    <a href="#t1" class="a-sp t1" data-i18n="sobre_mi">Sobre mí</a>
                 </div>
                 <div class="ab">
-                    <a href="#t2" class="a-sp t2">Mis Habilidades</a>
+                    <a href="#t2" class="a-sp t2" data-i18n="mis_hab">Mis Habilidades</a>
                 </div>
                 <div class="ab">
-                    <a href="#t3" class="a-sp t3">Mis proyectos</a>
+                    <a href="#t3" class="a-sp t3" data-i18n="mis_pro">Mis proyectos</a>
                 </div>
                 <div class="ab">
-                    <a href="#t4" class="a-sp t4">Contáctame</a>
+                    <a href="#t4" class="a-sp t4" data-i18n="contact_me">Contáctame</a>
                 </div>
 
             </div>
@@ -67,7 +65,7 @@
             <div class="flex t">
                 <div class="flex pro">
                     <div>
-                        <h1 class="title">Soy</h1>
+                        <h1 class="title" data-i18n="soy">Soy</h1>
                     </div>
                     <div id="name">
                         <h1 class="title prot" id="prot"></h1>
@@ -81,10 +79,10 @@
                 </div>
                 <div class="tt">
                     <p class="dcr">
-                        <H1 class="titlesub">La creatividad inicia con un clic.</H1>
-                        <h2 style="font-weight: 200;">- Acompáñame...</h2>
+                        <H1 class="titlesub" data-i18n="message">La creatividad inicia con un clic.</H1>
+                        <h2 style="font-weight: 200;" data-i18n="sub_message">- Acompáñame...</h2>
                     </p>
-                    <button class="btn-1 flex center space-between" id="btn_g">Descargar CV
+                    <button class="btn-1 flex center space-between" id="btn_g"><span data-i18n="dowl_cv">Descargar CV</span>
                         <svg
                         width="7mm"
                         height="7mm"
@@ -163,25 +161,26 @@
         <div class="tut" id="t1">
             <div class="par">
                 <div class="title-5">
-                    <h1 class="t-i">Sobre mí</h1>
+                    <h1 class="t-i" data-i18n="sobre_mi">Sobre mí</h1>
                 </div>
-                <p>Mi nombre es Lisandro Zapata, tengo <span id="ag"></span> años. Soy técnico en sistemas, desarrollador web y estudiante de Ingeniería de Sistemas de <span id="s_carr_or"></span>.<!-- becado por <a href="https://www.utb.edu.co/blog/noticias/refineria-de-cartagena-y-la-utb-entregan-becas/" class="">@BecasConCorazón</a> de la Refinería de Cartagena y la UTB.--> Me identifico como una persona autodidacta, responsable y ordenada. Cuando me inspiro, me encanta dibujar, pues la descarga de emociones es gigantezca. Me puedes llamar Liso, no por ser liso, sino por ser curioso.</p>
+                <p>
+                    <span data-i18n="smtext1">Mi nombre es Lisandro Zapata, tengo </span> <span id="ag"></span> <span data-i18n="smtext2">años. Soy técnico en sistemas, desarrollador web y estudiante de Ingeniería de Sistemas de</span><span id="s_carr_or"></span>.<!-- becado por <a href="https://www.utb.edu.co/blog/noticias/refineria-de-cartagena-y-la-utb-entregan-becas/" class="">@BecasConCorazón</a> de la Refinería de Cartagena y la UTB.--> <span data-i18n="smtext3">Me identifico como una persona autodidacta, responsable y ordenada. Cuando me inspiro, me encanta dibujar, pues la descarga de emociones es gigantezca. Me puedes llamar Liso, no por ser liso, sino por ser curioso.</span> <span></span></p>
             </div>
 
         </div>
         <div class="tut" id="t2">
             <div class="par">
                 <div class="title-5">
-                    <h1 class="t-i">Mis habilidades Pro</h1>
+                    <h1 class="t-i" data-i18n="mis_hab_h">Mis habilidades Pro</h1>
                 </div>
-                <p>Como técnico en sistemas, puedo administrar y configurar herramientas y equipos de oficina, participar en el montaje de redes informáticas y realizar mantenimiento preventivo a computadoras. Como desarrollador web, también trabajo con las tecnologías que se presentan a continuación. </p>
+                <p data-i18n="mhtext1">Como técnico en sistemas, puedo administrar y configurar herramientas y equipos de oficina, participar en el montaje de redes informáticas y realizar mantenimiento preventivo a computadoras. Como desarrollador web, también trabajo con las tecnologías que se presentan a continuación. </p>
             </div>
 
         </div>
 
         <div class="skills">
             <div class="title-5">
-                <h1 class="t-i"> Las tecnologías</h1>
+                <h1 class="t-i" data-i18n="tech_h"> Las tecnologías</h1>
             </div>
             <div class="wrap">
                 <div class="element tc flex column center" id="tc1">
@@ -227,7 +226,7 @@
 
         <div class="skills" id="t3">
             <div class="title-5">
-                <h1 class="t-i">Mis proyectos</h1>
+                <h1 class="t-i" data-i18n="mis_pro">Mis proyectos</h1>
             </div>
 
             <div class="content-slider">
@@ -235,7 +234,7 @@
             </div>
             <div id="app_bookendtest">
                 
-                <h2 class="title-5">Una muestra interactiva</h2>
+                <h2 class="title-5" data-i18n="show_example">Una muestra interactiva</h2>
                 <h3>Bookendtest</h3>
                 <div class="cam"></div>
                 <iframe src="assets/muestra_bookendtest/" id="app_b_test"></iframe><br><br>
@@ -246,20 +245,20 @@
 
         <div class="c-form" id="t4">
             <div class="bdrp" id="bdrp">
-                <h1>Contáctame</h1><br>
+                <h1 data-i18n="contact_me">Contáctame</h1><br>
                 <form action="" method="post" class="form-1" id="contact-form">
                     <div class="code suggestion">
-                        <h2>Puedes enviar <span id="cont" class="sbr">3</span> mensajes hoy.</h2>
+                        <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont" class="sbr">3</span> <span data-i18n="contact_me_text2"></span></h2>
                     </div>
 
 
-                    <h2 class="title-sp">Nombre:</h2>
+                    <h2 class="title-sp" data-i18n="contact_me_text3">Nombre:</h2>
                     <input type="text" name="name" class="input" placeholder="Nombre...">
-                    <h2 class="title-sp">Correo electrónico o teléfono:</h2>
+                    <h2 class="title-sp" data-i18n="contact_me_text4">Correo electrónico o teléfono:</h2>
                     <input type="email" name="email" class="input" placeholder="Correo electrónico o teléfono...">
                     <div class="flex space-between">
                         <div>
-                            <h2 class="title-sp">Mensaje:</h2>
+                            <h2 class="title-sp" data-i18n="contact_me_text5">Mensaje:</h2>
                         </div>
 
                         <div>
@@ -271,7 +270,7 @@
             <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input" placeholder="Mensaje..."></textarea>
             <div id="sgt">
             </div><br>
-            <button type="submit" id="btn_s" class="btn-1">Enviar</button>
+            <button type="submit" id="btn_s" class="btn-1" data-i18n="submit">Enviar</button>
             </form>
         </div>
 
@@ -333,19 +332,19 @@
             <nav>
                 <ul>
                     <li>
-                        <h4>Menú</h4>
+                        <h4 data-i18n="menu">Menú</h4>
                     </li>
                     <li>
-                        <a href="#t1" class="a-sp t1">Sobre mí</a>
+                        <a href="#t1" class="a-sp t1" data-i18n="sobre_mi">Sobre mí</a>
                     </li>
                     <li>
-                        <a href="#t2" class="a-sp t2">Mis Habilidades</a>
+                        <a href="#t2" class="a-sp t2" data-i18n="mis_hab">Mis Habilidades</a>
                     </li>
                     <li>
-                        <a href="#t3" class="a-sp t3">Mis Proyectos</a>
+                        <a href="#t3" class="a-sp t3" data-i18n="mis_pro">Mis Proyectos</a>
                     </li>
                     <li>
-                        <a href="#t4" class="a-sp t4">
+                        <a href="#t4" class="a-sp t4" data-i18n="contact_me">
                           Contáctame
                         </a>
                     </li>
@@ -358,8 +357,8 @@
 
     <script src="js/typed.js" defer ></script>
     <script src="js/index.js"></script>
-    <script src="js/date.js"></script>
-
+    <script src="js/date.js" defer></script>
+    <script src="js/lang.js" defer></script>
 </body>
 
 </html>
