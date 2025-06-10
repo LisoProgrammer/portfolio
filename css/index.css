@@ -69,7 +69,11 @@ div[id] {
   border-bottom: 5px solid var(--color2) !important;
   transition: 0.3s !important;
 }
-
+.sp-icon{
+    width: 25px;
+    height: 25px;
+    margin: auto 0px 20px 0px;
+}
 .slider {
   width: 100%;
   height: 550px;
@@ -271,6 +275,7 @@ header {
     border: none;
     font-size: 20px;
     margin: auto 0px 20px 0px;
+    cursor: pointer;
 }
 #name {
   border-right: 3px solid #ad5353;
@@ -776,6 +781,12 @@ img {
   }
   p {
     text-align: justify;
+  }
+  #langSelector{
+    margin: 0px 5px;
+  }
+  .sp-icon {
+    margin: 0;
   }
 }
 
