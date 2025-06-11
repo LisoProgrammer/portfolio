@@ -6,17 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <meta name="description" content="Este portafolio web contiene todo lo referente a Lisandro Zapata a nivel laboral.">
+    <meta name="description"
+        content="Este portafolio web contiene todo lo referente a Lisandro Zapata a nivel laboral.">
     <meta property="og:image" content="assets/Yo.jpg">
     <link rel="shortcut icon" href="assets/brand_white(2).png">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q04R0W6M2F"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-Q04R0W6M2F');
-</script>
     <title data-i18n="title">Lisandro Zapata | Portafolio</title>
 </head>
 
@@ -24,9 +17,12 @@
     <div id="loading">
         <div id="progress"></div>
         <div class="sub-load">
-
             <img src="assets/brand_white(2).png" alt="" width="50vw">
+            <div class="progress_bar">
+                <div id="bar"></div>
+            </div>
             <h2 data-i18n="loading">Cargando contenido...</h2>
+            <h2 id="porcent_loading"></h2>
         </div>
     </div>
     <div class="c">
@@ -38,13 +34,14 @@
                 <div class="flex center">
                     <img src="assets/lang.png" class="sp-icon">
                     <select name="" id="langSelector" value="es" style="outline: none;">
-                    <option value="es">Español (es)</option>
-                    <option value="en">English (en)</option>
-                </select>
+                        <option value="es">Español (es)</option>
+                        <option value="en">English (en)</option>
+                    </select>
                 </div>
-                
+
                 <div class="cab">
-                    <button id="btn_m" class="btn-5"><img src="assets/m.svg" alt="menu" width="20px"></button></div>
+                    <button id="btn_m" class="btn-5"><img src="assets/m.svg" alt="menu" width="20px"></button>
+                </div>
                 <div class="ab">
                     <a href="#t1" class="a-sp t1" data-i18n="sobre_mi">Sobre mí</a>
                 </div>
@@ -79,79 +76,40 @@
                 </div>
                 <div class="tt">
                     <p class="dcr">
-                        <H1 class="titlesub" data-i18n="message">La creatividad inicia con un clic.</H1>
-                        <h2 style="font-weight: 200;" data-i18n="sub_message">- Acompáñame...</h2>
+                    <H1 class="titlesub" data-i18n="message">La creatividad inicia con un clic.</H1>
+                    <h2 style="font-weight: 200;" data-i18n="sub_message">- Acompáñame...</h2>
                     </p>
-                    <button class="btn-1 flex center space-between" id="btn_g"><span data-i18n="dowl_cv">Descargar CV</span>
-                        <svg
-                        width="7mm"
-                        height="7mm"
-                        viewBox="0 0 210 210"
-                        version="1.1"
-                        id="svg5"
-                        inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-                        sodipodi:docname="download.svg"
-                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:svg="http://www.w3.org/2000/svg">
-                       <sodipodi:namedview
-                          id="namedview7"
-                          pagecolor="#505050"
-                          bordercolor="#eeeeee"
-                          borderopacity="1"
-                          inkscape:pageshadow="0"
-                          inkscape:pageopacity="0"
-                          inkscape:pagecheckerboard="0"
-                          inkscape:document-units="mm"
-                          showgrid="false"
-                          inkscape:zoom="0.73406285"
-                          inkscape:cx="428.43743"
-                          inkscape:cy="357.59881"
-                          inkscape:window-width="1920"
-                          inkscape:window-height="1009"
-                          inkscape:window-x="-8"
-                          inkscape:window-y="-8"
-                          inkscape:window-maximized="1"
-                          inkscape:current-layer="layer1" />
-                       <defs
-                          id="defs2" />
-                       <g
-                          inkscape:label="Capa 1"
-                          inkscape:groupmode="layer"
-                          id="layer1">
-                         <rect
-                            style="fill:#000000;stroke:#000000;stroke-width:0.711297;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
-                            id="rect846"
-                            width="8.0885954"
-                            height="84.080887"
-                            x="-70.84124"
-                            y="125.90786"
-                            transform="matrix(0.78263607,-0.62247955,0.75725061,0.65312442,0,0)" />
-                         <rect
-                            style="fill:#000000;stroke:#000000;stroke-width:0.716872;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
-                            id="rect928"
-                            width="8.0947971"
-                            height="85.339806"
-                            x="199.35733"
-                            y="-22.632151"
-                            transform="matrix(0.73326117,0.6799471,-0.76763674,0.64088519,0,0)" />
-                         <rect
-                            style="fill:#000000;stroke:#000000;stroke-width:0.81731;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
-                            id="rect1156"
-                            width="11.332726"
-                            height="158.33167"
-                            x="98.044289"
-                            y="17.40918" />
-                         <rect
-                            style="fill:#000000;stroke:#000000;stroke-width:1.209;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
-                            id="rect1373"
-                            width="121.46723"
-                            height="11.894418"
-                            x="43.252426"
-                            y="188.07907" />
-                       </g>
-                     </svg>
+                    <button class="btn-1 flex center space-between" id="btn_g"><span data-i18n="dowl_cv">Descargar
+                            CV</span>
+                        <svg width="7mm" height="7mm" viewBox="0 0 210 210" version="1.1" id="svg5"
+                            inkscape:version="1.1 (c68e22c387, 2021-05-23)" sodipodi:docname="download.svg"
+                            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                            <sodipodi:namedview id="namedview7" pagecolor="#505050" bordercolor="#eeeeee"
+                                borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0"
+                                inkscape:pagecheckerboard="0" inkscape:document-units="mm" showgrid="false"
+                                inkscape:zoom="0.73406285" inkscape:cx="428.43743" inkscape:cy="357.59881"
+                                inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="-8"
+                                inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1" />
+                            <defs id="defs2" />
+                            <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1">
+                                <rect
+                                    style="fill:#000000;stroke:#000000;stroke-width:0.711297;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
+                                    id="rect846" width="8.0885954" height="84.080887" x="-70.84124" y="125.90786"
+                                    transform="matrix(0.78263607,-0.62247955,0.75725061,0.65312442,0,0)" />
+                                <rect
+                                    style="fill:#000000;stroke:#000000;stroke-width:0.716872;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
+                                    id="rect928" width="8.0947971" height="85.339806" x="199.35733" y="-22.632151"
+                                    transform="matrix(0.73326117,0.6799471,-0.76763674,0.64088519,0,0)" />
+                                <rect
+                                    style="fill:#000000;stroke:#000000;stroke-width:0.81731;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
+                                    id="rect1156" width="11.332726" height="158.33167" x="98.044289" y="17.40918" />
+                                <rect
+                                    style="fill:#000000;stroke:#000000;stroke-width:1.209;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers fill stroke"
+                                    id="rect1373" width="121.46723" height="11.894418" x="43.252426" y="188.07907" />
+                            </g>
+                        </svg>
                     </button>
 
                 </div>
@@ -164,7 +122,14 @@
                     <h1 class="t-i" data-i18n="sobre_mi">Sobre mí</h1>
                 </div>
                 <p>
-                    <span data-i18n="smtext1">Mi nombre es Lisandro Zapata, tengo </span> <span id="ag"></span> <span data-i18n="smtext2">años. Soy técnico en sistemas, desarrollador web y estudiante de Ingeniería de Sistemas de</span><span id="s_carr_or"></span>.<!-- becado por <a href="https://www.utb.edu.co/blog/noticias/refineria-de-cartagena-y-la-utb-entregan-becas/" class="">@BecasConCorazón</a> de la Refinería de Cartagena y la UTB.--> <span data-i18n="smtext3">Me identifico como una persona autodidacta, responsable y ordenada. Cuando me inspiro, me encanta dibujar, pues la descarga de emociones es gigantezca. Me puedes llamar Liso, no por ser liso, sino por ser curioso.</span> <span></span></p>
+                    <span data-i18n="smtext1">Mi nombre es Lisandro Zapata, tengo </span> <span id="ag"></span> <span
+                        data-i18n="smtext2">años. Soy técnico en sistemas, desarrollador web y estudiante de Ingeniería
+                        de Sistemas de</span><span
+                        id="s_carr_or"></span>.<!-- becado por <a href="https://www.utb.edu.co/blog/noticias/refineria-de-cartagena-y-la-utb-entregan-becas/" class="">@BecasConCorazón</a> de la Refinería de Cartagena y la UTB.-->
+                    <span data-i18n="smtext3">Me identifico como una persona autodidacta, responsable y ordenada. Cuando
+                        me inspiro, me encanta dibujar, pues la descarga de emociones es gigantezca. Me puedes llamar
+                        Liso, no por ser liso, sino por ser curioso.</span> <span></span>
+                </p>
             </div>
 
         </div>
@@ -173,7 +138,10 @@
                 <div class="title-5">
                     <h1 class="t-i" data-i18n="mis_hab_h">Mis habilidades Pro</h1>
                 </div>
-                <p data-i18n="mhtext1">Como técnico en sistemas, puedo administrar y configurar herramientas y equipos de oficina, participar en el montaje de redes informáticas y realizar mantenimiento preventivo a computadoras. Como desarrollador web, también trabajo con las tecnologías que se presentan a continuación. </p>
+                <p data-i18n="mhtext1">Como técnico en sistemas, puedo administrar y configurar herramientas y equipos
+                    de oficina, participar en el montaje de redes informáticas y realizar mantenimiento preventivo a
+                    computadoras. Como desarrollador web, también trabajo con las tecnologías que se presentan a
+                    continuación. </p>
             </div>
 
         </div>
@@ -193,19 +161,23 @@
                 </div>
                 <div class="element tc flex column center" id="tc3">
                     <img src="assets/js.png" alt="JS" srcset="" width="100vw"><br>
-                    <h2>JS</h2>
+                    <h2>JavaScript</h2>
+                </div>
+                <div class="element tc flex column center" id="tc4">
+                    <img src="assets/bstp.png" alt="Bootstrap" srcset="" width="100vw"><br>
+                    <h2>Bootstrap</h2>
                 </div>
                 <div class="element tc flex column center" id="tc5">
-                    <img src="assets/php.svg" alt="PHP" srcset="" width="160vw"><br>
-                    <h2>PHP</h2>
+                    <img src="assets/angular.png" alt="Angular" srcset="" width="100vw"><br>
+                    <h2>Angular</h2>
                 </div>
                 <div class="element tc flex column center" id="tc6">
-                    <img src="assets/py.png" alt="Python" srcset="" width="100vw"><br>
-                    <h2>PYTHON</h2>
+                    <img src="assets/ts.png" alt="TypeScript" srcset="" width="100vw"><br>
+                    <h2>TypeScript</h2>
                 </div>
                 <div class="element tc flex column center" id="tc7">
-                    <img src="assets/c++.svg.png" alt="C++" srcset="" width="100vw"><br>
-                    <h2>C++</h2>
+                    <img src="assets/php.svg" alt="PHP" srcset="" width="160vw"><br>
+                    <h2>PHP</h2>
                 </div>
                 <div class="element tc flex column center" id="tc8">
                     <img src="assets/mysql.png" alt="MYSQL" srcset="" width="110vw"><br>
@@ -219,7 +191,7 @@
             <div class="title-5">
                 <h1 class="t-i" data-i18n="mis_pro">Mis proyectos</h1>
             </div>
-            
+
             <div class="content-cards">
                 <div class="card">
                     <div class="img_card">
@@ -227,15 +199,17 @@
                     </div>
                     <div>
                         <h3 data-i18n="pro1name">MenuDirecto</h3>
-                        <p data-i18n="pro1des">Un sistema software robusto y funcional para restaurantes, diseñado en torno a la operatividad de cinco roles de usuario: Cliente no registrado, Cliente regular, Mesero, Cajero, Jefe de cocina y Administrador.</p>
+                        <p data-i18n="pro1des">Un sistema software robusto y funcional para restaurantes, diseñado en
+                            torno a la operatividad de cinco roles de usuario: Cliente no registrado, Cliente regular,
+                            Mesero, Cajero, Jefe de cocina y Administrador.</p>
+                        <div class="tech_icons">
+                            <img src="assets/_html.png" alt="" title="HTML">
+                            <img src="assets/css.png" alt="" title="CSS">
+                            <img src="assets/js.png" alt="" title="JS">
+                            <img src="assets/php.svg" alt="" title="PHP">
+                        </div>
+                        <button class="btn-1" id="pro1">Go to LinkedIn</button>
                     </div>
-                    <div class="tech_icons">
-                        <img src="assets/_html.png" alt="" title="HTML">
-                        <img src="assets/css.png" alt="" title="CSS">
-                        <img src="assets/js.png" alt="" title="JS">
-                        <img src="assets/php.svg" alt="" title="PHP">
-                    </div>
-                    <button class="btn-1" id="pro1">Go to LinkedIn</button>
                 </div>
                 <div class="card">
                     <div class="img_card">
@@ -243,17 +217,17 @@
                     </div>
                     <div>
                         <h3 data-i18n="pro2name">Minibanner</h3>
-                        <p data-i18n="pro2des">Un sistema de gestión de calificaciones por materia, que integra de forma eficiente los roles de estudiante y docente, con autenticación basada en cookies de sesión.</p>
-                    </div>
-                    <div class="tech_icons">
-                        <img src="assets/_html.png" alt="" title="HTML">
-                        <img src="assets/css.png" alt="" title="CSS">
-                        <img src="assets/angular.png" alt="" title="Angular">
-                        <img src="assets/ts.png" alt="" title="TypeScript">
-                        <img src="assets/bstp.png" alt="" title="Bootstrap">
-                        <img src="assets/php.svg" alt="" title="PHP">
-                    </div>
-                    <div>
+                        <p data-i18n="pro2des">Un sistema de gestión de calificaciones por materia, que integra de forma
+                            eficiente los roles de estudiante y docente, con autenticación basada en cookies de sesión.
+                        </p>
+                        <div class="tech_icons">
+                            <img src="assets/_html.png" alt="" title="HTML">
+                            <img src="assets/css.png" alt="" title="CSS">
+                            <img src="assets/angular.png" alt="" title="Angular">
+                            <img src="assets/ts.png" alt="" title="TypeScript">
+                            <img src="assets/bstp.png" alt="" title="Bootstrap">
+                            <img src="assets/php.svg" alt="" title="PHP">
+                        </div>
                         <button class="btn-1" id="pro2">Go to Github</button>
                     </div>
                 </div>
@@ -263,15 +237,15 @@
                     </div>
                     <div>
                         <h3 data-i18n="pro3name">Dashboard Learning Style para Moodle</h3>
-                        <p data-i18n="pro3des">Mejora del módulo de estilos de aprendizaje de Moodle mediante la incorporación de un dashboard personalizado, rediseño del cuestionario y mejora del panel de resultados.</p>
-                    </div>
-                    <div class="tech_icons">
-                        <img src="assets/_html.png" alt="" title="HTML">
-                        <img src="assets/css.png" alt="" title="CSS">
-                        <img src="assets/js.png" alt="" title="JS">
-                        <img src="assets/php.svg" alt="" title="PHP">
-                    </div>
-                    <div>
+                        <p data-i18n="pro3des">Mejora del módulo de estilos de aprendizaje de Moodle mediante la
+                            incorporación de un dashboard personalizado, rediseño del cuestionario y mejora del panel de
+                            resultados.</p>
+                        <div class="tech_icons">
+                            <img src="assets/_html.png" alt="" title="HTML">
+                            <img src="assets/css.png" alt="" title="CSS">
+                            <img src="assets/js.png" alt="" title="JS">
+                            <img src="assets/php.svg" alt="" title="PHP">
+                        </div>
                         <button class="btn-1" id="pro3">Go to Github</button>
                     </div>
                 </div>
@@ -281,10 +255,11 @@
                 <iframe title="slider" src="slider.html" frameborder="0" class="slider"></iframe>
             </div>-->
             <div id="app_bookendtest">
-                
+
                 <h2 class="title-5" data-i18n="show_example">Una muestra interactiva</h2>
-                <h3>Bookendtest</h3>
-                <p data-i18n="show_example_des" style="padding: 10px;">Un cuestionario simulado para las pruebas Saber 11</p>
+                <h3 style="font-size: 1rem;">Bookendtest</h3>
+                <p data-i18n="show_example_des" style="padding: 10px;text-align: center;">Un cuestionario simulado para las pruebas Saber
+                    11</p>
                 <div class="cam"></div>
                 <iframe src="assets/muestra_bookendtest/" id="app_b_test"></iframe><br><br>
             </div>
@@ -297,10 +272,10 @@
                 <h1 data-i18n="contact_me">Contáctame</h1><br>
                 <form action="" method="post" class="form-1" id="contact-form">
                     <div class="code suggestion">
-                        <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont" class="sbr">3</span> <span data-i18n="contact_me_text2"></span></h2>
+                        <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont" class="sbr">3</span>
+                            <span data-i18n="contact_me_text2"></span>
+                        </h2>
                     </div>
-
-
                     <h2 class="title-sp" data-i18n="contact_me_text3">Nombre:</h2>
                     <input type="text" name="name" class="input" placeholder="Nombre...">
                     <h2 class="title-sp" data-i18n="contact_me_text4">Correo electrónico o teléfono:</h2>
@@ -311,55 +286,56 @@
                         </div>
 
                         <div>
-                            <span><div class="time"><span  id="le">0</span>/400</div>
-                        </span>
+                            <span>
+                                <div class="time"><span id="le">0</span>/400</div>
+                            </span>
+                        </div>
                     </div>
-
+                    <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input"
+                        placeholder="Mensaje..."></textarea>
+                    <div id="sgt">
+                    </div><br>
+                    <button type="submit" id="btn_s" class="btn-1" data-i18n="submit">Enviar</button>
+                </form>
             </div>
-            <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input" placeholder="Mensaje..."></textarea>
-            <div id="sgt">
-            </div><br>
-            <button type="submit" id="btn_s" class="btn-1" data-i18n="submit">Enviar</button>
-            </form>
+
         </div>
+        <button id="b_top" title="Scroll to top">
+            <img src="assets/top.png" alt="">
+        </button>
+        <footer>
+            <img src="assets/brand_white(2).png" alt="" width="30vw">
 
-    </div>
-    <button id="b_top" title="Scroll to top">
-        <img src="assets/top.png" alt="">
-    </button>
-    <footer>                
-        <img src="assets/brand_white(2).png" alt="" width="30vw">
+            <div class="flex center margin-top-10px flex-column">
+                <div class="flex center">
+                    <br>
+                    <div class="m">
+                        <a href="https://github.com/LisoProgrammer" class="a-normal net">
+                            <img src="assets/github_logo.png" alt="Logo de Github" width="30vw">
+                        </a>
+                    </div>
+                    <div class="m">
+                        <a href="https://www.facebook.com/lisandroez.paternina/" class="a-normal net">
+                            <img src="assets/f.png" alt="Logo de Facebook" width="30vw">
+                        </a>
+                    </div>
+                    <div class="m">
+                        <a href="https://www.linkedin.com/in/lisandro-zapata-paternina-769611263/" class="a-normal net">
+                            <img src="assets/linkedin.png" alt="Logo de Linkedin" width="37vw">
+                        </a>
+                    </div>
+                </div>
+                <div style="font-size: 1rem;">
+                    Todos los derechos reservados © 2025
+                    <!--<p class="par" style="margin: auto;">Las imágenes tomadas de otras marcas son utilizadas únicamente para indicar relación con las habilidades laborales e/o incorporar en el diseño de este sitio web, todas bajo la licencia<a href="https://creativecommons.org/licenses/?lang=es" class="a-sp" style="color: #fff">Creative Commons.</a></p>-->
+                </div>
 
-        <div class="flex center margin-top-10px flex-column">
-            <div class="flex center">
-                <br>
-                <div class="m">
-                    <a href="https://github.com/LisoProgrammer" class="a-normal net">
-                        <img src="assets/github_logo.png" alt="Logo de Github" width="30vw">
-                    </a>
-                </div>
-                <div class="m">
-                    <a href="https://www.facebook.com/lisandroez.paternina/" class="a-normal net">
-                        <img src="assets/f.png" alt="Logo de Facebook" width="30vw">
-                    </a>
-                </div>
-                <div class="m">
-                    <a href="https://www.linkedin.com/in/lisandro-zapata-paternina-769611263/" class="a-normal net">
-                        <img src="assets/linkedin.png" alt="Logo de Linkedin" width="37vw">
-                    </a>
-                </div>
+
             </div>
-            <div>        
-                Todos los derechos reservados © 2025
-                <!--<p class="par" style="margin: auto;">Las imágenes tomadas de otras marcas son utilizadas únicamente para indicar relación con las habilidades laborales e/o incorporar en el diseño de este sitio web, todas bajo la licencia<a href="https://creativecommons.org/licenses/?lang=es" class="a-sp" style="color: #fff">Creative Commons.</a></p>-->
-            </div>
-            
-            
-        </div>
 
-    </footer>
-    <br>
-    <br>
+        </footer>
+        <br>
+        <br>
 
     </div>
     <div class="menu closed" id="menu" role="menu">
@@ -394,7 +370,7 @@
                     </li>
                     <li>
                         <a href="#t4" class="a-sp t4" data-i18n="contact_me">
-                          Contáctame
+                            Contáctame
                         </a>
                     </li>
                 </ul>
@@ -404,10 +380,11 @@
     </div>
 
 
-    <script src="js/typed.js" defer ></script>
+    <script src="js/typed.js" defer></script>
+    <script src="js/lang.js" defer></script>
     <script src="js/index.js"></script>
     <script src="js/date.js" defer></script>
-    <script src="js/lang.js" defer></script>
+    
 </body>
 
 </html>

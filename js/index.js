@@ -53,46 +53,77 @@ for (let m = 0; m < a.length; m++) {
   });
 }
 const elements = document.getElementsByTagName("*");
-//console.log(elements)
-window.onload = () => {
-  let loader = document.getElementById("progress");
-  let loading = document.getElementById("loading");
-  let sub_loa = document.querySelector(".sub-load");
-  //let aud = document.getElementById("ini")
-  if (sub_loa !== null) {
-    sub_loa.style.animation = "scalemax 1s";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loading = document.getElementById("loading");
+  const porcent_loading_h2 = document.getElementById("porcent_loading");
+  const barr = document.getElementById("bar");
+
+  const imagenes = document.querySelectorAll("img");
+  const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+
+  const total = imagenes.length + stylesheets.length;
+  let loaded = 0;
+
+  let currentProgress = 0;
+  let targetProgress = 0;
+
+  function updateProgress() {
+    loaded++;
+    targetProgress = Math.floor((loaded / total) * 100);
   }
-  //aud.play()
-  setTimeout(() => {
-    setTimeout(() => {
-      loading.remove();
-    }, 500);
-    loading.style.animation = "parp 0.5s";
-  }, 1000);
-  //
 
-  /*let num_element = 0
-    let porcent = 0
-    try {
-        for (let j = 0; j < elements.length; j++) {
-            //console.log(elements[j] == null)
-            if (elements[j] !== null) {
-                num_element++
-                //console.log((num_element * 100) / elements.length)
-                porcent = Math.floor(num_element * 100 / elements.length)
-                loader.style.width = porcent + "%"
-            }
-        }
-    } catch (e) {
-        console.error(e)
-    }*/
-  //console.log(num_element)
-};
+  function animateProgress() {
+    if (currentProgress < targetProgress) {
+      currentProgress += 1; // o usa easing si prefieres
+      barr.style.width = currentProgress + "%";
+      porcent_loading_h2.innerText = `[${currentProgress}%]`;
+    }
+    if (currentProgress < 100) {
+      requestAnimationFrame(animateProgress);
+    }
+  }
 
-/*nst imgs = ["", "assets/b_1ken.png", "assets/s_6m.png"]
-for (let mm = 1; mm < 3; mm++) {
-    document.getElementsByClassName("num" + mm + "img")[0].src = imgs[mm]
-}*/
+  if (total === 0) {
+    barr.style.width = "100%";
+    porcent_loading_h2.innerText = "[100%]";
+    loading.style.display = "none";
+    return;
+  }
+
+  imagenes.forEach((img) => {
+    if (img.complete) {
+      updateProgress();
+    } else {
+      img.addEventListener("load", updateProgress);
+      img.addEventListener("error", updateProgress);
+    }
+  });
+
+  stylesheets.forEach((link) => {
+    if (link.sheet) {
+      updateProgress();
+    } else {
+      link.addEventListener("load", updateProgress);
+      link.addEventListener("error", updateProgress);
+    }
+  });
+
+  // Arrancar la animación suave
+  requestAnimationFrame(animateProgress);
+
+  // Ocultar loader al final
+  window.addEventListener("load", () => {
+    const interval = setInterval(() => {
+      if (currentProgress >= 100) {
+        clearInterval(interval);
+        loading.style.animation = "parp 0.5s";
+        setTimeout(() => loading.remove(), 500);
+      }
+    }, 100);
+  });
+});
+
 //Botón de apertura y cierre de menú
 const btn_m = document.getElementById("btn_m");
 //Menú objeto de pantalla completa
@@ -235,7 +266,79 @@ let messages_es = {
   sending: "Enviando...",
 };
 //breakpoint
-const _0xca7083=_0x1b52;(function(_0x5eb0f6,_0x394797){const _0x12de1c=_0x1b52,_0x4575d2=_0x5eb0f6();while(!![]){try{const _0x4cd5d3=-parseInt(_0x12de1c(0x1ed))/0x1+-parseInt(_0x12de1c(0x1ef))/0x2+parseInt(_0x12de1c(0x1f0))/0x3*(parseInt(_0x12de1c(0x1f9))/0x4)+-parseInt(_0x12de1c(0x1fc))/0x5+-parseInt(_0x12de1c(0x1fb))/0x6+-parseInt(_0x12de1c(0x1f1))/0x7+parseInt(_0x12de1c(0x1eb))/0x8*(parseInt(_0x12de1c(0x1ee))/0x9);if(_0x4cd5d3===_0x394797)break;else _0x4575d2['push'](_0x4575d2['shift']());}catch(_0x2d9b7b){_0x4575d2['push'](_0x4575d2['shift']());}}}(_0x10f6,0x6487a),window[_0xca7083(0x1f3)](_0xca7083(0x1f5),()=>{const _0x1a35c8=_0xca7083;sgt['className']=_0x1a35c8(0x1fa);let _0x261e3a=localStorage['lang'];_0x261e3a=='en'?sgt[_0x1a35c8(0x1ec)]=messages_en['alternative_message_error']:sgt[_0x1a35c8(0x1ec)]=messages_es[_0x1a35c8(0x1f2)],setTimeout(()=>{const _0x1798ce=_0x1a35c8;localStorage[_0x1798ce(0x1f6)]=0x0,window[_0x1798ce(0x1f7)][_0x1798ce(0x1f4)](),localStorage[_0x1798ce(0x1f8)]('e',0x0);},0xbb8);}));function _0x1b52(_0x5a3aea,_0x5949d4){const _0x10f63b=_0x10f6();return _0x1b52=function(_0x1b52cc,_0x296c3a){_0x1b52cc=_0x1b52cc-0x1eb;let _0x46c38e=_0x10f63b[_0x1b52cc];return _0x46c38e;},_0x1b52(_0x5a3aea,_0x5949d4);}function _0x10f6(){const _0x2e2068=['34732sIHiHd','code\x20error','3763272hYtAcZ','2911440ygIuyX','3984KinJnH','innerHTML','542727sJiBnX','39114skoBYH','337574Ixoxgq','279eVkdVK','4473301XpDbiM','alternative_message_error','addEventListener','reload','storage','int','location','setItem'];_0x10f6=function(){return _0x2e2068;};return _0x10f6();}
+const _0xca7083 = _0x1b52;
+(function (_0x5eb0f6, _0x394797) {
+  const _0x12de1c = _0x1b52,
+    _0x4575d2 = _0x5eb0f6();
+  while (!![]) {
+    try {
+      const _0x4cd5d3 =
+        -parseInt(_0x12de1c(0x1ed)) / 0x1 +
+        -parseInt(_0x12de1c(0x1ef)) / 0x2 +
+        (parseInt(_0x12de1c(0x1f0)) / 0x3) *
+          (parseInt(_0x12de1c(0x1f9)) / 0x4) +
+        -parseInt(_0x12de1c(0x1fc)) / 0x5 +
+        -parseInt(_0x12de1c(0x1fb)) / 0x6 +
+        -parseInt(_0x12de1c(0x1f1)) / 0x7 +
+        (parseInt(_0x12de1c(0x1eb)) / 0x8) * (parseInt(_0x12de1c(0x1ee)) / 0x9);
+      if (_0x4cd5d3 === _0x394797) break;
+      else _0x4575d2["push"](_0x4575d2["shift"]());
+    } catch (_0x2d9b7b) {
+      _0x4575d2["push"](_0x4575d2["shift"]());
+    }
+  }
+})(_0x10f6, 0x6487a),
+  window[_0xca7083(0x1f3)](_0xca7083(0x1f5), () => {
+    const _0x1a35c8 = _0xca7083;
+    sgt["className"] = _0x1a35c8(0x1fa);
+    let _0x261e3a = localStorage["lang"];
+    _0x261e3a == "en"
+      ? (sgt[_0x1a35c8(0x1ec)] = messages_en["alternative_message_error"])
+      : (sgt[_0x1a35c8(0x1ec)] = messages_es[_0x1a35c8(0x1f2)]),
+      setTimeout(() => {
+        const _0x1798ce = _0x1a35c8;
+        (localStorage[_0x1798ce(0x1f6)] = 0x0),
+          window[_0x1798ce(0x1f7)][_0x1798ce(0x1f4)](),
+          localStorage[_0x1798ce(0x1f8)]("e", 0x0);
+      }, 0xbb8);
+  });
+function _0x1b52(_0x5a3aea, _0x5949d4) {
+  const _0x10f63b = _0x10f6();
+  return (
+    (_0x1b52 = function (_0x1b52cc, _0x296c3a) {
+      _0x1b52cc = _0x1b52cc - 0x1eb;
+      let _0x46c38e = _0x10f63b[_0x1b52cc];
+      return _0x46c38e;
+    }),
+    _0x1b52(_0x5a3aea, _0x5949d4)
+  );
+}
+function _0x10f6() {
+  const _0x2e2068 = [
+    "34732sIHiHd",
+    "code\x20error",
+    "3763272hYtAcZ",
+    "2911440ygIuyX",
+    "3984KinJnH",
+    "innerHTML",
+    "542727sJiBnX",
+    "39114skoBYH",
+    "337574Ixoxgq",
+    "279eVkdVK",
+    "4473301XpDbiM",
+    "alternative_message_error",
+    "addEventListener",
+    "reload",
+    "storage",
+    "int",
+    "location",
+    "setItem",
+  ];
+  _0x10f6 = function () {
+    return _0x2e2068;
+  };
+  return _0x10f6();
+}
 //Se valida la información para preparar el envío
 const elemetn_form = document.getElementsByClassName("input");
 console.log(elemetn_form);
@@ -385,9 +488,10 @@ let links = [
   "https://html.com",
   "https://developer.mozilla.org/es/docs/Web/CSS",
   "https://javascript.com",
+  "https://getbootstrap.com/",
+  "https://angular.dev/",
+  "https://www.typescriptlang.org/",
   "https://php.net",
-  "https://python.org",
-  "https://learn.microsoft.com/es-es/cpp/cpp/welcome-back-to-cpp-modern-cpp?view=msvc-170",
   "https://www.mysql.com",
 ];
 for (let m = 1; m < 8; m++) {
