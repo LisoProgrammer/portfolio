@@ -11,12 +11,54 @@
 html {
   zoom: 100%;
 }
-
+.content-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card{
+  width: 350px;
+  text-align: left;
+  margin: 10px 10px;
+  font-size: 1rem;
+  overflow: hidden;
+  background: var(--color6);
+  border-radius: 5px;
+}
+.card h3{
+  margin-bottom: 5px;
+}
+.tech_icons{
+  display: flex;
+  padding: 10px;
+}
+.tech_icons > img{
+  height: 25px;
+  margin: 0px 8px 0px 0px;
+  transition: all 0.3s;
+}
+.tech_icons > img:hover{
+  transform: translateY(-1px);
+}
+.card > div:nth-child(2){
+  padding: 10px;
+}
+.card button{
+  margin: 10px;
+  font-size: 1rem;
+}
+.img_card > img{
+  width: 100%;
+}
+.img_card{
+  max-height: 200px;
+  overflow: hidden;
+}
 #app_bookendtest {
   width: 100%;
   margin: 20px auto;
   position: relative;
-  top: -90px;
 }
 
 #app_b_test {
@@ -787,6 +829,9 @@ img {
   }
   .sp-icon {
     margin: 0;
+  }
+  .card{
+    width: 100%;
   }
 }
 

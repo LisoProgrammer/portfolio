@@ -373,11 +373,14 @@ function insertAction(id, link) {
 
 
 insertAction("#btn_g", "assets/cv/CVLISANDRO_ZAPATA.pdf")
-let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://json.com", "https://php.net", "https://python.org","https://learn.microsoft.com/es-es/cpp/cpp/welcome-back-to-cpp-modern-cpp?view=msvc-170", "https://www.mysql.com", "https://developer.mozilla.org/es/docs/Web/Guide/AJAX"]
+let links = ["", "https://html.com", "https://developer.mozilla.org/es/docs/Web/CSS", "https://javascript.com", "https://php.net", "https://python.org","https://learn.microsoft.com/es-es/cpp/cpp/welcome-back-to-cpp-modern-cpp?view=msvc-170", "https://www.mysql.com"]
 for (let m = 1; m < 8; m++) {
     insertAction("#tc" + m, links[m])
 }
-
+let links_cards = ["","https://www.linkedin.com/in/lisandro-zapata-paternina-dev/details/projects/", "https://github.com/LisoProgrammer/minibanner_front", "https://github.com/ISCOUTB/AS_dashboard_learning_styles"];
+for (let m = 1; m < 4; m++){
+    insertAction("#pro" + m, links_cards[m])
+}
 document.addEventListener("DOMContentLoaded", () => {
     let e = localStorage.getItem("e");
     if (localStorage.getItem("int") == null && localStorage.getItem("tod") == null) {
