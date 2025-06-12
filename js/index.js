@@ -530,3 +530,56 @@ document.addEventListener("DOMContentLoaded", () => {
   let cont = document.getElementById("cont");
   cont.innerHTML = localStorage.getItem("int");
 });
+let cards = document.getElementsByClassName("card");
+
+for (let i = 0; i < cards.length; i++) {
+  const card = cards[i];
+  const left_button = card.querySelector(".left");
+  const right_button = card.querySelector(".right");
+  const progress_bar = card.querySelector(".bar-slider");
+  const imgs = card.querySelectorAll(".img_card > img");
+  const total = imgs.length;
+
+  if (!left_button || !right_button || !progress_bar) continue;
+
+  // Función para obtener índice activo
+  const getActiveIndex = () => {
+    for (let j = 0; j < total; j++) {
+      if (imgs[j].classList.contains("active")) return j;
+    }
+    return 0; // fallback
+  };
+
+  // Función para actualizar barra
+  const updateProgressBar = (index) => {
+    const percentage = ((index + 1) / total) * 100;
+    progress_bar.style.width = `${percentage}%`;
+  };
+
+  // Inicializa barra según imagen activa
+  updateProgressBar(getActiveIndex());
+
+  // Botón izquierda
+  left_button.addEventListener("click", () => {
+    let current = getActiveIndex();
+    if (current > 0) {
+      imgs[current].classList.remove("active");
+      imgs[current - 1].classList.add("active");
+      updateProgressBar(current - 1);
+    } else {
+      console.log("Hemos llegado al inicio");
+    }
+  });
+
+  // Botón derecha
+  right_button.addEventListener("click", () => {
+    let current = getActiveIndex();
+    if (current < total - 1) {
+      imgs[current].classList.remove("active");
+      imgs[current + 1].classList.add("active");
+      updateProgressBar(current + 1);
+    } else {
+      console.log("Hemos llegado al final");
+    }
+  });
+}
