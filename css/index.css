@@ -328,6 +328,7 @@ header {
   z-index: 10;
   top: 0;
   transition: 0.5s;
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
 .sub-h {
