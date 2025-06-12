@@ -21,7 +21,7 @@
   "pro2name": "Minibanner",
   "pro2des": "Un sistema de gestión de calificaciones por materia que integra de forma eficiente los roles de estudiante y docente, con autenticación basada en cookies de sesión. Se incorporon estadísticas para el alumno y el docente.",
   "pro3name": "Dashboard de Estilos de Aprendizaje para Moodle",
-  "pro3des": "Mejora del módulo de estilos de aprendizaje de Moodle mediante la incorporación de un dashboard personalizado, rediseño del cuestionario y mejora del panel de resultados.",
+  "pro3des": "Mejora del módulo de estilos de aprendizaje de Moodle mediante la incorporación de un dashboard personalizado, rediseño del cuestionario y mejora del panel de resultados. Se utilizó Chart.js para los gráficos.",
   "show_example": "Una muestra interactiva",
   "show_example_des": "Un cuestionario interactivo de práctica para las pruebas Saber 11.",
   "contact_me_text1": "Puedes enviar",
