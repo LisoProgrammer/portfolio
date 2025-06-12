@@ -62,13 +62,25 @@ html {
   display: flex;
   margin: 15px 0px;
 }
-.tech_icons > img {
+.tech_icons > .icon {
   height: 25px;
   margin: 0px 8px 0px 0px;
   transition: all 0.3s;
 }
-.tech_icons > img:hover {
+.icon > img {
+  height: 100%;
+}
+.tech_icons > .icon:hover {
   transform: translateY(-1px);
+}
+.tech_icons > .icon:hover::before {
+  padding: 5px;
+  content: attr(data-tooltip);
+  position: fixed;
+  top: -120%;
+  color: white;
+  background: rgb(0 0 0);
+  border-radius: 5px;
 }
 .card > div:nth-child(2) {
   padding: 1rem;
@@ -114,15 +126,15 @@ html {
   align-items: center;
   justify-content: center;
 }
-.btn-control.left{
+.btn-control.left {
   top: 40%;
   left: 5px;
 }
-.btn-control.right{
+.btn-control.right {
   top: 40%;
   right: 5px;
 }
-.bar-slider{
+.bar-slider {
   height: 3px;
   position: absolute;
   bottom: 0;
