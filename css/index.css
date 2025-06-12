@@ -46,7 +46,7 @@ html {
   padding: 10px;
 }
 .card {
-  width: 350px;
+  width: 450px;
   text-align: left;
   margin: 10px 10px;
   font-size: 1rem;
@@ -93,7 +93,7 @@ html {
 }
 .img_card {
   position: relative; /* Para posicionar las imágenes absolutamente dentro */
-  height: 200px; /* Altura máxima deseada */
+  height: 300px; /* Altura máxima deseada */
   overflow: hidden; /* Oculta el contenido que se salga */
   width: 100%; /* Asegura que ocupe el ancho del contenedor padre */
 }
