@@ -9,6 +9,9 @@ async function loadLanguage(lang) {
         el.textContent = translations[key];
       }
     });
+    document.querySelectorAll(".skills .element").forEach((el) => {
+      el.setAttribute("data-tooltip", translations["qsm"]);
+    })
     //editar semestre en el parrafo
     get_semester_by_lang();
   } catch (error) {
