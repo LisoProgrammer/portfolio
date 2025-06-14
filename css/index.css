@@ -11,7 +11,7 @@
 html {
   zoom: 100%;
 }
-p{
+p {
   line-height: 1.6;
 }
 .progress_bar {
@@ -383,8 +383,7 @@ header {
   margin: 55px 0px 0px 0px;
   /*border-bottom: 1px solid var(--color1);*/
   color: white;
-  height: 580px;
-  text-shadow: 0px 0px 10px #000;
+  height: 800px;
   background: url("../assets/fon-p-l.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -398,30 +397,49 @@ header {
   cursor: pointer;
 }
 #name {
-  border-right: 3px solid #ad5353;
+  border-right: 0.5rem solid #c70000;
   animation: 16s wr;
-  margin: 0px 0px 0px 10px;
-  transition: 0.3s;
-  height: 38px;
-  width: auto;
-  max-width: 250px;
+  margin: 0px;
   overflow: hidden;
-  display: inline;
-  animation: 0.5s prp infinite;
+  width: fit-content;
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #1e90ff, #00ffe7);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 3s;
+  animation: brillar 3s ease;
 }
 
 h1[class^="title"] {
-  font-weight: 500;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 10px;
 }
-
+.pre-text {
+  width: 60%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  min-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ghost {
+  visibility: hidden;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
 #c-img {
-  margin: 0px 0px 0px -55px;
+  margin: 0px;
 }
 
 .ic-5 {
   border-radius: 10px;
   width: 70vw;
-  max-width: 250px;
+  max-width: 350px;
 }
 
 .pro {
@@ -431,9 +449,9 @@ h1[class^="title"] {
 }
 
 .t {
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 50px 10px;
+  padding: 100px 10px;
   width: 100%;
   backdrop-filter: blur(4px);
 }
@@ -458,8 +476,9 @@ h1[class^="title"] {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 3s;
+  cursor: text;
 }
-.t-i:hover{
+.t-i:hover {
   animation: brillar 3s ease infinite;
 }
 @keyframes brillar {
@@ -550,7 +569,7 @@ h1[class^="title"] {
 
 .par {
   width: 600px;
-  margin: 80px auto;
+  margin: 100px auto;
 }
 
 .title-5 {
@@ -944,6 +963,13 @@ img {
   }
   .card {
     width: 100%;
+  }
+  .pre-text{
+    width: fit-content;
+    margin: 0px 0px 50px 0px;
+  }
+  .ic-5{
+    width: 50vw;
   }
 }
 
