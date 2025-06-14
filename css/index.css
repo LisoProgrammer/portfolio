@@ -453,7 +453,7 @@ h1[class^="title"] {
   align-items: center;
   padding: 100px 10px;
   width: 100%;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
 }
 
 .tt {
