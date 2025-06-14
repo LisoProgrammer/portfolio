@@ -502,8 +502,10 @@ let links_cards = [
   "https://www.linkedin.com/in/lisandro-zapata-paternina-dev/details/projects/",
   "https://github.com/LisoProgrammer/minibanner_front",
   "https://github.com/ISCOUTB/AS_dashboard_learning_styles",
+  "assets/mathApp",
+  "assets/dadoo"
 ];
-for (let m = 1; m < 4; m++) {
+for (let m = 1; m < 6; m++) {
   insertAction("#pro" + m, links_cards[m]);
 }
 document.addEventListener("DOMContentLoaded", () => {
