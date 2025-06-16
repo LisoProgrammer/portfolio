@@ -5,7 +5,6 @@
   -o-box-sizing: border-box;
   margin: 0;
   font-family: "Lato", sans-serif;
-  user-select: none;
 }
 
 html {
@@ -49,6 +48,9 @@ main {
 }
 p {
   line-height: 1.6;
+}
+.t p {
+  font-size: 1.7rem;
 }
 .progress_bar {
   max-width: 300px;
@@ -539,6 +541,18 @@ h1[class^="title"] {
 .title-5:hover::before {
   width: 150px; /* Se expande al hacer hover */
 }
+.title-6::before{
+  content: "";
+  width: 100px;
+  height: 5px;
+  display: block;
+  margin: 0;
+  border-bottom: 5px solid white;
+  transition: width 0.6s ease;
+}
+.title-6:hover::before {
+  width: 150px; /* Se expande al hacer hover */
+}
 /*.title-5:hover::before {
              content: "";
              width: 0px;
@@ -573,10 +587,13 @@ h1[class^="title"] {
 }
 
 .par {
-  width: 600px;
+  width: 60%;
   /*margin: 100px auto;*/
 }
-
+.img_pre{
+  width: 70vw;
+  max-width: 350px;
+}
 .title-5 {
   margin-bottom: 20px;
 }
@@ -584,7 +601,7 @@ h1[class^="title"] {
 .tut {
   width: 100%;
   margin: auto;
-  text-align: center;
+  text-align: left;
   color: var(--color3);
   font-size: 1.4rem;
 }
@@ -597,7 +614,7 @@ h1[class^="title"] {
   max-width: 1000px;
   min-width: 324px;
   justify-content: center;
-  align-items: baseline;
+  align-items: stretch;
   font-size: 16px;
 }
 
@@ -620,7 +637,6 @@ h1[class^="title"] {
   border-radius: 10px;
   transition: 0.3s;
   position: relative;
-  cursor: pointer;
   min-height: 200px;
   top: 0px;
 }
@@ -632,7 +648,7 @@ h1[class^="title"] {
 .sbr {
   border-bottom: 5px solid var(--color2);
 }
-.tc:hover::after {
+/*.tc:hover::after {
   content: attr(data-tooltip);
   position: absolute;
   background: rgb(255, 255, 255);
@@ -646,7 +662,7 @@ h1[class^="title"] {
   animation: up 0.6s;
   margin: auto;
   color: #000;
-}
+}*/
 
 #ini {
   display: none;
@@ -785,18 +801,16 @@ input {
 }
 
 .btn-1:hover {
-  animation: 1s covered;
-  background: transparent;
-  backdrop-filter: blur(20px);
-  color: #fff;
+  background: #18698f;
+  border-color: #18698f;
 }
-.btn-1:hover svg rect#rect846,
+/**.btn-1:hover svg rect#rect846,
 .btn-1:hover svg rect#rect928,
 .btn-1:hover svg rect#rect1156,
 .btn-1:hover svg rect#rect1373 {
   fill: rgb(255, 255, 255) !important;
   transition: 0.3s;
-}
+}**/
 
 .btn-1:active {
   position: relative;
@@ -861,9 +875,7 @@ li {
   /*border-bottom: 1px solid var(--color1);*/
 }
 
-button,
-b,
-img {
+button {
   user-select: none;
   cursor: pointer;
 }
