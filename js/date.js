@@ -66,9 +66,9 @@ function get_semester_by_lang() {
   let lang = localStorage.lang;
   if (lang == "en") {
     span_s_tr.innerHTML = semestre_completed;
-    span_s_or.innerHTML = ordinarios_en[semestre_completed] + " semestre";
+    span_s_or.innerHTML = ordinarios_en[semestre_completed] + " semester";
     span_s_carr.innerHTML = s_carr;
-    span_s_carr_or.innerHTML = ordinarios_en[s_carr - 1] + " semestre";
+    span_s_carr_or.innerHTML = ordinarios_en[s_carr - 1] + " semester";
     span_age.innerHTML = age;
   } else {
     span_s_tr.innerHTML = semestre_completed;
