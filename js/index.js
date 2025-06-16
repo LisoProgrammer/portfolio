@@ -1,52 +1,37 @@
-/*const observer = new IntersectionObserver(an, {
+// Intersection Observer con threshold ajustado
+const observer = new IntersectionObserver(an, {
   root: null,
-  rootMargin: "0px 0px 50px 0px",
-  threshold: 0.1,
+  rootMargin: "0px",
+  threshold: 0.27
 });
 
-for (let e = 0; e < 5; e++) {
-  observer.observe(document.getElementById("t" + e));
-  /*console.log("t" + e)
-        console.log(document.getElementById("t" + e))
-        console.log(observer)
-}
-
-function an(entries, observer) {
-  console.log("entries");
-  console.log(entries);
-  console.log("observer");
-  console.log(observer);
-  try {
-    entries.forEach((entries) => {
-      if (entries.isIntersecting) {
-        for (let i = 0; i < 2; i++) {
-          if (entries.target.id) {
-            document
-              .getElementsByClassName(entries.target.id)
-              [i].classList.add("spc-a-focuss");
-          }
-
-          //console.log(observer)
-          //console.log(entries)
-          //console.log(entries.target.id)
-        }
-      } else {
-        for (let i = 0; i < 2; i++) {
-          document
-            .getElementsByClassName(entries.target.id)
-            [i].classList.remove("spc-a-focuss");
-        }
-      }
-    });
-  } catch (error) {
-    console.error(error);
+// Observar elementos t0 a t4 si existen
+for (let e = 1; e < 5; e++) {
+  const el = document.getElementById("t" + e);
+  if (el) {
+    observer.observe(el);
   }
 }
-const a = document.getElementsByClassName("a-sp");
+
+// Callback para IntersectionObserver
+function an(entries, observer) {
+  entries.forEach((entry) => {
+    const id = entry.target.id;
+    const relacionados = document.querySelectorAll("." + id);
+
+    if (entry.isIntersecting) {
+      relacionados.forEach(el => el.classList.add("spc-a-focuss"));
+    } else {
+      relacionados.forEach(el => el.classList.remove("spc-a-focuss"));
+    }
+  });
+}
+
+// Manejo de clics en <a> con clase .a-sp
+/*const a = document.getElementsByClassName("a-sp");
 for (let m = 0; m < a.length; m++) {
   a[m].addEventListener("click", () => {
-    //Se le da click al elemento,cambia de estilo y se omiten los otros elementos en este proceso. Si no tiene la clase de estilo el elemento clickeado, se le añade y a la vez se evita que quede con la clase permanentemente al ser seleccionado otro elemento <a>.
-    if (!a[m].classList[2]) {
+    if (!a[m].classList.contains("spc-a-focuss")) {
       for (let i = 0; i < a.length; i++) {
         a[i].classList.remove("spc-a-focuss");
       }
@@ -54,6 +39,7 @@ for (let m = 0; m < a.length; m++) {
     }
   });
 }*/
+
 const elements = document.getElementsByTagName("*");
 
 /**document.addEventListener("DOMContentLoaded", () => {
