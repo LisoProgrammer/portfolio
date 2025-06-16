@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="loading">
+    <!--<div id="loading">
         <div id="progress"></div>
         <div class="sub-load">
             <img src="assets/brand_white(2).png" alt="" width="50vw">
@@ -24,13 +24,13 @@
             <h2 data-i18n="loading">Cargando contenido...</h2>
             <h2 id="porcent_loading"></h2>
         </div>
-    </div>
-    <div class="c">
-        <header>
-            <div class="m">
+    </div>-->
+    <header>
+        <nav>
+            <section class="m">
                 <img src="assets/brand(2).png" alt="Marca_Lisandro_Zapata" width="40vw" id="ic">
-            </div>
-            <div class="flex c_c" role="navigation">
+            </section>
+            <section class="flex c_c">
                 <div class="flex center">
                     <img src="assets/lang.png" class="sp-icon">
                     <select name="" id="langSelector" value="es" style="outline: none;">
@@ -54,10 +54,10 @@
                 <div class="ab">
                     <a href="#t4" class="a-sp t4" data-i18n="contact_me">Contáctame</a>
                 </div>
-
-            </div>
-
-        </header>
+            </section>
+        </nav>
+    </header>
+    <main>
         <section class="ban flex" id="ban">
             <div class="flex t">
                 <!-- Texto de presentación -->
@@ -94,21 +94,28 @@
             </div>
         </section>
         <div class="tut" id="t1">
-            <div class="par">
-                <div class="title-5">
-                    <h1 class="t-i" data-i18n="sobre_mi">Sobre mí</h1>
+            <div class="flex space-between">
+                <div class="par">
+                    <div class="title-5">
+                        <h1 class="t-i" data-i18n="sobre_mi">Sobre mí</h1>
+                    </div>
+                    <p>
+                        <span data-i18n="smtext1">Mi nombre es Lisandro Zapata, tengo </span> <span id="ag"></span>
+                        <span data-i18n="smtext2">años. Soy técnico en sistemas, desarrollador web y estudiante de
+                            Ingeniería
+                            de Sistemas de</span><span
+                            id="s_carr_or"></span>.<!-- becado por <a href="https://www.utb.edu.co/blog/noticias/refineria-de-cartagena-y-la-utb-entregan-becas/" class="">@BecasConCorazón</a> de la Refinería de Cartagena y la UTB.-->
+                        <span data-i18n="smtext3">Me identifico como una persona autodidacta, responsable y ordenada.
+                            Cuando
+                            me inspiro, me encanta dibujar, pues la descarga de emociones es gigantezca. Me puedes
+                            llamar
+                            Liso, no por ser liso, sino por ser curioso.</span> <span></span>
+                    </p>
                 </div>
-                <p>
-                    <span data-i18n="smtext1">Mi nombre es Lisandro Zapata, tengo </span> <span id="ag"></span> <span
-                        data-i18n="smtext2">años. Soy técnico en sistemas, desarrollador web y estudiante de Ingeniería
-                        de Sistemas de</span><span
-                        id="s_carr_or"></span>.<!-- becado por <a href="https://www.utb.edu.co/blog/noticias/refineria-de-cartagena-y-la-utb-entregan-becas/" class="">@BecasConCorazón</a> de la Refinería de Cartagena y la UTB.-->
-                    <span data-i18n="smtext3">Me identifico como una persona autodidacta, responsable y ordenada. Cuando
-                        me inspiro, me encanta dibujar, pues la descarga de emociones es gigantezca. Me puedes llamar
-                        Liso, no por ser liso, sino por ser curioso.</span> <span></span>
-                </p>
+                <div>
+                    <img src="assets/piscis_t.png" alt="">
+                </div>
             </div>
-
         </div>
         <div class="tut" id="t2">
             <div class="par">
@@ -303,7 +310,9 @@
                     </div>
                     <div>
                         <h3 data-i18n="pro4name">MathApp | Matemáticas básicas</h3>
-                        <p data-i18n="pro4des">Una aplicación interactiva diseñada para entrenar a jóvenes en matemáticas, con sistema de rachas, puntos, efectos de sonido y optimización para dispositivos móviles.</p>
+                        <p data-i18n="pro4des">Una aplicación interactiva diseñada para entrenar a jóvenes en
+                            matemáticas, con sistema de rachas, puntos, efectos de sonido y optimización para
+                            dispositivos móviles.</p>
                         <div class="tech_icons">
                             <span class="icon" data-tooltip="HTML">
                                 <img src="assets/html.png" alt="HTML">
@@ -332,7 +341,8 @@
                     </div>
                     <div>
                         <h3 data-i18n="pro5name">Dadoo | Dados interactivos</h3>
-                        <p data-i18n="pro5des">Una aplicación que simula dados físicos con efectos de sonido realistas y acción rápida, ideal como reemplazo práctico de los dados tradicionales.</p>
+                        <p data-i18n="pro5des">Una aplicación que simula dados físicos con efectos de sonido realistas y
+                            acción rápida, ideal como reemplazo práctico de los dados tradicionales.</p>
                         <div class="tech_icons">
                             <span class="icon" data-tooltip="HTML">
                                 <img src="assets/html.png" alt="HTML">
@@ -348,91 +358,70 @@
                     </div>
                 </div>
             </div>
-
-            <!--
-            <div class="content-slider">
-                <iframe title="slider" src="slider.html" frameborder="0" class="slider"></iframe>
-            </div>-->
-            <div id="app_bookendtest">
-
-                <h2 class="title-5" data-i18n="show_example">Una muestra interactiva</h2>
-                <h3 style="font-size: 1rem;">Bookendtest</h3>
-                <p data-i18n="show_example_des" style="padding: 10px;text-align: center;">Un cuestionario simulado para
-                    las pruebas Saber
-                    11</p>
-                <div class="cam"></div>
-                <iframe src="assets/muestra_bookendtest/" id="app_b_test"></iframe><br><br>
-            </div>
-
-        </div>
-        <br><br><br><br><br><br>
-
-        <div class="c-form" id="t4">
-            <div class="bdrp" id="bdrp">
-                <h1 data-i18n="contact_me">Contáctame</h1><br>
-                <form action="" method="post" class="form-1" id="contact-form">
-                    <div class="code suggestion">
-                        <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont" class="sbr">3</span>
-                            <span data-i18n="contact_me_text2"></span>
-                        </h2>
-                    </div>
-                    <h2 class="title-sp" data-i18n="contact_me_text3">Nombre:</h2>
-                    <input type="text" name="name" class="input" placeholder="Nombre...">
-                    <h2 class="title-sp" data-i18n="contact_me_text4">Correo electrónico o teléfono:</h2>
-                    <input type="email" name="email" class="input" placeholder="Correo electrónico o teléfono...">
-                    <div class="flex space-between">
-                        <div>
-                            <h2 class="title-sp" data-i18n="contact_me_text5">Mensaje:</h2>
+            <div class="c-form" id="t4">
+                <div class="bdrp" id="bdrp">
+                    <h1 data-i18n="contact_me">Contáctame</h1><br>
+                    <form action="" method="post" class="form-1" id="contact-form">
+                        <div class="code suggestion">
+                            <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont"
+                                    class="sbr">3</span>
+                                <span data-i18n="contact_me_text2"></span>
+                            </h2>
                         </div>
+                        <h2 class="title-sp" data-i18n="contact_me_text3">Nombre:</h2>
+                        <input type="text" name="name" class="input" placeholder="Nombre...">
+                        <h2 class="title-sp" data-i18n="contact_me_text4">Correo electrónico o teléfono:</h2>
+                        <input type="email" name="email" class="input" placeholder="Correo electrónico o teléfono...">
+                        <div class="flex space-between">
+                            <div>
+                                <h2 class="title-sp" data-i18n="contact_me_text5">Mensaje:</h2>
+                            </div>
 
-                        <div>
-                            <span>
-                                <div class="time"><span id="le">0</span>/400</div>
-                            </span>
+                            <div>
+                                <span>
+                                    <div class="time"><span id="le">0</span>/400</div>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input"
-                        placeholder="Mensaje..."></textarea>
-                    <div id="sgt">
-                    </div><br>
-                    <button type="submit" id="btn_s" class="btn-1" data-i18n="submit">Enviar</button>
-                </form>
-            </div>
-
-        </div>
-        <button id="b_top" title="Scroll to top">
-            <img src="assets/top.png" alt="">
-        </button>
-        <footer>
-            <img src="assets/brand_white(2).png" alt="" width="30vw">
-
-            <div class="flex center margin-top-10px flex-column">
-                <div class="flex center">
-                    <br>
-                    <div class="m">
-                        <a href="https://github.com/LisoProgrammer" class="a-normal net">
-                            <img src="assets/github_logo.png" alt="Logo de Github" width="30vw">
-                        </a>
-                    </div>
-                    <div class="m">
-                        <a href="https://www.linkedin.com/in/lisandro-zapata-paternina-769611263/" class="a-normal net">
-                            <img src="assets/linkedin.png" alt="Logo de Linkedin" width="37vw">
-                        </a>
-                    </div>
-                </div>
-                <div style="font-size: 1rem;">
-                    Todos los derechos reservados © 2025
-                    <!--<p class="par" style="margin: auto;">Las imágenes tomadas de otras marcas son utilizadas únicamente para indicar relación con las habilidades laborales e/o incorporar en el diseño de este sitio web, todas bajo la licencia<a href="https://creativecommons.org/licenses/?lang=es" class="a-sp" style="color: #fff">Creative Commons.</a></p>-->
+                        <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input"
+                            placeholder="Mensaje..."></textarea>
+                        <div id="sgt">
+                        </div><br>
+                        <button type="submit" id="btn_s" class="btn-1" data-i18n="submit">Enviar</button>
+                    </form>
                 </div>
 
+            </div>
+            <button id="b_top" title="Scroll to top">
+                <img src="assets/top.png" alt="">
+            </button>
+    </main>
+    <footer>
+        <img src="assets/brand_white(2).png" alt="" width="30vw">
 
+        <div class="flex center margin-top-10px flex-column">
+            <div class="flex center">
+                <br>
+                <div class="m">
+                    <a href="https://github.com/LisoProgrammer" class="a-normal net">
+                        <img src="assets/github_logo.png" alt="Logo de Github" width="30vw">
+                    </a>
+                </div>
+                <div class="m">
+                    <a href="https://www.linkedin.com/in/lisandro-zapata-paternina-769611263/" class="a-normal net">
+                        <img src="assets/linkedin.png" alt="Logo de Linkedin" width="37vw">
+                    </a>
+                </div>
+            </div>
+            <div style="font-size: 1rem;">
+                Desarrollado por Lisandro Zapata
+                <!--<p class="par" style="margin: auto;">Las imágenes tomadas de otras marcas son utilizadas únicamente para indicar relación con las habilidades laborales e/o incorporar en el diseño de este sitio web, todas bajo la licencia<a href="https://creativecommons.org/licenses/?lang=es" class="a-sp" style="color: #fff">Creative Commons.</a></p>-->
             </div>
 
-        </footer>
-        <br>
-        <br>
 
-    </div>
+        </div>
+
+    </footer>
     <div class="menu closed" id="menu" role="menu">
         <div class="c-menu closed" id="sub-menu">
             <div class="sub-h">
