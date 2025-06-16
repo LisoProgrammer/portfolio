@@ -187,6 +187,7 @@ for (let m = 0; m < element_a.length; m++) {
     subMe.style.transition = "all 0.3s";
   });
 }
+/*
 //Se asigna una variable inicial de valor 0, que corresponde al scroll inicial del usuario
 var direction = 0;
 //El encabezado de la página
@@ -215,7 +216,7 @@ window.addEventListener("scroll", () => {
     header.style.top = "0";
     direction = scroll_y;
   }
-});
+});*/
 //Si se presiona el botón "Volver arriba", el scroll Y es cero.
 const btn_top = document.getElementById("b_top");
 btn_top.onclick = function () {
@@ -483,20 +484,6 @@ function insertAction(id, link) {
 }
 
 insertAction("#btn_g", "assets/cv/CVLISANDRO_ZAPATA.pdf");
-let links = [
-  "",
-  "https://html.com",
-  "https://developer.mozilla.org/es/docs/Web/CSS",
-  "https://javascript.com",
-  "https://getbootstrap.com/",
-  "https://angular.dev/",
-  "https://www.typescriptlang.org/",
-  "https://php.net",
-  "https://www.mysql.com",
-];
-for (let m = 1; m < 8; m++) {
-  insertAction("#tc" + m, links[m]);
-}
 let links_cards = [
   "",
   "https://www.linkedin.com/in/lisandro-zapata-paternina-dev/details/projects/",
