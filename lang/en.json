@@ -1,6 +1,7 @@
 {
   "title": "Lisandro Zapata | Portfolio",
   "loading": "Loading content...",
+  "home": "Home",
   "sobre_mi": "About Me",
   "mis_hab": "My Skills",
   "mis_pro": "My Projects",
@@ -22,7 +23,7 @@
   "pro2name": "Minibanner",
   "pro2des": "A subject-based grade management system that efficiently integrates the roles of student and teacher, with session cookie-based authentication. Statistics were incorporated for both students and teachers.",
   "pro3name": "Learning Styles Dashboard for Moodle",
-  "pro3des": "Enhancement of the Moodle learning styles module by incorporating a custom dashboard, redesigning the questionnaire, and improving the results panel. Chart.js was used for the graphs.",
+  "pro3des": "Enhancement of the Moodle learning styles module by incorporating a custom dashboard, redesigning the questionnaire, and improving the results panel.",
   "pro4name": "MathApp | Basic Mathematics",
   "pro4des": "An interactive application designed to train young students in mathematics, with a streak system, points, sound effects, and optimization for mobile devices.",
   "pro5name": "Dadoo | Interactive Dice",

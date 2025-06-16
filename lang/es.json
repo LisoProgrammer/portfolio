@@ -1,6 +1,7 @@
 {
   "title": "Lisandro Zapata | Portafolio",
   "loading": "Cargando contenido...",
+  "home": "Inicio",
   "sobre_mi": "Sobre mí",
   "mis_hab": "Mis Habilidades",
   "mis_pro": "Mis Proyectos",
@@ -22,7 +23,7 @@
   "pro2name": "Minibanner",
   "pro2des": "Un sistema de gestión de calificaciones por materia que integra de forma eficiente los roles de estudiante y docente, con autenticación basada en cookies de sesión. Se incorporon estadísticas para el alumno y el docente.",
   "pro3name": "Dashboard de Estilos de Aprendizaje para Moodle",
-  "pro3des": "Mejora del módulo de estilos de aprendizaje de Moodle mediante la incorporación de un dashboard personalizado, rediseño del cuestionario y mejora del panel de resultados. Se utilizó Chart.js para los gráficos.",
+  "pro3des": "Mejora del módulo de estilos de aprendizaje de Moodle mediante la incorporación de un dashboard personalizado, rediseño del cuestionario y mejora del panel de resultados.",
   "pro4name": "MathApp | Matemáticas Básicas",
   "pro4des": "Una aplicación interactiva diseñada para entrenar a jóvenes en matemáticas, con sistema de rachas, puntos, efectos de sonido y optimización para dispositivos móviles.",
   "pro5name": "Dadoo | Dados Interactivos",
