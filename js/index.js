@@ -1,28 +1,30 @@
-const observer = new IntersectionObserver(an, {
+/*const observer = new IntersectionObserver(an, {
   root: null,
   rootMargin: "0px 0px 50px 0px",
-  threshold: 0.2,
+  threshold: 0.1,
 });
 
-for (let e = 1; e < 5; e++) {
+for (let e = 0; e < 5; e++) {
   observer.observe(document.getElementById("t" + e));
   /*console.log("t" + e)
         console.log(document.getElementById("t" + e))
-        console.log(observer)*/
+        console.log(observer)
 }
 
 function an(entries, observer) {
-  //console.log("entries")
-  //console.log(entries)
-  /*console.log("observer")
-    console.log(observer)*/
+  console.log("entries");
+  console.log(entries);
+  console.log("observer");
+  console.log(observer);
   try {
     entries.forEach((entries) => {
       if (entries.isIntersecting) {
         for (let i = 0; i < 2; i++) {
-          document
-            .getElementsByClassName(entries.target.id)
-            [i].classList.add("spc-a-focuss");
+          if (entries.target.id) {
+            document
+              .getElementsByClassName(entries.target.id)
+              [i].classList.add("spc-a-focuss");
+          }
 
           //console.log(observer)
           //console.log(entries)
@@ -51,10 +53,10 @@ for (let m = 0; m < a.length; m++) {
       a[m].classList.add("spc-a-focuss");
     }
   });
-}
+}*/
 const elements = document.getElementsByTagName("*");
 
-document.addEventListener("DOMContentLoaded", () => {
+/**document.addEventListener("DOMContentLoaded", () => {
   const loading = document.getElementById("loading");
   const porcent_loading_h2 = document.getElementById("porcent_loading");
   const barr = document.getElementById("bar");
@@ -122,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, 100);
   });
-});
+});*/
 
 //Botón de apertura y cierre de menú
 const btn_m = document.getElementById("btn_m");
@@ -132,8 +134,6 @@ const menu = document.getElementById("menu");
 const subMe = document.getElementById("sub-menu");
 //formulario de contacto
 const form = document.getElementById("contact-form");
-//banner
-const ban = document.getElementById("ban");
 //
 //Estado inicial del menú: cerrado -> 0. Abierto -> 1
 let stat = 0;
@@ -154,10 +154,6 @@ btn_m.addEventListener("click", function () {
     subMe.className = "c-menu opened";
     subMe.style.transition = "all 0.3s";
   }
-});
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  ban.style.transform = "translate3d(0px,-" + scrollY * 0.08 + "px, 0px)";
 });
 //cuando se detecta que se dió click al menu objeto, el menú objeto cambia de estado: 0.
 document.addEventListener("click", function (e) {
@@ -187,7 +183,7 @@ for (let m = 0; m < element_a.length; m++) {
     subMe.style.transition = "all 0.3s";
   });
 }
-/*
+
 //Se asigna una variable inicial de valor 0, que corresponde al scroll inicial del usuario
 var direction = 0;
 //El encabezado de la página
@@ -209,14 +205,14 @@ window.addEventListener("scroll", () => {
     //Abajo
     //console.log("Abajo")
     direction = scroll_y;
-    header.style.top = "-100%";
+    //header.style.top = "-100%";
   } else {
     //Arriba
     //console.log("Arriba")
-    header.style.top = "0";
+    //header.style.top = "0";
     direction = scroll_y;
   }
-});*/
+});
 //Si se presiona el botón "Volver arriba", el scroll Y es cero.
 const btn_top = document.getElementById("b_top");
 btn_top.onclick = function () {
@@ -490,7 +486,7 @@ let links_cards = [
   "https://github.com/LisoProgrammer/minibanner_front",
   "https://github.com/ISCOUTB/AS_dashboard_learning_styles",
   "assets/mathApp",
-  "assets/dadoo"
+  "assets/dadoo",
 ];
 for (let m = 1; m < 6; m++) {
   insertAction("#pro" + m, links_cards[m]);
