@@ -11,12 +11,12 @@
   "sub_message": "- Acompáñame...",
   "dowl_cv": "Descargar CV",
   "sobre_mih": "Sobre mí",
-  "smtext1": "Me llamo Lisandro Zapata, tengo",
-  "smtext2": "años. Soy técnico en sistemas, desarrollador web y estudiante de Ingeniería de Sistemas de ",
-  "smtext3": "Me identifico como una persona autodidacta, responsable y ordenada. Cuando me inspiro, me encanta dibujar, pues la descarga de emociones es gigantezca. Me puedes llamar Liso, no por ser liso, sino por ser curioso.",
+  "smtext1": "Soy Lisandro Zapata, tengo ",
+  "smtext2": "años. Técnico en sistemas, desarrollador web y estudiante de Ingeniería de Sistemas de ",
+  "smtext3": ". Me considero autodidacta, responsable y organizado. Me apasiona aprender constantemente y asumir nuevos retos. Adicionalmente, expreso mi creatividad a través del dibujo y la escritura. Puedes llamarme 'Liso' porque siempre estoy en movimiento, explorando y creciendo profesionalmente.",
   "mis_hab_h": "Mis habilidades",
   "tech_h": "Las Tecnologías",
-  "mhtext1": "Como técnico en sistemas, puedo administrar y configurar herramientas y equipos de oficina, participar en el montaje de redes informáticas y realizar mantenimiento preventivo a computadoras. Como desarrollador web, también trabajo con las tecnologías que se presentan a continuación.",
+  "mhtext1": "Me especializo en el desarrollo de software, enfocado en construir soluciones funcionales, eficientes y orientadas al usuario. Disfruto trabajar en equipo, comunicar ideas con claridad y aprender de cada experiencia compartida. Valoro la colaboración, el compromiso y la capacidad de adaptación frente a nuevos desafíos tecnológicos. Trabajo con diversas herramientas y tecnologías que me permiten desarrollar productos web modernos y escalables.",
   "pro1name": "MenuDirecto",
   "pro1des": "Un sistema software robusto y funcional para restaurantes, diseñado en torno a la operatividad de cinco roles de usuario: Cliente no registrado, Cliente regular, Mesero, Cajero, Jefe de cocina y Administrador.",
   "pro2name": "Minibanner",
@@ -36,5 +36,7 @@
   "contact_me_text5": "Mensaje",
   "submit": "Enviar",
   "menu": "Menú",
-  "qsm": "Quiero saber más"
+  "gtogit": "Ir a Github",
+  "gtolkd": "Ir a LinkedIn",
+  "gtodemo": "Ver Demo"
 }
