@@ -11,6 +11,42 @@
 html {
   zoom: 100%;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-margin: 0px 0px 200px 0px;
+}
+
+body {
+  background: rgb(33, 33, 33);
+}
+header {
+  width: 100%;
+  padding: 0px;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+}
+header > nav {
+  width: 100%;
+  padding: 0px;
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  transition: 0.5s;
+}
+main {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0px auto;
+  background: rgb(41, 41, 41);
+}
 p {
   line-height: 1.6;
 }
@@ -284,8 +320,10 @@ footer {
   font-size: 1.5rem;
   text-align: center;
   padding: 10px;
+  margin: 15px auto;
   position: relative;
-  top: -50px;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .center {
@@ -299,39 +337,6 @@ footer {
 
 textarea {
   min-height: 40px;
-}
-
-.c {
-  width: 100%;
-  max-width: 1594px;
-  margin: 0px auto;
-  background: rgb(41, 41, 41);
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-margin: 0px 0px 200px 0px;
-}
-
-body {
-  background: rgb(33, 33, 33);
-}
-
-header {
-  width: 100%;
-  padding: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.6rem;
-  border-bottom: 1px solid var(--color1);
-  position: fixed;
-  background: rgb(255, 255, 255);
-  max-width: 1594px;
-  z-index: 10;
-  top: 0;
-  transition: 0.5s;
-  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
 .sub-h {
@@ -569,7 +574,7 @@ h1[class^="title"] {
 
 .par {
   width: 600px;
-  margin: 100px auto;
+  /*margin: 100px auto;*/
 }
 
 .title-5 {
@@ -680,7 +685,6 @@ h1[class^="title"] {
   color: var(--color1);
   font-size: 1.2rem;
   position: relative;
-  top: -130px;
 }
 
 button[type="submit"] {
@@ -964,11 +968,11 @@ img {
   .card {
     width: 100%;
   }
-  .pre-text{
+  .pre-text {
     width: fit-content;
     margin: 0px 0px 50px 0px;
   }
-  .ic-5{
+  .ic-5 {
     width: 50vw;
   }
 }
