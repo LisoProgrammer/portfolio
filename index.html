@@ -367,36 +367,67 @@
         </div>
         <div class="c-form" id="t4">
             <div class="bdrp" id="bdrp">
-                <h1 data-i18n="contact_me">Contáctame</h1><br>
-                <form action="" method="post" class="form-1" id="contact-form">
-                    <div class="code suggestion">
-                        <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont" class="sbr">3</span>
-                            <span data-i18n="contact_me_text2"></span>
-                        </h2>
-                    </div>
-                    <h2 class="title-sp" data-i18n="contact_me_text3">Nombre:</h2>
-                    <input type="text" name="name" class="input" placeholder="Nombre...">
-                    <h2 class="title-sp" data-i18n="contact_me_text4">Correo electrónico o teléfono:</h2>
-                    <input type="email" name="email" class="input" placeholder="Correo electrónico o teléfono...">
-                    <div class="flex space-between">
-                        <div>
-                            <h2 class="title-sp" data-i18n="contact_me_text5">Mensaje:</h2>
+                <div class="flex" style="justify-content: space-evenly;">
+                    <div>
+                        <h1 data-i18n="contact_me">Contáctame</h1>
+                        <div class="chat">
+                            <nav>
+                                <section>
+                                    <div class="div_img_profile">
+                                        <img src="assets/Yo.jpg" alt="" class="chat_perfil">
+                                    </div>
+                                    <span>LisoProgrammer</span>
+                                </section>
+                                <section>
+                                    <div><img src="assets/call.png" alt=""></div>
+                                    <div><img src="assets/videocam.png" alt=""></div>
+                                    <div><img src="assets/menup.png" alt=""></div>
+                                </section>
+                            </nav>
+                            <div class="chat_area">
+                                <div class="chat_msg other">Hola, soy LisoProgrammer. Quiero revelarte un secreto. Te animas? Responde "Si" si quieres averiguarlo.
+                                    <span>11:45 p.m</span>
+                                </div>
+                                <div class="chat_msg me">Hola, soy LisoProgrammer. Quiero revelarte un secreto. Te animas? Responde "Si" si quieres averiguarlo. <span>11:45 p.m</span></div>
+                                <div class="chat_msg other">Hola, soy LisoProgrammer. Quiero revelarte un secreto. Te animas? Responde "Si" si quieres averiguarlo.</div>
+                                <div class="chat_msg me">Hola, soy LisoProgrammer. Quiero revelarte un secreto. Te animas? Responde "Si" si quieres averiguarlo.</div>
+                            </div>
+                            <div class="camps_chat flex space-between">
+                                <input type="text" placeholder="Escribe algo">
+                                <button>Enviar</button>
+                            </div>
                         </div>
+                    </div>
+                    <form action="" method="post" class="form-1" id="contact-form">
+                        <div class="code suggestion">
+                            <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont"
+                                    class="sbr">3</span>
+                                <span data-i18n="contact_me_text2"></span>
+                            </h2>
+                        </div>
+                        <h2 class="title-sp" data-i18n="contact_me_text3">Nombre:</h2>
+                        <input type="text" name="name" class="input" placeholder="Nombre...">
+                        <h2 class="title-sp" data-i18n="contact_me_text4">Correo electrónico o teléfono:</h2>
+                        <input type="email" name="email" class="input" placeholder="Correo electrónico o teléfono...">
+                        <div class="flex space-between">
+                            <div>
+                                <h2 class="title-sp" data-i18n="contact_me_text5">Mensaje:</h2>
+                            </div>
 
-                        <div>
-                            <span>
-                                <div class="time"><span id="le">0</span>/400</div>
-                            </span>
+                            <div>
+                                <span>
+                                    <div class="time"><span id="le">0</span>/400</div>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input"
-                        placeholder="Mensaje..."></textarea>
-                    <div id="sgt">
-                    </div><br>
-                    <button type="submit" id="btn_s" class="btn-1" data-i18n="submit">Enviar</button>
-                </form>
+                        <textarea name="msg" cols="50" rows="5" style="width: 100%;" class="input"
+                            placeholder="Mensaje..."></textarea>
+                        <div id="sgt">
+                        </div><br>
+                        <button type="submit" id="btn_s" class="btn-1" data-i18n="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
-
             <button id="b_top" title="Scroll to top">
                 <img src="assets/top.png" alt="">
             </button>

@@ -100,7 +100,6 @@ p {
   display: flex;
   flex-direction: column;
   height: 100%;
-
 }
 .card h3 {
   margin-bottom: 5px;
@@ -707,7 +706,7 @@ h1[class^="title"] {
 .c-form {
   width: 100%;
   height: auto;
-  background: url("../assets/by.jpg");
+  background: var(--color6); /*url("../assets/by.jpg");*/
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -805,7 +804,7 @@ input {
 .form-1 {
   width: 50%;
   padding: 40px;
-  margin: auto;
+  margin: 0;
   background: var(--color7);
   border-radius: 5px;
   color: var(--color3);
@@ -817,6 +816,77 @@ input {
 .btn-1:hover {
   background: #18698f;
   border-color: #18698f;
+}
+.chat {
+  width: 100%;
+  height: auto;
+  background: #242424;
+  border-radius: 5px;
+}
+.chat > nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.chat_area {
+  padding: 5px;
+  background: url("../assets/by.jpg");
+  background-position: 0 0;
+  background-size: cover;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+.chat_msg {
+  max-width: 70%;
+  text-align: left;
+  margin: 30px 5px 5px;
+  border-radius: 3px;
+  padding: 6px;
+}
+.chat_msg span{
+  display: block;
+  width: 100%;
+}
+.chat_msg.other > span{
+ text-align: right;
+}
+.chat_msg.me > span{
+ text-align: left;
+}
+.chat section{
+  display: flex;
+  align-items: center;
+}
+.chat section:nth-child(2) img{
+  width: 30px;
+  margin: 0px 10px;
+}
+.chat .div_img_profile {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 5px;
+}
+.div_img_profile img {
+  width: 100%;
+}
+.chat .other {
+  background: var(--color-brownblue);
+}
+.chat .me {
+  background: var(--color-brown);
+  margin-left: auto;
+}
+.camps_chat input {
+  min-width: 70%;
+  height: 60px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.camps_chat button {
+  min-width: 30%;
+  font-size: 1.2rem;
 }
 /**.btn-1:hover svg rect#rect846,
 .btn-1:hover svg rect#rect928,
@@ -1004,7 +1074,7 @@ button {
   .sp-icon {
     margin: 0;
   }
-  .content-cards{
+  .content-cards {
     justify-items: center;
   }
   .card {
@@ -1017,7 +1087,7 @@ button {
   .ic-5 {
     width: 50vw;
   }
-  .content-cards{
+  .content-cards {
     grid-template-columns: auto;
   }
   .ban {
@@ -1025,7 +1095,7 @@ button {
     max-height: 1000px;
     padding: 0;
   }
-  .img_pre{
+  .img_pre {
     max-width: 150px;
   }
 }
