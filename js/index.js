@@ -2,7 +2,7 @@
 const observer = new IntersectionObserver(an, {
   root: null,
   rootMargin: "0px",
-  threshold: 0.27
+  threshold: 0.27,
 });
 
 // Observar elementos t0 a t4 si existen
@@ -20,9 +20,9 @@ function an(entries, observer) {
     const relacionados = document.querySelectorAll("." + id);
 
     if (entry.isIntersecting) {
-      relacionados.forEach(el => el.classList.add("spc-a-focuss"));
+      relacionados.forEach((el) => el.classList.add("spc-a-focuss"));
     } else {
-      relacionados.forEach(el => el.classList.remove("spc-a-focuss"));
+      relacionados.forEach((el) => el.classList.remove("spc-a-focuss"));
     }
   });
 }
@@ -554,3 +554,104 @@ for (let i = 0; i < cards.length; i++) {
     }
   });
 }
+function obtenerHoraActual() {
+  const fecha = new Date();
+  let horas = fecha.getHours();
+  const minutos = fecha.getMinutes();
+  const ampm = horas >= 12 ? "PM" : "AM";
+
+  horas = horas % 12;
+  horas = horas ? horas : 12; // la hora 0 debe ser 12
+  const minutosFormateados = minutos < 10 ? "0" + minutos : minutos;
+
+  return `${horas}:${minutosFormateados} ${ampm}`;
+}
+let tiempo_ini = Date.now();
+function obtenerTiempoTranscurrido() {
+  const ahora = Date.now();
+  const diferencia = ahora - tiempo_ini; // Diferencia en milisegundos
+
+  const segundos = Math.floor(diferencia / 1000) % 60;
+  const minutos = Math.floor(diferencia / (1000 * 60)) % 60;
+  const horas = Math.floor(diferencia / (1000 * 60 * 60));
+
+  // Formato legible
+  let resultado = "";
+  if (horas > 0) resultado += `${horas}h `;
+  if (minutos > 0 || horas > 0) resultado += `${minutos} min `;
+  resultado += `${segundos} s`;
+
+  return resultado.trim();
+}
+function createMessage(tipo_user, message, time_am_pm) {
+  let div_message = document.createElement("div");
+  div_message.className = "chat_msg " + tipo_user; //other or me;
+  div_message.innerText = message;
+  let span_time = document.createElement("span");
+  span_time.innerText = time_am_pm;
+  div_message.appendChild(span_time);
+  return div_message;
+}
+let chat_area = document.getElementById("chat_area");
+let span_hora_inicial = document.getElementById("time_ini");
+span_hora_inicial.innerText = obtenerHoraActual();
+let input_message = document.getElementById("message_value");
+let button_send_message = document.getElementById("send_message_chat");
+let secreto_revelado = false;
+button_send_message.addEventListener("click", () => {
+  if (!secreto_revelado && input_message.value.length > 0) {
+    let value_message = input_message.value.replace(/\s+/g, "").toLowerCase();
+    console.log(value_message);
+    let div_message_user = createMessage(
+      "me",
+      input_message.value.trim(),
+      obtenerHoraActual()
+    );
+    chat_area.appendChild(div_message_user);
+    input_message.value = "";
+    let div_message;
+    if (value_message == "revelarsecreto" || value_message == "revealsecret") {
+      setTimeout(() => {
+        if (localStorage.lang == "en") {
+          div_message = createMessage(
+            "other",
+            "You’ve been exploring my portfolio for " +
+              obtenerTiempoTranscurrido() +
+              " .Feel like leaving me a message? 😉.",
+            obtenerHoraActual()
+          );
+        } else {
+          div_message = createMessage(
+            "other",
+            "Has estado explorando mi portafolio desde hace " +
+              obtenerTiempoTranscurrido() +
+              " .Te animas a dejarme un mensaje? 😉.",
+            obtenerHoraActual()
+          );
+        }
+        chat_area.appendChild(div_message);
+        chat_area.scrollBy(0, chat_area.scrollHeight);
+      }, 1000);
+      secreto_revelado = true;
+    } else {
+      setTimeout(() => {
+        if (localStorage.lang == "en") {
+          div_message = createMessage(
+            "other",
+            "Please, type the correct phrase to reveal the secret ('Reveal secret')",
+            obtenerHoraActual()
+          );
+        } else {
+          div_message = createMessage(
+            "other",
+            "Por favor, escribe la frase correcta para revelar el secreto ('Revelar secreto').",
+            obtenerHoraActual()
+          );
+        }
+
+        chat_area.appendChild(div_message);
+        chat_area.scrollBy(0, chat_area.scrollHeight);
+      }, 1000);
+    }
+  }
+});
