@@ -592,6 +592,23 @@ function createMessage(tipo_user, message, time_am_pm) {
   div_message.appendChild(span_time);
   return div_message;
 }
+let chat_opened = false;
+let chat = document.getElementById("chat");
+let icon_exp = document.querySelector(".tools #icon_exp");
+let tools_mark = document.getElementById("tools_mark");
+tools_mark.addEventListener("click", ()=>{
+  if(!chat_opened){
+    //se abre el chat
+    chat.className = "chat open";
+    chat_opened = true;
+    icon_exp.className = "open";
+  }else{
+    //se cierra
+    chat.className = "chat close";
+    chat_opened = false;
+    icon_exp.className = "close";
+  }
+})
 let chat_area = document.getElementById("chat_area");
 let span_hora_inicial = document.getElementById("time_ini");
 span_hora_inicial.innerText = obtenerHoraActual();
