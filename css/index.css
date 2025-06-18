@@ -343,7 +343,7 @@ footer {
   font-size: 1.5rem;
   text-align: center;
   padding: 10px;
-  margin: 15px auto;
+  margin: 30px auto;
   position: relative;
   width: 100%;
   max-width: 1600px;
@@ -820,11 +820,47 @@ input {
 #content_form_chat > * {
   margin: 15px;
 }
+.container_chat_tools {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px 0px 10px #000;
+}
+.container_chat_tools .tools {
+  padding: 10px;
+  align-items: center;
+  background: var(--color5);
+  cursor: pointer;
+}
+.container_chat_tools .tools > button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+}
+.container_chat_tools .tools > button > img {
+  filter: invert(1);
+}
+.container_chat_tools #icon_exp.open {
+  transform: rotate(90deg);
+}
+.container_chat_tools #icon_exp.close {
+  transform: rotate(270deg);
+}
 .chat {
-  width: 100%;
+  width: 350px;
   height: 100%;
   background: #242424;
-  border-radius: 5px;
+  transition: max-height 1s ease;
+}
+.chat.close {
+  max-height: 0;
+}
+.chat.open {
+  max-height: 500px;
 }
 .chat .today {
   padding: 10px;
@@ -844,10 +880,11 @@ input {
   background: url("../assets/by.jpg");
   background-position: 0 0;
   background-size: cover;
-  overflow-y: hidden;
-  max-height: 500px;
-  min-height: 500px;
+  overflow-y: scroll;
+  max-height: 300px;
+  min-height: 300px;
   height: 100%;
+  width: 100%;
 }
 .chat_msg {
   max-width: 70%;
@@ -855,7 +892,7 @@ input {
   text-align: left;
   margin: 30px 5px 5px;
   border-radius: 3px;
-  padding: 6px;
+  padding: 10px;
 }
 .chat_msg span {
   display: block;
@@ -863,9 +900,13 @@ input {
 }
 .chat_msg.other > span {
   text-align: right;
+  font-size: 13px;
+  color: #c6c6c6;
 }
 .chat_msg.me > span {
   text-align: left;
+  font-size: 13px;
+  color: #c6c6c6;
 }
 .chat section {
   display: flex;
@@ -892,7 +933,7 @@ input {
   background: var(--color7);
   margin-left: auto;
 }
-.chat .me::after {
+/*.chat .me::after {
   content: "";
   display: block;
   position: absolute;
@@ -902,8 +943,8 @@ input {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 14px solid var(--color7); /* color del triángulo */
-}
+  border-left: 14px solid var(--color7); /* color del triángulo 
+}*/
 .camps_chat input {
   min-width: 70%;
   height: 60px;
@@ -1046,6 +1087,7 @@ button {
   .t {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
     padding: 40px 10px;
   }
   div[class^="ab"] {
@@ -1210,6 +1252,15 @@ button {
   }
   .element {
     width: 90%;
+  }
+  .container_chat_tools {
+    width: 100%;
+  }
+  .chat {
+    width: 100%;
+  }
+  #b_top {
+    bottom: 70px;
   }
 }
 

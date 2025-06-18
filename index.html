@@ -365,46 +365,18 @@
             </div>
 
         </div>
-        <div class="c-form">
+        <div class="c-form" id="t4">
             <div class="bdrp" id="bdrp">
-                <div class="flex" style="justify-content: space-evenly;display: flex;align-items: center;" id="content_form_chat">
-                    <div style="border-radius: 10px;overflow: hidden;max-width: 500px;width: 100%;">
-                        <div class="chat">
-                            <nav>
-                                <section>
-                                    <div class="div_img_profile">
-                                        <img src="assets/Yo.jpg" alt="" class="chat_perfil">
-                                    </div>
-                                    <span
-                                        style="text-align: left;font-size: 1rem;margin-left: 5px;">LisoProgrammer<br>En
-                                        línea</span>
-                                </section>
-                                <section>
-                                    <div><img src="assets/call.png" alt=""></div>
-                                    <div><img src="assets/videocam.png" alt=""></div>
-                                    <div><img src="assets/menup.png" alt=""></div>
-                                </section>
-                            </nav>
-                            <div class="chat_area" id="chat_area">
-                                <div class="today">
-                                    HOY
-                                </div>
-                                <div class="chat_msg other" data-i18n="message_contact_me">
-                                    <span id="time_ini">11:45 p.m</span>
-                                </div>
-                                <!--<div class="chat_msg me">Hola, soy LisoProgrammer. Quiero revelarte un secreto. Te animas? Responde "Si" si quieres averiguarlo. <span>11:45 p.m</span></div>-->
-                            </div>
-                            <div class="camps_chat flex space-between">
-                                <input id="message_value" type="text" placeholder="Escribe algo / Type something" autocomplete="off">
-                                <button id="send_message_chat">Enviar</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex" style="justify-content: space-evenly;display: flex;align-items: center;"
+                    id="content_form_chat">
+                    <!--<div style="border-radius: 10px;overflow: hidden;max-width: 500px;width: 100%;">
+                        
+                    </div>-->
                     <div>
-                        <img src="assets/contact.png" alt="" style="width: 200px">
+                        <img src="assets/contact.png" alt="" class="img_pre">
                     </div>
                     <form action="" method="post" class="form-1" id="contact-form">
-                        <h1 data-i18n="contact_me" id="t4">Contáctame</h1>
+                        <h1 data-i18n="contact_me">Contáctame</h1>
                         <div class="code suggestion">
                             <h2><span data-i18n="contact_me_text1">Puedes enviar</span> <span id="cont"
                                     class="sbr">3</span>
@@ -437,6 +409,48 @@
             <button id="b_top" title="Scroll to top">
                 <img src="assets/top.png" alt="">
             </button>
+            <div class="container_chat_tools">
+                <div class="flex space-between tools" id="tools_mark">
+                    <div>
+                        Tienes nuevos mensajes
+                    </div>
+                    <button>
+                        <img src="assets/right.png" alt="" id="icon_exp" class="close">
+                    </button>
+                </div>
+                <div class="container_chat">
+                    <div class="chat close" id="chat">
+                        <nav>
+                            <section>
+                                <div class="div_img_profile">
+                                    <img src="assets/Yo.jpg" alt="" class="chat_perfil">
+                                </div>
+                                <span style="text-align: left;font-size: 1rem;margin-left: 5px;">LisoProgrammer<br>En
+                                    línea</span>
+                            </section>
+                            <section>
+                                <div><img src="assets/call.png" alt=""></div>
+                                <div><img src="assets/videocam.png" alt=""></div>
+                                <div><img src="assets/menup.png" alt=""></div>
+                            </section>
+                        </nav>
+                        <div class="chat_area" id="chat_area">
+                            <div class="today">
+                                HOY
+                            </div>
+                            <div class="chat_msg other" data-i18n="message_contact_me">
+                                <span id="time_ini">11:45 p.m</span>
+                            </div>
+                            <!--<div class="chat_msg me">Hola, soy LisoProgrammer. Quiero revelarte un secreto. Te animas? Responde "Si" si quieres averiguarlo. <span>11:45 p.m</span></div>-->
+                        </div>
+                        <div class="camps_chat flex space-between">
+                            <input id="message_value" type="text" placeholder="Escribe algo / Type something"
+                                autocomplete="off">
+                            <button id="send_message_chat">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
     <footer>
         <img src="assets/brand_white(2).png" alt="" width="30vw">
