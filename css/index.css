@@ -893,17 +893,30 @@ input {
   margin: 30px 5px 5px;
   border-radius: 3px;
   padding: 10px;
+  font-size: 16px;
+  animation: upon 0.3s ease;
+}
+@keyframes upon {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+.chat_msg a{
+  color: #fff;
 }
 .chat_msg span {
   display: block;
   width: 100%;
 }
-.chat_msg.other > span {
+.chat_msg.other > span:nth-child(2) {
   text-align: right;
   font-size: 13px;
   color: #c6c6c6;
 }
-.chat_msg.me > span {
+.chat_msg.me > span:nth-child(2) {
   text-align: left;
   font-size: 13px;
   color: #c6c6c6;
@@ -949,11 +962,11 @@ input {
   min-width: 70%;
   height: 60px;
   padding: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .camps_chat button {
   min-width: 30%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #000000;
   background: var(--color2);
   border: none;
