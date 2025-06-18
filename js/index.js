@@ -421,7 +421,7 @@ elemetn_form[2].addEventListener("input", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   new Typed(".prot", {
-    strings: ["Developer.", "Full Stack.", "@LisoProgrammer."],
+    strings: ["Developer.", "Programmer.", "@LisoProgrammer."],
     // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
     stringsElement: null,
     // typing speed
@@ -465,7 +465,6 @@ function insertAction(id, link) {
   }
 }
 
-insertAction("#btn_g", "assets/cv/CVLISANDRO_ZAPATA.pdf");
 let links_cards = [
   "",
   "https://www.linkedin.com/in/lisandro-zapata-paternina-dev/details/projects/",
