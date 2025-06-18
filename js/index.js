@@ -586,7 +586,7 @@ function obtenerTiempoTranscurrido() {
 function createMessage(tipo_user, message, time_am_pm) {
   let div_message = document.createElement("div");
   div_message.className = "chat_msg " + tipo_user; //other or me;
-  div_message.innerText = message;
+  div_message.innerHTML = "<span>" + message + "</span>";
   let span_time = document.createElement("span");
   span_time.innerText = time_am_pm;
   div_message.appendChild(span_time);
@@ -609,14 +609,29 @@ tools_mark.addEventListener("click", ()=>{
     icon_exp.className = "close";
   }
 })
+let commands = {
+  "en": {
+    "cv": "Here’s my resume, check it out 👉 <a target='_blank' href='assets/cv/CVLISANDRO_ZAPATA.pdf'>CVLISANDRO_ZAPATA.pdf</a>",
+    "about": "I'm @LisoProgrammer — let's start coding! more in <a href='#t1'>About me</a>",
+    "projects": "Take a look at my projects here: <a href='#t3'>Projects</a>",
+    "help": "Type a command like 'cv', 'about' or 'projects' to explore. You can also try 'secret' if you're curious 😉"
+  },
+  "es": {
+    "cv": "Aquí está mi hoja de vida, échale un vistazo 👉 <a target='_blank' href='assets/cv/CVLISANDRO_ZAPATA.pdf'>CVLISANDRO_ZAPATA.pdf</a>",
+    "about": "Soy @LisoProgrammer, ¡vamos a programar! Mira más aquí <a href='#t1'>Sobre mí</a>",
+    "projects": "Aquí puedes ver mis proyectos: <a href='#t3'>Proyectos</a>",
+    "help": "Escribe un comando como 'cv', 'about' o 'projects' para explorar. También puedes probar con 'secret' si tienes curiosidad 😉"
+  }
+}
+
 let chat_area = document.getElementById("chat_area");
 let span_hora_inicial = document.getElementById("time_ini");
 span_hora_inicial.innerText = obtenerHoraActual();
 let input_message = document.getElementById("message_value");
 let button_send_message = document.getElementById("send_message_chat");
-let secreto_revelado = false;
 button_send_message.addEventListener("click", () => {
-  if (!secreto_revelado && input_message.value.length > 0) {
+  if (input_message.value.length > 0) {
+    let lang = localStorage.lang;
     let value_message = input_message.value.replace(/\s+/g, "").toLowerCase();
     console.log(value_message);
     let div_message_user = createMessage(
@@ -625,16 +640,35 @@ button_send_message.addEventListener("click", () => {
       obtenerHoraActual()
     );
     chat_area.appendChild(div_message_user);
+    chat_area.scrollBy(0, chat_area.scrollHeight);
     input_message.value = "";
     let div_message;
-    if (value_message == "revelarsecreto" || value_message == "revealsecret") {
+    if (commands[lang][value_message]) {
+      setTimeout(() => {
+        if (lang == "en") {
+          div_message = createMessage(
+            "other",
+            commands[lang][value_message],
+            obtenerHoraActual()
+          );
+        } else {
+          div_message = createMessage(
+            "other",
+            commands["es"][value_message],
+            obtenerHoraActual()
+          );
+        }
+        chat_area.appendChild(div_message);
+        chat_area.scrollBy(0, chat_area.scrollHeight);
+      }, 1000);
+    } else if(value_message == "secret"){
       setTimeout(() => {
         if (localStorage.lang == "en") {
           div_message = createMessage(
             "other",
             "You’ve been exploring my portfolio for " +
               obtenerTiempoTranscurrido() +
-              " .Feel like leaving me a message? 😉.",
+              " .Feel like leaving me a message 😉? <a href='#t4'>Contact me</a>.",
             obtenerHoraActual()
           );
         } else {
@@ -642,30 +676,28 @@ button_send_message.addEventListener("click", () => {
             "other",
             "Has estado explorando mi portafolio desde hace " +
               obtenerTiempoTranscurrido() +
-              " .Te animas a dejarme un mensaje? 😉.",
+              " .Te animas a dejarme un mensaje 😉? <a href='#t4'>Contáctame</a>.",
             obtenerHoraActual()
           );
         }
         chat_area.appendChild(div_message);
         chat_area.scrollBy(0, chat_area.scrollHeight);
       }, 1000);
-      secreto_revelado = true;
-    } else {
+    }else {
       setTimeout(() => {
         if (localStorage.lang == "en") {
           div_message = createMessage(
             "other",
-            "Please, type the correct phrase to reveal the secret ('Reveal secret')",
+            commands[lang]["help"],
             obtenerHoraActual()
           );
         } else {
           div_message = createMessage(
             "other",
-            "Por favor, escribe la frase correcta para revelar el secreto ('Revelar secreto').",
+            commands["es"]["help"],
             obtenerHoraActual()
           );
         }
-
         chat_area.appendChild(div_message);
         chat_area.scrollBy(0, chat_area.scrollHeight);
       }, 1000);
