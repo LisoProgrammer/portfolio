@@ -28,4 +28,14 @@ select.addEventListener("change", (e) => {
   const lang = e.target.value;
   loadLanguage(lang);
   localStorage.lang = lang;
+  let button_download_cv = document.getElementById("btn_g");
+  button_download_cv.addEventListener("click", download_cv);
 });
+
+function download_cv(){
+  if(localStorage.lang == "en"){
+    window.open("assets/cv/en/CVLISANDRO_ZAPATA.pdf", "_blank");
+  }else{
+    window.open("assets/cv/es/CVLISANDRO_ZAPATA.pdf", "_blank");
+  }
+}
