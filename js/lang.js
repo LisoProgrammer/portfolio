@@ -23,12 +23,13 @@ if (!localStorage.lang) {
 }
 const select = document.getElementById("langSelector");
 select.value = localStorage.lang;
+let button_download_cv = document.getElementById("btn_g");
+button_download_cv.addEventListener("click",download_cv)
 loadLanguage(localStorage.lang);
 select.addEventListener("change", (e) => {
   const lang = e.target.value;
   loadLanguage(lang);
   localStorage.lang = lang;
-  let button_download_cv = document.getElementById("btn_g");
   button_download_cv.addEventListener("click", download_cv);
 });
 
