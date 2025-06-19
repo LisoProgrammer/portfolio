@@ -419,41 +419,6 @@ elemetn_form[2].addEventListener("input", function () {
   }
   document.getElementById("le").innerHTML = lengthE;
 });
-document.addEventListener("DOMContentLoaded", function () {
-  new Typed(".prot", {
-    strings: ["Developer.", "Programmer.", "@LisoProgrammer."],
-    // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-    stringsElement: null,
-    // typing speed
-    typeSpeed: 30,
-    // time before typing starts
-    startDelay: 1200,
-    // backspacing speed
-    backSpeed: 20,
-    // time before backspacing
-    backDelay: 500,
-    // loop
-    loop: true,
-    // false = infinite
-    loopCount: 2,
-    // show cursor
-    showCursor: false,
-    // character for cursor
-    cursorChar: "",
-    // attribute to type (null == text)
-    attr: null,
-    // either html or text
-    contentType: "html",
-    // call when done callback function
-    callback: function () {},
-    // starting callback function before each string
-    preStringTyped: function () {},
-    //callback for every typed string
-    onStringTyped: function () {},
-    // callback for reset
-    resetCallback: function () {},
-  });
-});
 
 function insertAction(id, link) {
   try {
@@ -500,8 +465,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let cont = document.getElementById("cont");
   cont.innerHTML = localStorage.getItem("int");
 });
-let cards = document.getElementsByClassName("card");
 
+let cards = document.getElementsByClassName("card");
 for (let i = 0; i < cards.length; i++) {
   const card = cards[i];
   const left_button = card.querySelector(".left");
@@ -553,6 +518,7 @@ for (let i = 0; i < cards.length; i++) {
     }
   });
 }
+
 function obtenerHoraActual() {
   const fecha = new Date();
   let horas = fecha.getHours();
@@ -565,6 +531,7 @@ function obtenerHoraActual() {
 
   return `${horas}:${minutosFormateados} ${ampm}`;
 }
+
 let tiempo_ini = Date.now();
 function obtenerTiempoTranscurrido() {
   const ahora = Date.now();
