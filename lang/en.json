@@ -41,5 +41,6 @@
   "menu": "Menu",
   "gtogit": "Go to Github",
   "gtolkd": "Go to LinkedIn",
-  "gtodemo": "View Demo"
+  "gtodemo": "View Demo",
+  "created_by": "Powered by Lisandro Zapata"
 }
