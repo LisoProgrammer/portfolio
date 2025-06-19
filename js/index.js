@@ -610,16 +610,16 @@ tools_mark.addEventListener("click", ()=>{
 })
 let commands = {
   "en": {
-    "cv": "Here’s my resume, check it out 👉 <a target='_blank' href='assets/cv/CVLISANDRO_ZAPATA.pdf'>CVLISANDRO_ZAPATA.pdf</a>",
+    "resume": "Here’s my resume, check it out 👉 <a target='_blank' href='assets/cv/en/CVLISANDRO_ZAPATA.pdf'>CVLISANDRO_ZAPATA.pdf</a>",
     "about": "I'm @LisoProgrammer — let's start coding! more in <a href='#t1'>About me</a>",
     "projects": "Take a look at my projects here: <a href='#t3'>Projects</a>",
-    "help": "Type a command like 'cv', 'about' or 'projects' to explore. You can also try 'secret' if you're curious 😉"
+    "help": "Type a command like 'resume', 'about' or 'projects' to explore. You can also try 'secret' if you're curious 😉"
   },
   "es": {
-    "cv": "Aquí está mi hoja de vida, échale un vistazo 👉 <a target='_blank' href='assets/cv/CVLISANDRO_ZAPATA.pdf'>CVLISANDRO_ZAPATA.pdf</a>",
+    "resume": "Aquí está mi hoja de vida, échale un vistazo 👉 <a target='_blank' href='assets/cv/es/CVLISANDRO_ZAPATA.pdf'>CVLISANDRO_ZAPATA.pdf</a>",
     "about": "Soy @LisoProgrammer, ¡vamos a programar! Mira más aquí <a href='#t1'>Sobre mí</a>",
     "projects": "Aquí puedes ver mis proyectos: <a href='#t3'>Proyectos</a>",
-    "help": "Escribe un comando como 'cv', 'about' o 'projects' para explorar. También puedes probar con 'secret' si tienes curiosidad 😉"
+    "help": "Escribe un comando como 'resume', 'about' o 'projects' para explorar. También puedes probar con 'secret' si tienes curiosidad 😉"
   }
 }
 
