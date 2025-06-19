@@ -84,7 +84,7 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   gap: 20px;
   padding: 10px;
-  max-width: 1500px;
+  max-width: 1380px;
   width: 100%;
   margin: auto;
   align-items: stretch;
@@ -343,10 +343,9 @@ footer {
   font-size: 1.5rem;
   text-align: center;
   padding: 10px;
-  margin: 30px auto;
+  margin: 40px auto 100px auto;
   position: relative;
   width: 100%;
-  max-width: 1600px;
 }
 
 .center {
@@ -1301,18 +1300,18 @@ button {
 }
 
 .error {
-  border-left-color: rgb(216, 0, 0);
-  background: rgb(255, 176, 145);
+  border-left-color: #ff6b9e;
+  background: #F8BBD0;
 }
 
 .success {
-  border-left-color: rgb(0, 156, 0);
-  background: rgb(181, 255, 181);
+  border-left-color: #00e18e;
+  background: #A8E6CF;
 }
 
 .suggestion {
-  border-left-color: rgb(255 229 0);
-  background: rgb(255 253 202);
+  border-left-color: #74dae7;
+  background: #E0F7FA;
 }
 
 .sending {
