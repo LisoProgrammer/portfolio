@@ -310,17 +310,6 @@ div.skills#t4 {
   flex-direction: column;
   color: rgb(255, 255, 255);
 }
-@keyframes scalemax {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: scale(50);
-  }
-}
-
 @font-face {
   src: url("../assets/PoorRichardOpti.otf");
   font-family: "Poor Richard";
@@ -565,17 +554,6 @@ h1[class^="title"] {
 .title-6:hover::before {
   width: 150px; /* Se expande al hacer hover */
 }
-/*.title-5:hover::before {
-             content: "";
-             width: 0px;
-             height: 0px;
-             margin: auto;
-             transform: rotate(90deg);
-             border-left: 10px solid var(--color2);
-             border-top: 5px solid transparent;
-             border-bottom: 5px solid transparent;
-         }*/
-
 .triangle {
   width: 0px;
   height: 0px;
@@ -660,37 +638,9 @@ h1[class^="title"] {
 .sbr {
   border-bottom: 5px solid var(--color2);
 }
-/*.tc:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  background: rgb(255, 255, 255);
-  padding: 5px;
-  width: auto;
-  transition: all 0.3s;
-  transform: scale(1.6);
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgb(83, 83, 83);
-  font-size: 14px;
-  animation: up 0.6s;
-  margin: auto;
-  color: #000;
-}*/
-
 #ini {
   display: none;
 }
-
-@keyframes agr {
-  from {
-    opacity: 0;
-    left: -10px;
-  }
-  to {
-    opacity: 1;
-    left: 0;
-  }
-}
-
 .skills {
   width: 100%;
   height: auto;
@@ -945,18 +895,6 @@ input {
   background: var(--color7);
   margin-left: auto;
 }
-/*.chat .me::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  transform: translateY(-15px);
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 14px solid var(--color7); /* color del triángulo 
-}*/
 .camps_chat input {
   min-width: 70%;
   height: 60px;
@@ -970,14 +908,6 @@ input {
   background: var(--color2);
   border: none;
 }
-/**.btn-1:hover svg rect#rect846,
-.btn-1:hover svg rect#rect928,
-.btn-1:hover svg rect#rect1156,
-.btn-1:hover svg rect#rect1373 {
-  fill: rgb(255, 255, 255) !important;
-  transition: 0.3s;
-}**/
-
 .btn-1:active {
   position: relative;
   top: 1px;
@@ -1062,15 +992,6 @@ button {
   }
   to {
     transform: scale(1);
-  }
-}
-
-@keyframes desp1 {
-  from {
-    right: -100%;
-  }
-  to {
-    right: 0;
   }
 }
 
